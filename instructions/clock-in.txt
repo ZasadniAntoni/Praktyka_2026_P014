@@ -1,0 +1,2 @@
+01.07 - 10:00 - 11:40 -> Instalacja IIC-OSIC-TOOLS i wstep do biblioteki sky130A.
+        14:40 - 16:30 -> Wstępny setup backupu przez Git, setup vsc dla wygody

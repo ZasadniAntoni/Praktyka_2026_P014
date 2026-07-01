@@ -1,0 +1,17 @@
+Instalancja curl:
+	sudo apt install curl
+Instalacja narzędzi:
+	curl -fsSL https://osic.tools/install.sh | bash
+Dodanie użytkownika do grupy docker:
+	sudo usermod -aG docker $USER
+Zastosuj zmiany w obecnej sesji terminala (aby nie musieć ponownie uruchamiać komputera):
+	newgrp docker
+Aby nie trzeba było wpisywać tej komendy przy każdym uruchomieniu nowego terminala
+wyloguj się z komputera i zaloguj ponownie, jednak może się okazać, że konieczny będzie reboot komputera:
+	sudo reboot
+Przejdź do Katalogu z zainstalowanymi narzędziami:
+	cd iic-osic-tools
+Uruchom narzędzia:
+	./start_x.sh
+Trzeba będzie trochę poczekać
+Jeśli nowe okno terminala się nie uruchamia warto spróbować wylogowania i zalogowania się ponownie do systemu.
