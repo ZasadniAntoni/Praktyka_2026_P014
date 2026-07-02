@@ -11,15 +11,27 @@ sudo apt install curl
 ``` bash
 curl -fsSL https://osic.tools/install.sh | bash
 ```
-3. Then follow the Docker installation process described on their [site](https://docs.docker.com/desktop/setup/install/linux/ubuntu/)
-4. There are few ways to launch the tool. firstly go to the iic-osic-tools folder in your home directory. then you can launch the enviroment by using commands:  
+3. Add new user to docker.
+``` bash
+sudo usermod -aG docker $USER
+```
+4. Apply changes to your current terminal session.
+``` bash
+newgrp docker
+```
+5. If you dont want to repeat this step each time you login, you should reboot the system.
+``` bash
+sudo reboot
+```
+6. Then follow the Docker installation process described on their [site](https://docs.docker.com/desktop/setup/install/linux/ubuntu/)
+7. There are few ways to launch the tool. firstly go to the iic-osic-tools folder in your home directory. then you can launch the enviroment by using commands:  
    `./start_x.sh` - launches the x  
    `./start_vnc.sh` - x  
    `./start_shell.sh` - x  
-Just keep in mind that first launch might take few minutes before the program launches. 
+Just keep in mind that first launch might take a few minutes before the program launches. 
 
 ## Getting familiar with IIC-OSIC-TOOLS and sky130A library
-This guid will follow the local enviroment started up with `./start_x.sh`. It should launch a terminal.
+This guide will follow the local enviroment started up with `./start_x.sh`. It should launch a terminal.
 1. With command `sak-pdk` you can switch between different PDKs, type this command to see the usage. In this tool, there are 4 available by default PDKs with them being: 
    * `sky130A` - SkyWater Technologies, 180-130nm hybrid 1.8-3.3V 
    * `gf180mcuD` - Global Foundries, 180nm 3.3-6V
