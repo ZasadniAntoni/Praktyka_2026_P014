@@ -1,2 +1,3 @@
-01.07 - 10:00 - 11:40 -> Instalacja IIC-OSIC-TOOLS i wstep do biblioteki sky130A.
+01.07 - 10:00 - 11:40 -> Instalacja IIC-OSIC-TOOLS i wstep do technologii sky130A.
         14:40 - 16:30 -> Wstępny setup backupu przez Git, setup vsc dla wygody
+02.07 - 10.30 - 16:30 -> Naprawienie dostępu zdalnego (ufw allow 10164/tcp -> firewall mnie blokował), Dalsze zapoznawanie się z IIC-OSIC-TOOLS i sky130A; Prosty wzmacniacz i pierwsze symulacje dc sweep; przygotowanie pod param sweep i MC

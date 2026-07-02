@@ -3,7 +3,7 @@
 ## **Ubuntu 24.04.4 LTS (Noble Numbat) setup**
 ---
 1. Download Desktop Image; we got one from [here](https://releases.ubuntu.com/noble/)
-2. Create a bootable USB stick with that image (using prefered software; we used ___)
+2. Create a bootable USB stick with that image (using prefered software; we used win32_disc_imager on Windows or dd on linux)
 3. Restart PC and boot the Ubuntu from USB stick
 4. Get through installation process with prefered software 
    * we used default version
@@ -20,7 +20,7 @@ Here we mostly followed this [guide](https://www.cherryservers.com/blog/install-
   ``` bash
   sudo apt update && sudo apt upgrade -y
   ```
-2. Install Vim, OpenSSH, Xrdp and XFCE. Enable ssh and change config - In 'sshd_config' file uncomment line that has Port [number] in it and change the Port number to designated one. In our case it was ports 10160-10164. 
+1. Install Vim, OpenSSH, Xrdp and XFCE. Enable ssh and change config - In 'sshd_config' file uncomment line that has `#Port 22` in it and change the Port number to designated one. In our case it was ports 10160-10164. 
   ``` bash
   sudo apt install vim
   sudo apt install openssh-server -y
@@ -32,40 +32,48 @@ Here we mostly followed this [guide](https://www.cherryservers.com/blog/install-
 
   cd /etc/ssh
   sudo vim sshd_config
+  # inside the file change uncomment Port line and change the number to your port
   ```
 3. Reload system services and apply SSH configuration: 
   ``` bash
   usystemctl daemon-reload
   systemctl restart ssh.socket
   ```
-4. Configure XRDP to use XFCE and enable RDP access:
+4. Configure XRDP to use XFCE:
   ``` bash
   sudo adduser xrdp ssl-cert
   echo "xfce-session" | tee ~/.xsession
   sudo systemctl restart xrdp
-
+  ```
+**IMPORTANT:** If you have changed your default sshd port, you must update your firewall rules to allow traffic through the new port.
+  ``` bash
+  sudo ufw allow [port_number]/tcp # change the [port_number] to your port
+  sudo ufw deny 22/tcp
+  ```
+Update firewall rules to enable RDP access:
+  ```bash
   sudo ufw allow 3389/tcp
   sudo ufw enable
   sudo ufw reload
   ```
-5. In new terminal you can check if everything is working correctly; remember to logout after each login.
-   * '-p 10164' is port number - change to your own
-   * 'student' is login - change to your own
+5. In new terminal you can check if everything is working correctly; **IMPORTANT:** remember to logout after each login.
+   * '-p [port_number]' is port number - change to your own
+   * '-l [login]' is login - change to your own
   ``` bash
   ssh -p 22 localhost 
-  ssh 192.168.0.160 -p 10164
-  ssh 149.156.107.197 -p 10164 -l student4
+  ssh 192.168.0.160 -p [port_number]
+  ssh 149.156.107.197 -p [port_number] -l [login]
 
-  ssh -L 3389:localhost:3389 student4@149.156.107.197 -p 10164
+  ssh -L 3389:localhost:3389 [login]@149.156.107.197 -p [port_number]
   ```
 6. If everything is working fine from the side of the Ubuntu now you can connect from the other device.
 7. First go into **Powershell** and establish the secure SSH tunnel: 
   ``` bash
-  ssh -L 3389:localhost:3389 student4@149.156.107.197 -p 10164
+  ssh -L 3389:localhost:3389 [login]@149.156.107.197 -p [port_number]
   ```
 1. Open **Remote Desktop Connection** and configure settings: 
    * **Default/Computer:** `127.0.0.1`
-   * **Default/Username:** `student4`
+   * **Default/Username:** `[login]`
    * **Display/Display Configuration:** set to your prefered display resolution
    * **Display/Colors:** set to `True Color` or `16-bit High Color`
    * **Experience/Performance:** `Automatic` or your prefered connection quality
@@ -73,7 +81,7 @@ Here we mostly followed this [guide](https://www.cherryservers.com/blog/install-
 
 ## (Optional) VSCode setup
 
-I followed this quick [guide](https://code.visualstudio.com/docs/setup/linux)
+You can follow this quick [guide](https://code.visualstudio.com/docs/setup/linux) or download VSC from App Center.
 
 ## (Optional) Git quick setup
 
