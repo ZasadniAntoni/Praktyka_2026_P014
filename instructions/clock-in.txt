@@ -1,8 +1,37 @@
+26.06 - 14:00 - 16:00 -> Instalacja komputera w P014. Instalacja systemu operacyjnego Ubuntu.
+        16:00 - 19:30 -> Konfiguracja systemu pod pracę zdalną.
+time: 5,5h
 01.07 - 10:00 - 11:40 -> Instalacja IIC-OSIC-TOOLS i wstep do technologii sky130A.
         14:40 - 16:30 -> Wstępny setup backupu przez Git, setup vsc dla wygody
 time: 3,5h
 
-02.07 - 10.30 - 16:30 -> Naprawienie dostępu zdalnego (ufw allow 10164/tcp -> firewall mnie blokował), Dalsze zapoznawanie się z IIC-OSIC-TOOLS i sky130A; Prosty wzmacniacz i pierwsze symulacje dc sweep; wstępne przygotowanie pod param sweep i MC (wstęp do ngspice)
+02.07 - 10:30 - 16:30 -> Naprawienie dostępu zdalnego (ufw allow 10164/tcp -> firewall mnie blokował), Dalsze zapoznawanie się z IIC-OSIC-TOOLS i sky130A; Prosty wzmacniacz i pierwsze symulacje dc sweep; wstępne przygotowanie pod param sweep i MC (wstęp do ngspice)
 time: 6h
 
+06.07 - 18:00 - 19.30 -> Tworzenie skryptów: do szybkiego połączenia RDP, do włączania iic_osic_tools z default/selected PDK i z użyciem aliasów
+time: 1,5h
+
+07.07 - 14:00 - 15:00 -> zapoznawanie się z dostępnymi symulacjami w sky130A
+        19:00 - 23:00 -> zapoznawanie się z dostępnymi symulacjami w sky130A
+time 5h
+
+09.07 - 13.00 - 17.00 -> Wykonywanie instrukcji lab2 - missmatch w środowisku IIC-OSIC-TOOLS; analizy parametryczne, monte carlo
+time: 4h
+
+15.07 - 14.30 - 18.30 -> Kontynuacja wykonywania instrukcji lab2 w środowisku IIC-OSIC-TOOLS
+time: 4h
+
+16.07 - 17.00 - xxxxx ->
+time: -h
+
 ---
+
+TOTAL TIME SO FAR: 29,5h / 90h
+
+---
+
+03.07 - NOTES:
+1. find vlsi communities for open source software, search discords, reddits -> xxx
+2. bash alias and autocompletion - for automatic sak-pdk sky130a launch -> done, in scripts folder
+3. sky130a Design Rule Manual -> full DRM online: https://skywater-pdk.readthedocs.io/en/main/index.html ; havent found offline version yet
+4. sky130a Application note -> when launching xschem with sky130a pdk without specified files there are many examples that use this process' mosfets toghether with simulations. They are also inside the library files and can be used as building blocks.

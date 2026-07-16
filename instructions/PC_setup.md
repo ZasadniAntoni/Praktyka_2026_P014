@@ -1,9 +1,9 @@
 # **Setting up remote Linux workstation for IIC-OSIC-TOOLS**
 
 ## **Ubuntu 24.04.4 LTS (Noble Numbat) setup**
----
+
 1. Download Desktop Image; we got one from [here](https://releases.ubuntu.com/noble/)
-2. Create a bootable USB stick with that image (using prefered software; we used win32_disc_imager on Windows or dd on linux)
+2. Create a bootable USB stick with that image (using prefered software; we used win32_disc_imager on Windows or dd on Linux)
 3. Restart PC and boot the Ubuntu from USB stick
 4. Get through installation process with prefered software 
    * we used default version
@@ -14,13 +14,13 @@
 5. Partitions can be divided after the setup with the help of USB stick by booting Ubuntu from USB and dividing partitions through "Discs" manager
 
 ## **Remote connection to server**
----
+
 Here we mostly followed this [guide](https://www.cherryservers.com/blog/install-xrdp-on-ubuntu-2404)
 1. Its good to update system packages first:
   ``` bash
   sudo apt update && sudo apt upgrade -y
   ```
-1. Install Vim, OpenSSH, Xrdp and XFCE. Enable ssh and change config - In 'sshd_config' file uncomment line that has `#Port 22` in it and change the Port number to designated one. In our case it was ports 10160-10164. 
+2. Install Vim, OpenSSH, Xrdp and XFCE. Enable ssh and change config - In 'sshd_config' file uncomment line that has `#Port 22` in it and change the Port number to designated one. In our case it was ports 10160-10164. 
   ``` bash
   sudo apt install vim
   sudo apt install openssh-server -y
@@ -56,9 +56,10 @@ Update firewall rules to enable RDP access:
   sudo ufw enable
   sudo ufw reload
   ```
-5. In new terminal you can check if everything is working correctly; **IMPORTANT:** remember to logout after each login.
+5. In new terminal you can check if everything is working correctly:  
    * '-p [port_number]' is port number - change to your own
    * '-l [login]' is login - change to your own
+   * **IMPORTANT:** remember to logout from terminal after each check.
   ``` bash
   ssh -p 22 localhost 
   ssh 192.168.0.160 -p [port_number]
@@ -71,17 +72,30 @@ Update firewall rules to enable RDP access:
   ``` bash
   ssh -L 3389:localhost:3389 [login]@149.156.107.197 -p [port_number]
   ```
-1. Open **Remote Desktop Connection** and configure settings: 
+8. Open **Remote Desktop Connection** and configure settings: 
    * **Default/Computer:** `127.0.0.1`
    * **Default/Username:** `[login]`
    * **Display/Display Configuration:** set to your prefered display resolution
    * **Display/Colors:** set to `True Color` or `16-bit High Color`
    * **Experience/Performance:** `Automatic` or your prefered connection quality
-2. Click **Connect** and log into your remote desktop.
+   * In **Default** tab press **Save** to save this configuration as default.
+9. Click **Connect** and log into your remote desktop.
+
+If the connection works, Congrats, you can start your work through RDP.  
+**IMPORTANT**: After finishing work on RDP, dont just close the RDP window - remember to log out of remote session, so you don't just block the computer from other users.
+
+## (Optional) Quick RDP connection via .bat script
+
+In `scripts/rdp_connection_scripts` there is a `connect_rdp_template.bat` script for quick RDP connection - edit it and change `[login]` and `[port_number]` to the ones assigned for you.  
+When launched it will ask you for your password and after entering it, RDP session should pop up. Session created with that file uses default configuration, so the 8th step from previous paragraph is important, if you have prefrences in terms of display and speed.  
+**IMPORTANT**: After finishing work on RDP, dont just close the RDP window - remember to log out of remote session, so you don't just block the computer from other users.
 
 ## (Optional) VSCode setup
 
 You can follow this quick [guide](https://code.visualstudio.com/docs/setup/linux) or download VSC from App Center.
+
+For the creation of the instructions I opted for markdown files since the syntax is simple and quick, even though tex is more my style, I didn't want to spend most of my time perfecting the tex files. Markdown is easy and looks good enough.  
+So for that I got VSC extensions: Markdown All in one, Markdown PDF, vscode-pdf. I modified the settings to save the .md file into pdf each time I save (ctrl + , then find convert on save setting and turn it on). If you use git a lot I advise to add README.md to exclude them from saving.
 
 ## (Optional) Git quick setup
 
@@ -115,3 +129,10 @@ You can follow this quick [guide](https://code.visualstudio.com/docs/setup/linux
   ssh -T git@github.com
   ```
   If it asks if you want to continue connecting, type `yes` and hit Enter. You should see a success message containing your username. Congrats, everything is working correctly.
+
+## (Optional) Useful software to install
+
+Here I will list what I installed outside of the things listed in the instructions to make my workflow a bit easier and more comfortable.
+* `sudo apt install tilinx` - The terminal on RDP connection doesn't launch so you need to download one through the established ssh tunnel. I found Tilinx to be the most suiting - it has tabs and is fairly quick. Other option without tabs is terminator.
+* `sudo apt install micro` - I'm not that used to vim, nano is ok, but micro just felt much more comfortable. That's just for Linux - when tools are launched with Docker, you will probably be using vim (if ever needed).
+* ...
