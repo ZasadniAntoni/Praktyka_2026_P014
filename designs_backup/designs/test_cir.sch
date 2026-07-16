@@ -18,8 +18,12 @@ N -220 -40 -220 -0 {lab=VDD}
 N -0 -30 20 -30 {lab=0}
 N 20 -30 20 10 {lab=0}
 N 0 10 20 10 {lab=0}
+N -40 -130 -20 -130 {lab=VDD}
+N 0 -200 0 -180 {lab=VDD}
+N -40 -180 -40 -130 {lab=VDD}
+N -40 -180 0 -180 {lab=VDD}
 C {sky130_fd_pr/nfet_01v8.sym} -20 -30 0 0 {name=MOUT
-W=40
+W=WN
 L=0.5
 nf=1 
 mult=1
@@ -32,26 +36,59 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {sky130_fd_pr/res_generic_l1.sym} 0 -130 0 0 {name=R1
-W=1
-L=1
-model=res_generic_l1
-mult=1}
 C {vsource.sym} -220 30 0 0 {name=V1 value=1.8 savecurrent=false}
 C {vsource.sym} -140 30 0 0 {name=V2 value=0 savecurrent=false}
 C {gnd.sym} 0 20 0 0 {name=l1 lab=0}
 C {gnd.sym} -180 80 0 0 {name=l2 lab=0}
 C {vdd.sym} -220 -40 0 0 {name=l3 lab=VDD}
-C {vdd.sym} 0 -180 0 0 {name=l4 lab=VDD}
+C {vdd.sym} 0 -200 0 0 {name=l4 lab=VDD}
 C {lab_wire.sym} 0 -80 0 1 {name=p1 sig_type=std_logic lab=Vout}
-C {code_shown.sym} 100 -190 0 0 {name=dc_sim only_toplevel=false 
-value=
-".lib $PDK_ROOT/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+C {sky130_fd_pr/res_xhigh_po.sym} 0 -130 0 0 {name=R2
+W=1
+L=6.83
+model=res_xhigh_po
+spiceprefix=X
+mult=1}
+C {code.sym} 110 -120 0 0 {name=dc+WN_sweep only_toplevel=false value=
+"
+* ngspice commands
+.param WN=1
 .options savecurrents
-
+.dc v2 0 1.8 0.01
 .control
-	dc V2 0 1.8 0.1
-	plot v(Vout)
-	plot @m.xmout.msky130_fd_pr__nfet_01v8[id]
+  let start_w = 1
+  let stop_w = 90
+  let delta_w = 5
+  let w_act = start_w
+  let new_vth = 0.3
+  while w_act le stop_w
+    alterparam WN = $&w_act
+    reset
+    ** example for changing a model param
+    * altermod @m.xm1.msky130_fd_pr__nfet_01v8[vth0]=$&new_vth
+    save all
+    save @m.xm1.msky130_fd_pr__nfet_01v8[id]
+    save @m.xm1.msky130_fd_pr__nfet_01v8[gm]
+    save @m.xm1.msky130_fd_pr__nfet_01v8[W] 
+    run
+    remzerovec
+    write /foss/designs/simulations/test_sweep_nmos_w.raw
+    let w_act = w_act + delta_w
+    set appendwrite
+  end
+  load /foss/designs/simulations/test_sweep_mos_w.raw
+  plot dc1.v(vout)
+  plot dc1.@m.xmout.msky130_fd_pr__nfet_01v8[id]
+  print dc1.@m.xmout.msky130_fd_pr__nfet_01v8[gm]
 .endc
-.save all"}
+"}
+C {code.sym} 110 -270 0 0 {
+name=TT_MODELS
+only_toplevel=true
+format="tcleval( @value )"
+value="
+** opencircuitdesign pdks install
+.lib $::SKYWATER_MODELS/sky130.lib.spice tt
+"
+spice_ignore=false
+      }

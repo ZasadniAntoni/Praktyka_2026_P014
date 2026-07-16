@@ -1,0 +1,47 @@
+name=sim_block only_toplevel=false
+value="
+.param W_DAC = 0.42 L_DAC = 0.18
+.param I_DAC = 100n
+.param VDD_val = 1.8
+.options savecurrents
+
+.control
+  * Clear M1 files
+  shell mkdir -p /foss/designs/lab2/results/1.2
+  shell rm -f /foss/designs/lab2/results/1.2/M1_Vgs_Vth.dat
+  * I_REF current sweep
+  foreach idac_val 100n 10u
+    * W/L group sweep (indexed W/L groups)
+    foreach case_idx 1 2 3
+      if $case_idx = 1
+        alterparam W_DAC = 0.42
+        alterparam L_DAC = 0.18
+      end
+      if $case_idx = 2
+        alterparam W_DAC = 5.0
+        alterparam L_DAC = 2.0
+      end
+      if $case_idx = 3
+        alterparam W_DAC = 2.0
+        alterparam L_DAC = 5.0
+      end
+      alterparam I_DAC = $idac_val
+      reset
+      op
+      set appendwrite
+      * NOTE: The syntax for extracting model params depends on the exact instance name in the PDK.
+      * Typically, for Xschem, this is @m.xm1.msky130_fd_pr__pfet_01v8[model_parameter]
+      let scale = 1e6
+      * scaled to um
+      let W = @m.xm1.msky130_fd_pr__pfet_01v8[w]*scale
+      let L = @m.xm1.msky130_fd_pr__pfet_01v8[l]*scale
+      let vg_val = v(Vg)
+      let vgs_val = @m.xm1.msky130_fd_pr__pfet_01v8[vgs]
+      let vth_val = @m.xm1.msky130_fd_pr__pfet_01v8[vth]
+      echo W/L= $&W / $&L [um] Idac= $idac_val [A] >> /foss/designs/lab2/results/1.2/M1_Vgs_Vth.dat
+      echo Vg= $&vg_val Vgs= $&vgs_val Vth= $&vth_val >> /foss/designs/lab2/results/1.2/M1_Vgs_Vth.dat
+      echo >> /foss/designs/lab2/results/1.2/M1_Vgs_Vth.dat
+    end
+  end
+.endc
+"

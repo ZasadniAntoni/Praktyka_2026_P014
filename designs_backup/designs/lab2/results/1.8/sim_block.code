@@ -1,0 +1,48 @@
+name=sim_block only_toplevel=false
+value=
+"
+.param W_DAC = 0.42 L_DAC = 0.18
+.param I_DAC = 100n
+.param VDD_val = 1.8
+.options savecurrents
+
+.control
+  let runs = 100
+  shell mkdir -p /foss/designs/lab2/results/1.8
+  shell rm -f /foss/designs/lab2/results/1.8/M1_stats.dat /foss/designs/lab2/results/1.8/M1_Iruns.dat
+  foreach idac_val 100n 10u
+    foreach case_idx 1 2 3
+      if $case_idx = 1
+        alterparam W_DAC = 0.42
+        alterparam L_DAC = 0.18
+      end
+      if $case_idx = 2
+        alterparam W_DAC = 5.0
+        alterparam L_DAC = 2.0
+      end
+      if $case_idx = 3
+        alterparam W_DAC = 2.0
+        alterparam L_DAC = 5.0
+      end
+      alterparam I_DAC = $idac_val
+      * allocate vector for currents
+      let Ivec = vector(runs)
+      let r = 0
+      dowhile r < runs
+        reset
+        op
+        let Ivec[r] = @m.xm1.msky130_fd_pr__pfet_01v8[id]
+        let curI = Ivec[r]
+        set appendwrite
+        echo CASE= $case_idx IDAC= $idac_val RUN= $&r I= $&curI >> /foss/designs/lab2/results/1.8/M1_Iruns.dat
+        let r = r + 1
+      end
+      * compute statistics
+      let avgI = mean(Ivec)
+      let sigI = stddev(Ivec)
+      let ratio = sigI/avgI
+      echo CASE= $case_idx IDAC= $idac_val AVG= $&avgI SIGMA= $&sigI sigma/AVG= $&ratio >> /foss/designs/lab2/results/1.8/M1_stats.dat
+    end
+  end
+.endc
+"
