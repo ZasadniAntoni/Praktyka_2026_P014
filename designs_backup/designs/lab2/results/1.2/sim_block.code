@@ -38,6 +38,7 @@ value="
       let vg_val = v(Vg)
       let vgs_val = @m.xm1.msky130_fd_pr__pfet_01v8[vgs]
       let vth_val = @m.xm1.msky130_fd_pr__pfet_01v8[vth]
+      
       echo W/L= $&W / $&L [um] Idac= $idac_val [A] >> /foss/designs/lab2/results/1.2/M1_Vgs_Vth.dat
       echo Vg= $&vg_val Vgs= $&vgs_val Vth= $&vth_val >> /foss/designs/lab2/results/1.2/M1_Vgs_Vth.dat
       echo >> /foss/designs/lab2/results/1.2/M1_Vgs_Vth.dat

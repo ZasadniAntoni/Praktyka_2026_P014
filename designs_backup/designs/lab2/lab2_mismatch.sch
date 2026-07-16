@@ -32,10 +32,10 @@ N -280 100 -280 140 {lab=0}
 N -280 20 -280 40 {lab=VDD}
 C {gnd.sym} -100 140 0 0 {name=l1 lab=0}
 C {gnd.sym} 100 140 0 0 {name=l2 lab=0}
-C {isource.sym} -100 70 0 0 {name=I_REF value=I_DAC}
+C {isource.sym} -100 70 0 0 {name=I_REF value=\{I_DAC\}}
 C {vcvs.sym} 100 50 0 0 {name=E1 value=1
 }
-C {vsource.sym} -280 70 0 0 {name=V1 value=VDD_val savecurrent=false}
+C {vsource.sym} -280 70 0 0 {name=V1 value=\{VDD_val\} savecurrent=false}
 C {vdd.sym} 0 -100 0 0 {name=l6 lab=VDD}
 C {vdd.sym} -280 20 0 0 {name=l10 lab=VDD}
 C {gnd.sym} -280 140 0 0 {name=l11 lab=0}
@@ -46,12 +46,16 @@ format="tcleval( @value )"
 value="
 ** opencircuitdesign pdks install
 .lib $::SKYWATER_MODELS/sky130.lib.spice tt_mm
+
+* force Mismatch/Process/Mismatch+Process config
+.param mc_mm_switch = 1
+.param mc_pr_switch = 0
 "
 spice_ignore=false
       }
 C {/foss/pdks/sky130A/libs.tech/xschem/sky130_fd_pr/pfet_01v8.sym} 80 -30 0 0 {name=M1
-W=W_DAC
-L=L_DAC
+W=\{W_DAC\}
+L=\{L_DAC\}
 nf=1
 mult=1
 ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
@@ -64,8 +68,8 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {/foss/pdks/sky130A/libs.tech/xschem/sky130_fd_pr/pfet_01v8.sym} -80 -30 0 1 {name=M_REF
-W=W_DAC
-L=L_DAC
+W=\{W_DAC\}
+L=\{L_DAC\}
 nf=1
 mult=1
 ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
@@ -89,6 +93,7 @@ value=
   let runs = 100
   shell mkdir -p /foss/designs/lab2/results/1.8
   shell rm -f /foss/designs/lab2/results/1.8/M1_stats.dat /foss/designs/lab2/results/1.8/M1_Iruns.dat
+
   foreach idac_val 100n 10u
     foreach case_idx 1 2 3
       if $case_idx = 1
@@ -107,22 +112,38 @@ value=
       * allocate vector for currents
       let Ivec = vector(runs)
       let r = 0
+
+      * reset and op to apply W/L changes
+      reset
+      op
+      let scale = 1e6
+      let W = @m.xm1.msky130_fd_pr__pfet_01v8[w]*scale
+      let L = @m.xm1.msky130_fd_pr__pfet_01v8[l]*scale
+      echo ----- W/L= $&W / $&L IDAC= $idac_val ----- >> /foss/designs/lab2/results/1.8/M1_Iruns.dat
+      echo ----- W/L= $&W / $&L IDAC= $idac_val ----- >> /foss/designs/lab2/results/1.8/M1_stats.dat
       dowhile r < runs
         reset
         op
         let Ivec[r] = @m.xm1.msky130_fd_pr__pfet_01v8[id]
         let curI = Ivec[r]
-        set appendwrite
-        echo CASE= $case_idx IDAC= $idac_val RUN= $&r I= $&curI >> /foss/designs/lab2/results/1.8/M1_Iruns.dat
+        set appendwrite 
+        echo RUN= $&r I= $&curI >> /foss/designs/lab2/results/1.8/M1_Iruns.dat
         let r = r + 1
       end
-      * compute statistics
+
+      * calculate stats
       let avgI = mean(Ivec)
       let sigI = stddev(Ivec)
       let ratio = sigI/avgI
-      echo CASE= $case_idx IDAC= $idac_val AVG= $&avgI SIGMA= $&sigI sigma/AVG= $&ratio >> /foss/designs/lab2/results/1.8/M1_stats.dat
+      * vecmin() does the same as minimum() ; analogically is maximum() and vecmax()
+      let minI = minimum(Ivec)
+      let maxI = maximum(Ivec)
+      
+      echo MIN= $&minI MAX= $&maxI AVG= $&avgI SIGMA= $&sigI sigma/AVG= $&ratio >> /foss/designs/lab2/results/1.8/M1_stats.dat
+      echo >> /foss/designs/lab2/results/1.8/M1_stats.dat
     end
   end
 .endc
-"}
+"
+}
 C {lab_pin.sym} -40 0 0 1 {name=p1 sig_type=std_logic lab=Vg}

@@ -10,6 +10,7 @@ value=
   let runs = 100
   shell mkdir -p /foss/designs/lab2/results/1.8
   shell rm -f /foss/designs/lab2/results/1.8/M1_stats.dat /foss/designs/lab2/results/1.8/M1_Iruns.dat
+
   foreach idac_val 100n 10u
     foreach case_idx 1 2 3
       if $case_idx = 1
@@ -28,20 +29,35 @@ value=
       * allocate vector for currents
       let Ivec = vector(runs)
       let r = 0
+
+      * reset and op to apply W/L changes
+      reset
+      op
+      let scale = 1e6
+      let W = @m.xm1.msky130_fd_pr__pfet_01v8[w]*scale
+      let L = @m.xm1.msky130_fd_pr__pfet_01v8[l]*scale
+      echo ----- W/L= $&W / $&L IDAC= $idac_val ----- >> /foss/designs/lab2/results/1.8/M1_Iruns.dat
+      echo ----- W/L= $&W / $&L IDAC= $idac_val ----- >> /foss/designs/lab2/results/1.8/M1_stats.dat
       dowhile r < runs
         reset
         op
         let Ivec[r] = @m.xm1.msky130_fd_pr__pfet_01v8[id]
         let curI = Ivec[r]
-        set appendwrite
-        echo CASE= $case_idx IDAC= $idac_val RUN= $&r I= $&curI >> /foss/designs/lab2/results/1.8/M1_Iruns.dat
+        set appendwrite 
+        echo RUN= $&r I= $&curI >> /foss/designs/lab2/results/1.8/M1_Iruns.dat
         let r = r + 1
       end
-      * compute statistics
+
+      * calculate stats
       let avgI = mean(Ivec)
       let sigI = stddev(Ivec)
       let ratio = sigI/avgI
-      echo CASE= $case_idx IDAC= $idac_val AVG= $&avgI SIGMA= $&sigI sigma/AVG= $&ratio >> /foss/designs/lab2/results/1.8/M1_stats.dat
+      * vecmin() does the same as minimum() ; analogically is maximum() and vecmax()
+      let minI = minimum(Ivec)
+      let maxI = maximum(Ivec)
+      
+      echo MIN= $&minI MAX= $&maxI AVG= $&avgI SIGMA= $&sigI sigma/AVG= $&ratio >> /foss/designs/lab2/results/1.8/M1_stats.dat
+      echo >> /foss/designs/lab2/results/1.8/M1_stats.dat
     end
   end
 .endc
