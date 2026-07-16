@@ -1,5 +1,6 @@
 {
     "markdown-pdf.executablePath": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
-    "markdown-pdf.outputDirectory": "./pdfs",
+    "markdown-pdf.outputDirectory": "pdfs",
+    "markdown-pdf.outputDirectoryRelativePathFile": true,
     "markdown-pdf.convertOnSave": true
 }
