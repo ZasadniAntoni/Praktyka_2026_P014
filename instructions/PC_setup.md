@@ -57,8 +57,8 @@ Update firewall rules to enable RDP access:
   sudo ufw reload
   ```
 5. In new terminal you can check if everything is working correctly:  
-   * '-p [port_number]' is port number - change to your own
-   * '-l [login]' is login - change to your own
+   * `-p [port_number]` is port number - change to your own
+   * `-l [login]` is login - change to your own
    * **IMPORTANT:** remember to logout from terminal after each check.
   ``` bash
   ssh -p 22 localhost 
@@ -133,6 +133,6 @@ So for that I got VSC extensions: Markdown All in one, Markdown PDF, vscode-pdf.
 ## (Optional) Useful software to install
 
 Here I will list what I installed outside of the things listed in the instructions to make my workflow a bit easier and more comfortable.
-* `sudo apt install tilinx` - The terminal on RDP connection doesn't launch so you need to download one through the established ssh tunnel. I found Tilinx to be the most suiting - it has tabs and is fairly quick. Other option without tabs is terminator.
-* `sudo apt install micro` - I'm not that used to vim, nano is ok, but micro just felt much more comfortable. That's just for Linux - when tools are launched with Docker, you will probably be using vim (if ever needed).
-* ...
+* `sudo apt install tilinx` - The terminal on RDP connection doesn't launch so you need to download one through the established ssh tunnel. I found Tilinx to be the most suiting - it has tabs and is fairly quick. There are a lot more options, however I found Tilinx to work decently fast while the other were laggy. Other terminal worth noting is also `terminator` which also worked fast, but has no tabs feature.
+* `sudo apt install micro` - I'm not that used to vim, nano is ok, but micro just felt much more comfortable. That's just for Linux - when tools are launched with Docker, you will probably be using vim (if ever needed ; I had to use it mostly to get familiar with pdk and what files are attached for different corners, or values of parameters of mosfets, and many more ...).
+* `sudo apt-get install -y ristretto` - Quick and efficient image viewer, works very quick on RDP connection, much faster than eog. I added also custom alias `img_show` for viewing all photos inside the folder

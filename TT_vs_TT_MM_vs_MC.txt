@@ -1,0 +1,80 @@
+* Typical corner (tt)
+.lib tt
+.param MC_MM_SWITCH=0
+.param MC_PR_SWITCH=0
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/parameters_fet_tt.spice
+.include continuous/parameters_res_nom.spice
+.include continuous/parameters_cap_nom.spice
+
+* Include the model files
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+* Legacy discrete models (RF, vpp caps, SONOS, and SRAM)
+.include corners/tt.spice
+.include corners/tt/specialized_cells.spice
+.include rescap/res_typical__cap_typical.spice
+.include rescap/res_typical__cap_typical__lin.spice
+.endl tt
+
+
+* Typical corner with mismatch (tt_mm)
+.lib tt_mm
+.param MC_MM_SWITCH=1
+.param MC_PR_SWITCH=0
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/parameters_fet_tt.spice
+.include continuous/parameters_res_nom.spice
+.include continuous/parameters_cap_nom.spice
+
+* Include the model files
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+* Legacy discrete models (RF, vpp caps, SONOS, and SRAM)
+.include corners/tt.spice
+.include corners/tt/specialized_cells.spice
+.include rescap/res_typical__cap_typical.spice
+.include rescap/res_typical__cap_typical__lin.spice
+.endl tt_mm
+
+
+* Monte Carlo process variation
+.lib mc
+.param MC_MM_SWITCH=0
+.param MC_PR_SWITCH=1
+.param corner_factor=1
+.param process_mc_factor=1
+.param mismatch_factor=1
+
+.include continuous/parameters_fet_tt.spice
+.include continuous/parameters_res_nom.spice
+.include continuous/parameters_cap_nom.spice
+
+* Include the model files
+.include continuous/models_global.spice
+.include continuous/models_fet.spice
+.include continuous/models_bjt.spice
+.include continuous/models_diodes.spice
+.include continuous/models_resistors.spice
+.include continuous/models_capacitors.spice
+
+* Legacy discrete models (RF, vpp caps, SONOS, and SRAM)
+.include parameters/critical.spice
+.include parameters/montecarlo.spice
+.endl mc

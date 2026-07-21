@@ -15,18 +15,28 @@ time: 1,5h
         19:00 - 23:00 -> zapoznawanie się z dostępnymi symulacjami w sky130A
 time 5h
 
-09.07 - 13.00 - 17.00 -> Wykonywanie instrukcji lab2 - missmatch w środowisku IIC-OSIC-TOOLS; analizy parametryczne, monte carlo
+09.07 - 13.00 - 17.00 -> Wykonywanie instrukcji lab2 - missmatch w środowisku IIC-OSIC-TOOLS ; analizy parametryczne, Monte Carlo
 time: 4h
 
-15.07 - 14.30 - 18.30 -> Kontynuacja wykonywania instrukcji lab2 w środowisku IIC-OSIC-TOOLS
+15.07 - 14.30 - 18.30 -> Kontynuacja wykonywania instrukcji lab2 w środowisku IIC-OSIC-TOOLS ; sprawdzanie załączanych bibliotek, cornery i pliki do symulacji
 time: 4h
 
-16.07 - 17.00 - 20.00 -> Kontynuacja wykonywania instrukcji lab2 w środowisku IIC-OSIC-TOOLS
+16.07 - 17.00 - 20.00 -> Kontynuacja wykonywania instrukcji lab2 w środowisku IIC-OSIC-TOOLS ; próby wykonania Mismatch / Process / Mismatch & Process dla punktów 1.4 - 1.11 instrukcji 
 time: 3h
+
+17.07 - 15.00 - 17.00 -> Kontynuacja wykonywania instrukcji lab2 w środowisku IIC-OSIC-TOOLS ; szukanie sposobów na rozrzucanie wyłącznie wybranych elementów ze schematu (test_M1vsM2.sch)
+time: 2h
+
+
+18.07 - 17.00 - 20.00 -> Kontynuacja wykonywania instrukcji lab2 w środowisku IIC-OSIC-TOOLS ; wykonanie Mismatch / Process / Mismatch & Process (parametry mc_mm/pr_switch) dla punktów 1.4 - 1.11 instrukcji ; znalezienie rozwiązania dla rozrzucania wybranych elementów (.subckt)
+time: 3h
+
+19.07 - 17.00 - 21.00 -> Kontynuacja wykonywania instrukcji lab2 w środowisku IIC-OSIC-TOOLS ; zebranie wyników, uzupełnienie instrukcji 1.4 - 1.11
+time: 4h
 
 ---
 
-TOTAL TIME SO FAR: 32,5h / 90h
+TOTAL TIME SO FAR: 41,5h / 90h
 
 ---
 

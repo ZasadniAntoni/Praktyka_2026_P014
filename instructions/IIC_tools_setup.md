@@ -52,6 +52,7 @@ alias update="sudo apt update && sudo apt upgrade"
 alias gs='git status'
 alias gc='git commit -m'
 alias gp='git push origin main'
+alias img_show='ristretto . &'
 ```
 Then you refresh this config file:
 ``` bash
@@ -69,14 +70,14 @@ Script `run_iic_tools.sh` is basically `./start_x.sh` but with addition of autom
 
 This guide will follow the local enviroment started up with `./start_x.sh` or `./run_iic_tools.sh`. It should launch a terminal.
 1. With command `sak-pdk` you can switch between different PDKs, type this command to see the usage. In this tool, there are 4 available by default PDKs with them being: 
-   * `sky130A` - SkyWater Technologies, 180-130nm hybrid 1.8-3.3V 
-   * `gf180mcuD` - Global Foundries, 180nm 3.3-6V
-   * `ihp-sg13g2` - IHP Microelectronics
-   * `ihp-sg13cmos5l` - IHP Microelectronics
-2. This instruction will get you familiar with sky130A PDK so use `sak-pdk sky130A` or the ./run. If this command is not input before starting your work, you will be using default PDK, which is `ihp-sg13g2`. You can check current PDK with `echo $PDK` after launch. This step is not necessary if launched using `run_iic_tools.sh` or `run_iic` alias that was optionally set up.
+   * **sky130A** - SkyWater Technologies, 180-130nm hybrid 1.8-3.3V 
+   * **gf180mcuD** - Global Foundries, 180nm 3.3-6V
+   * **ihp-sg13g2** - IHP Microelectronics
+   * **ihp-sg13cmos5l** - IHP Microelectronics
+2. This instruction will get you familiar with sky130A PDK so use `sak-pdk sky130A` command. If this command is not input before starting your work, you will be using default PDK, which is `ihp-sg13g2`. You can check current PDK with `echo $PDK` after launch. This step is not necessary if launched using `run_iic_tools.sh` or `run_iic` alias that was optionally set up in previous paragraphs in this instruction.
 3. Then you can launch schematic capture and netlisting EDA tool - Xschem - with command:
 ``` bash
 xschem # or `xschem [filename].sch` to launch specific file from your designs
 ```
-4. Feel free to explore Menu Bar, especially the `Help -> Keys/Keybindings` that has many useful shortcuts and `Help -> About XSCHEM` from which can check program's git or [Xschem Manual](https://xschem.sourceforge.io/stefan/xschem_man/xschem_man.html).
-5. If PDK is already chosen as sky130A and you use just `xschem` command Xschem will launch with `top.sch` that has: all available components in this PDK and some useful informations about them; Links to sky130A instructions, documentation, github; test cells for different simulations; digital standard cells. 
+1. Feel free to explore Menu Bar, especially the `Help -> Keys/Keybindings` that has many useful shortcuts and `Help -> About XSCHEM` from which can check program's git or [Xschem Manual](https://xschem.sourceforge.io/stefan/xschem_man/xschem_man.html).
+2. If PDK is already chosen as sky130A and you use just `xschem` command Xschem will launch with `top.sch` that has: all available components in this PDK and some useful informations about them; Links to sky130A instructions, documentation, github; test cells for different simulations; digital standard cells. 
