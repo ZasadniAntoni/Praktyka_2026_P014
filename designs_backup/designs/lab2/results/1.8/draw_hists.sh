@@ -46,7 +46,7 @@ for datafile in data_W*.dat; do
 		binwidth = $binwidth
 		bin(x, s) = s*floor(x/s) + s/2.0
 		
-		plot "$datafile" using (bin(\$4 * 1e6, binwidth)):(1.0) smooth frequency with boxes title "Dane MC" lc rgb "blue"
+		plot "$datafile" using (bin(\$4, binwidth)):(1.0) smooth frequency with boxes title "Dane MC" lc rgb "blue"
 	EOF
 done
 

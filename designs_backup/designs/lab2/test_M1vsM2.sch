@@ -15,9 +15,9 @@ N -20 -80 120 -80 {lab=VDD}
 N 120 -80 120 -60 {lab=VDD}
 N -280 100 -280 120 {lab=0}
 N -280 20 -280 40 {lab=VDD}
-N 60 -30 80 -30 {lab=in}
-N -80 -30 -60 -30 {lab=in}
-N -180 20 -180 40 {lab=in}
+N 60 -30 80 -30 {lab=#net3}
+N -80 -30 -60 -30 {lab=#net4}
+N -180 20 -180 40 {lab=#net5}
 N -180 100 -180 120 {lab=0}
 N 0 70 100 70 {lab=VDD}
 C {sky130_fd_pr/pfet3_01v8.sym} -40 -30 0 0 {name=M1
@@ -67,9 +67,6 @@ C {gnd.sym} 50 120 0 0 {name=l2 lab=0}
 C {vdd.sym} -280 20 0 0 {name=l3 lab=VDD}
 C {gnd.sym} -280 120 0 0 {name=l4 lab=0}
 C {vsource.sym} -280 70 0 0 {name=V1 value=1.8 savecurrent=false}
-C {lab_pin.sym} -80 -30 0 0 {name=p1 sig_type=std_logic lab=in}
-C {lab_pin.sym} 60 -30 0 0 {name=p2 sig_type=std_logic lab=in}
-C {lab_pin.sym} -180 20 0 0 {name=p3 sig_type=std_logic lab=in}
 C {vsource.sym} -180 70 0 0 {name=V2 value=0.6 savecurrent=false}
 C {gnd.sym} -180 120 0 0 {name=l5 lab=0}
 C {vdd.sym} 50 70 0 0 {name=l6 lab=VDD}
@@ -140,3 +137,6 @@ C {code.sym} 210 40 0 0 {name=sim_block only_toplevel=false value="
   echo MIN_DIFF= $&min_diff MAX_DIFF= $&max_diff AVG_DIFF= $&avg_diff SIGMA_DIFF= $&sig_diff >> /foss/designs/lab2/results/1.8/test_stats.dat
 .endc
 "}
+C {lab_wire.sym} -180 20 0 0 {name=p1 sig_type=std_logic lab=in}
+C {lab_wire.sym} -80 -30 0 0 {name=p2 sig_type=std_logic lab=in}
+C {lab_wire.sym} 60 -30 0 0 {name=p3 sig_type=std_logic lab=in}

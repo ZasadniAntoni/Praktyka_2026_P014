@@ -53,7 +53,7 @@ value="
 
 * force mismatch/process params
 .param mc_mm_switch = 1
-.param mc_pr_switch = 1
+.param mc_pr_switch = 0
 
 * disable pfet_ideal from mismatch/process
 .subckt sky130_fd_pr__pfet_ideal D G S B W=0.42 L=0.18
@@ -94,55 +94,71 @@ as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
 ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
 nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
 sa=0 sb=0 sd=0
-model=pfet_01v8
+model=pfet_ideal
 spiceprefix=X
 }
 C {code.sym} 240 40 0 0 {name=sim_block only_toplevel=false
 value=
 "
-.param W_DAC = 2.0 L_DAC = 5.0
-.param I_DAC = 10u
+.param W_DAC = 0.42 L_DAC = 0.18
+.param I_DAC = 100n
 .param VDD_val = 1.8
 .options savecurrents
 
 .control
   let runs = 100
-  shell mkdir -p /foss/designs/lab2/results/1.11/c/
-  shell rm -f /foss/designs/lab2/results/1.11/c/M1_stats.dat /foss/designs/lab2/results/1.11/c/M1_Iruns.dat
+  shell mkdir -p /foss/designs/lab2/results/1.8
+  shell rm -f /foss/designs/lab2/results/1.8/M1_stats.dat /foss/designs/lab2/results/1.8/M1_Iruns.dat
 
-  alterparam I_DAC = $idac_val
-  * allocate vector for currents
-  let Ivec = vector(runs)
-  let r = 0
+  foreach idac_val 100n 10u
+    foreach case_idx 1 2 3
+      if $case_idx = 1
+        alterparam W_DAC = 0.42
+        alterparam L_DAC = 0.18
+      end
+      if $case_idx = 2
+        alterparam W_DAC = 5.0
+        alterparam L_DAC = 2.0
+      end
+      if $case_idx = 3
+        alterparam W_DAC = 2.0
+        alterparam L_DAC = 5.0
+      end
+      alterparam I_DAC = $idac_val
+      * allocate vector for currents
+      let Ivec = vector(runs)
+      let r = 0
 
-  * reset and op to apply W/L changes
-  reset
-  op
-  let W = @m.xm1.msky130_fd_pr__pfet_01v8[w] * 1e6
-  let L = @m.xm1.msky130_fd_pr__pfet_01v8[l] * 1e6
-  echo ----- W/L= $&W / $&L IDAC= $idac_val ----- >> /foss/designs/lab2/results/1.11/c/M1_Iruns.dat
-  echo ----- W/L= $&W / $&L IDAC= $idac_val ----- >> /foss/designs/lab2/results/1.11/c/M1_stats.dat
-  dowhile r < runs
-    reset
-    op
-    let Ivec[r] = @m.xm1.msky130_fd_pr__pfet_01v8[id]
-    let curI = Ivec[r] * 1e6
-    set appendwrite 
-    echo RUN= $&r I[uA]= $&curI >> /foss/designs/lab2/results/1.11/c/M1_Iruns.dat
-    let r = r + 1
-    *break
+      * reset and op to apply W/L changes
+      reset
+      op
+      let W = @m.xm1.msky130_fd_pr__pfet_01v8[w] * 1e6
+      let L = @m.xm1.msky130_fd_pr__pfet_01v8[l] * 1e6
+      echo ----- W/L= $&W / $&L IDAC= $idac_val ----- >> /foss/designs/lab2/results/1.8/M1_Iruns.dat
+      echo ----- W/L= $&W / $&L IDAC= $idac_val ----- >> /foss/designs/lab2/results/1.8/M1_stats.dat
+      dowhile r < runs
+        reset
+        op
+        let Ivec[r] = @m.xm1.msky130_fd_pr__pfet_01v8[id]
+        let curI = Ivec[r] * 1e6
+        set appendwrite 
+        echo RUN= $&r I[uA]= $&curI >> /foss/designs/lab2/results/1.8/M1_Iruns.dat
+        let r = r + 1
+        *break
+      end
+
+      * calculate stats
+      let avgI = mean(Ivec) * 1e6
+      let sigI = stddev(Ivec) * 1e6
+      let ratio = sigI/avgI * 100
+      * vecmin() would do the same as minimum() ; analogically is maximum() and vecmax()
+      let minI = minimum(Ivec) * 1e6
+      let maxI = maximum(Ivec) * 1e6
+      
+      echo MIN[uA]= $&minI MAX[uA]= $&maxI AVG[uA]= $&avgI SIGMA[uA]= $&sigI sigma/AVG[%]= $&ratio >> /foss/designs/lab2/results/1.8/M1_stats.dat
+      echo >> /foss/designs/lab2/results/1.8/M1_stats.dat
+    end
   end
-
-  * calculate stats
-  let avgI = mean(Ivec) * 1e6
-  let sigI = stddev(Ivec) * 1e6
-  let ratio = sigI/avgI * 100
-  * vecmin() would do the same as minimum() ; analogically is maximum() and vecmax()
-  let minI = minimum(Ivec) * 1e6
-  let maxI = maximum(Ivec) * 1e6
-  
-  echo MIN[uA]= $&minI MAX[uA]= $&maxI AVG[uA]= $&avgI SIGMA[uA]= $&sigI sigma/AVG[%]= $&ratio >> /foss/designs/lab2/results/1.11/c/M1_stats.dat
-  echo >> /foss/designs/lab2/results/1.11/c/M1_stats.dat
 .endc
 "}
-C {lab_pin.sym} -40 0 0 1 {name=p1 sig_type=std_logic lab=Vg}
+C {lab_wire.sym} 0 -30 0 0 {name=p1 sig_type=std_logic lab=Vg}

@@ -1,0 +1,25 @@
+name=sim_block only_toplevel=false 
+value="
+.param VDD = 1.8
+.param RES_DAC = 26.8k
+.param dac_bit = 0
+.options savecurrents
+
+.control
+  save all
+
+  let d_val = 0
+  dowhile d_val <= 5
+    alterparam dac_bit = $&d_val
+    reset
+    op
+
+    let Id_ref = @m.xm_ref.msky130_fd_pr__pfet_01v8[id]
+    let v_b0 = v(b\[0\])
+
+    echo dac_bit: $&d_val  |  Id_M_REF: $&Id_ref  |  V(b[0]): $&v_b0 >> /foss/designs/lab2/results/2.3/test_run.dat
+
+    let d_val = d_val + 1
+  end
+.endc
+"
