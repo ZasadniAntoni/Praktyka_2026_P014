@@ -1,0 +1,29 @@
+
+name=TT_MODELS
+only_toplevel=true
+format="tcleval( @value )"
+value="
+** opencircuitdesign pdks install
+.lib $::SKYWATER_MODELS/sky130.lib.spice tt
+
+* force include MC files
+.include \"$::SKYWATER_MODELS/parameters/montecarlo.spice\"
+.include \"$::SKYWATER_MODELS/parameters/critical.spice\"
+
+* force mismatch/process params
+.param mc_mm_switch = 1
+.param mc_pr_switch = 1
+
+* disable pfet_ideal from mismatch/process
+.subckt sky130_fd_pr__pfet_ideal D G S B W=0.42 L=0.18
++ nf=1 ad='int((1 + 1)/2) * {W} / 1 * 0.29' as='int((1 + 2)/2) * {W} / 1 * 0.29'
++ pd='2*int((1 + 1)/2) * ({W} / 1 + 0.29)' ps='2*int((1 + 2)/2) * ({W} / 1 + 0.29)' 
++ nrd='0.29 / {W}' nrs='0.29 / {W}' sa=0 sb=0 sd=0 mult=1
+  .param mc_mm_switch=0
+  .param mc_pr_switch=0
+  XIDEAL D G S B sky130_fd_pr__pfet_01v8 W={W} L={L}
+  + nf={nf} ad={ad} as={as} pd={pd} ps={ps} 
+  + nrd={nrd} nrs={nrs} sa={sa} sb={sb} sd={sd} mult={mult}
+.ends
+"
+spice_ignore=false

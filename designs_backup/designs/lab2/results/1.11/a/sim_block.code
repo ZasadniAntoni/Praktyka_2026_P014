@@ -1,0 +1,48 @@
+name=sim_block only_toplevel=false
+value=
+"
+.param W_DAC = 2.0 L_DAC = 5.0
+.param I_DAC = 10u
+.param VDD_val = 1.8
+.options savecurrents
+
+.control
+  let runs = 100
+  shell mkdir -p /foss/designs/lab2/results/1.11/a/
+  shell rm -f /foss/designs/lab2/results/1.11/a/M1_stats.dat /foss/designs/lab2/results/1.11/a/M1_Iruns.dat
+
+  alterparam I_DAC = $idac_val
+  * allocate vector for currents
+  let Ivec = vector(runs)
+  let r = 0
+
+  * reset and op to apply W/L changes
+  reset
+  op
+  let W = @m.xm1.msky130_fd_pr__pfet_01v8[w] * 1e6
+  let L = @m.xm1.msky130_fd_pr__pfet_01v8[l] * 1e6
+  echo ----- W/L= $&W / $&L IDAC= $idac_val ----- >> /foss/designs/lab2/results/1.11/a/M1_Iruns.dat
+  echo ----- W/L= $&W / $&L IDAC= $idac_val ----- >> /foss/designs/lab2/results/1.11/a/M1_stats.dat
+  dowhile r < runs
+    reset
+    op
+    let Ivec[r] = @m.xm1.msky130_fd_pr__pfet_01v8[id]
+    let curI = Ivec[r] * 1e6
+    set appendwrite 
+    echo RUN= $&r I[uA]= $&curI >> /foss/designs/lab2/results/1.11/a/M1_Iruns.dat
+    let r = r + 1
+    *break
+  end
+
+  * calculate stats
+  let avgI = mean(Ivec) * 1e6
+  let sigI = stddev(Ivec) * 1e6
+  let ratio = sigI/avgI * 100
+  * vecmin() would do the same as minimum() ; analogically is maximum() and vecmax()
+  let minI = minimum(Ivec) * 1e6
+  let maxI = maximum(Ivec) * 1e6
+  
+  echo MIN[uA]= $&minI MAX[uA]= $&maxI AVG[uA]= $&avgI SIGMA[uA]= $&sigI sigma/AVG[%]= $&ratio >> /foss/designs/lab2/results/1.11/a/M1_stats.dat
+  echo >> /foss/designs/lab2/results/1.11/a/M1_stats.dat
+.endc
+"
