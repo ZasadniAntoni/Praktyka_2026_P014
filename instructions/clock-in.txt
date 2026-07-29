@@ -27,16 +27,32 @@ time: 3h
 17.07 - 15.00 - 17.00 -> Kontynuacja wykonywania instrukcji lab2 w środowisku IIC-OSIC-TOOLS ; szukanie sposobów na rozrzucanie wyłącznie wybranych elementów ze schematu (test_M1vsM2.sch)
 time: 2h
 
-
 18.07 - 17.00 - 20.00 -> Kontynuacja wykonywania instrukcji lab2 w środowisku IIC-OSIC-TOOLS ; wykonanie Mismatch / Process / Mismatch & Process (parametry mc_mm/pr_switch) dla punktów 1.4 - 1.11 instrukcji ; znalezienie rozwiązania dla rozrzucania wybranych elementów (.subckt)
 time: 3h
 
 19.07 - 17.00 - 21.00 -> Kontynuacja wykonywania instrukcji lab2 w środowisku IIC-OSIC-TOOLS ; zebranie wyników, uzupełnienie instrukcji 1.4 - 1.11
 time: 4h
 
+21.07 - 12.00 - 15.00 -> Kontynuacja wykonywania instrukcji lab2 w środowisku IIC-OSIC-TOOLS ; DAC_CORE_5_bit schematic i test cell, rozpoczęcie symulacji 2.3 - 2.4
+time: 3h
+
+22.07 - 14.30 - 17.00 -> Kontynuacja wykonywania instrukcji lab2 w środowisku IIC-OSIC-TOOLS ; DAC_CORE_5_bit_test, sprawdzanie lvt - zrezygnowano, zmieniać W/L i RES_DAC
+time: 2,5h
+
+
+
+27.07 - 16.00 - 18.00 -> Kontynuacja wykonywania instrukcji lab2 w środowisku IIC-OSIC-TOOLS ; Konfiguracja DAC_CORE i schematu z pkt 1. instrukcji, szukanie optymalnego W/L 
+time: 2h
+
+28.07 - 15.00 - 17.00 -> Kontynuacja wykonywania instrukcji lab2 w środowisku IIC-OSIC-TOOLS ; Wykonywanie symulacji z instrukcji 2.3 - 2.4, uzupełnianie instukcji lab2, szukanie sposobu na wykorzystanie interaktywnych wykresów - narzędzie GAW, na razie się nie udało, zostawiam to na później
+time: 2h
+
+29.07 - 14.00 - 17.00 -> Kontynuacja wykonywania instrukcji lab2 w środowisku IIC-OSIC-TOOLS ; Wykonywanie symulacji z instrukcji 2.4 - 2.10, uzupełnianie instukcji lab2
+time: 3h
+
 ---
 
-TOTAL TIME SO FAR: 41,5h / 90h
+TOTAL TIME SO FAR: 54h / 90h
 
 ---
 
@@ -45,3 +61,9 @@ TOTAL TIME SO FAR: 41,5h / 90h
 2. bash alias and autocompletion - for automatic sak-pdk sky130a launch -> done, in scripts folder
 3. sky130a Design Rule Manual -> full DRM online: https://skywater-pdk.readthedocs.io/en/main/index.html ; havent found offline version yet
 4. sky130a Application note -> when launching xschem with sky130a pdk without specified files there are many examples that use this process' mosfets toghether with simulations. They are also inside the library files and can be used as building blocks.
+
+24.07 - NOTES:
+1. Claude do LVSa - wyszukiwanie błędów
+
+29.07 - NOTES:
+1. Mogę na spokojnie modyfikować L, czyli zostawić W = 2um i regulować L żeby dostać odpowienie Id, Vth, Vgs

@@ -1,3 +1,5 @@
+* Fragment from: /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice
+
 * Typical corner (tt)
 .lib tt
 .param MC_MM_SWITCH=0
