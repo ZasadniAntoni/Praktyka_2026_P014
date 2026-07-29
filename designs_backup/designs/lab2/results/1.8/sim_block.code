@@ -1,7 +1,7 @@
 name=sim_block only_toplevel=false
 value=
 "
-.param W_DAC = 0.42 L_DAC = 0.18
+.param W_DAC = 0.42 L_DAC = 0.15
 .param I_DAC = 100n
 .param VDD_val = 1.8
 .options savecurrents
@@ -15,14 +15,14 @@ value=
     foreach case_idx 1 2 3
       if $case_idx = 1
         alterparam W_DAC = 0.42
-        alterparam L_DAC = 0.18
+        alterparam L_DAC = 0.15
       end
       if $case_idx = 2
         alterparam W_DAC = 5.0
-        alterparam L_DAC = 2.0
+        alterparam L_DAC = 3.5
       end
       if $case_idx = 3
-        alterparam W_DAC = 2.0
+        alterparam W_DAC = 3.5
         alterparam L_DAC = 5.0
       end
       alterparam I_DAC = $idac_val

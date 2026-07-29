@@ -11,7 +11,7 @@ value="
 .include \"$::SKYWATER_MODELS/parameters/critical.spice\"
 
 * force mismatch/process params
-.param mc_mm_switch = 1
+.param mc_mm_switch = 0
 .param mc_pr_switch = 0
 
 * disable pfet_ideal from mismatch/process

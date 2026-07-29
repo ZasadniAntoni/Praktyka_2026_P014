@@ -1,0 +1,34 @@
+-- Id_M_REF[uA]= 10.0003 | Vth_M_REF[V]= 1.03657 | Vgs_M_REF[V]= 1.68498 --
+
+dac_bit= 0 | I_dac[uA]= 8.15611E-05
+dac_bit= 1 | I_dac[uA]= 9.904
+dac_bit= 2 | I_dac[uA]= 19.3467
+dac_bit= 3 | I_dac[uA]= 29.2501
+dac_bit= 4 | I_dac[uA]= 33.3467
+dac_bit= 5 | I_dac[uA]= 43.2481
+dac_bit= 6 | I_dac[uA]= 52.687
+dac_bit= 7 | I_dac[uA]= 62.5879
+dac_bit= 8 | I_dac[uA]= 46.8994
+dac_bit= 9 | I_dac[uA]= 56.7979
+dac_bit= 10 | I_dac[uA]= 66.2337
+dac_bit= 11 | I_dac[uA]= 76.1317
+dac_bit= 12 | I_dac[uA]= 80.2166
+dac_bit= 13 | I_dac[uA]= 90.1125
+dac_bit= 14 | I_dac[uA]= 99.5446
+dac_bit= 15 | I_dac[uA]= 109.44
+dac_bit= 16 | I_dac[uA]= 56.4734
+dac_bit= 17 | I_dac[uA]= 66.3697
+dac_bit= 18 | I_dac[uA]= 75.803
+dac_bit= 19 | I_dac[uA]= 85.6988
+dac_bit= 20 | I_dac[uA]= 89.7809
+dac_bit= 21 | I_dac[uA]= 99.6746
+dac_bit= 22 | I_dac[uA]= 109.104
+dac_bit= 23 | I_dac[uA]= 118.997
+dac_bit= 24 | I_dac[uA]= 103.308
+dac_bit= 25 | I_dac[uA]= 113.198
+dac_bit= 26 | I_dac[uA]= 122.625
+dac_bit= 27 | I_dac[uA]= 132.515
+dac_bit= 28 | I_dac[uA]= 136.586
+dac_bit= 29 | I_dac[uA]= 146.474
+dac_bit= 30 | I_dac[uA]= 155.896
+dac_bit= 31 | I_dac[uA]= 165.784

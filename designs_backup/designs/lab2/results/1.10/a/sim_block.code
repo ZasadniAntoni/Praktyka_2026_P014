@@ -1,7 +1,7 @@
 name=sim_block only_toplevel=false
 value=
 "
-.param W_DAC = 2.0 L_DAC = 5.0
+.param W_DAC = 3.5 L_DAC = 5.0
 .param I_DAC = 10u
 .param VDD_val = 1.8
 .options savecurrents

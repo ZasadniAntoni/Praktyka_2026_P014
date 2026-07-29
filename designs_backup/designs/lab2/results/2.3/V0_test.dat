@@ -1,0 +1,13 @@
+-- Id_M_REF[uA]= 10.0003 | Vth_M_REF[V]= 1.03657 | Vgs_M_REF[V]= 1.68498 --
+dac_bit= 0 | V0[V]= 0 | net_b0[V]= 1.8
+
+dac_bit= 1 | V0[V]= 1.8 | net_b0[V]= 0
+
+dac_bit= 2 | V0[V]= 0 | net_b0[V]= 1.8
+
+dac_bit= 3 | V0[V]= 1.8 | net_b0[V]= 0
+
+dac_bit= 4 | V0[V]= 0 | net_b0[V]= 1.8
+
+dac_bit= 5 | V0[V]= 1.8 | net_b0[V]= 0
+

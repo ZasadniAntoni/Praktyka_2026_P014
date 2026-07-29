@@ -1,0 +1,18 @@
+----- dac_bit= 1 I_REF[uA]= 10.0003 -----
+MIN[uA]= 9.80227 MAX[uA]= 9.99531 AVG[uA]= 9.9087 SIGMA[uA]= 0.0431314 sigma/AVG[%]= 0.435288
+
+----- dac_bit= 2 I_REF[uA]= 10.0003 -----
+MIN[uA]= 19.6811 MAX[uA]= 20.0155 AVG[uA]= 19.809 SIGMA[uA]= 0.0607149 sigma/AVG[%]= 0.306502
+
+----- dac_bit= 4 I_REF[uA]= 10.0003 -----
+MIN[uA]= 39.3584 MAX[uA]= 39.8116 AVG[uA]= 39.6162 SIGMA[uA]= 0.0873551 sigma/AVG[%]= 0.220503
+
+----- dac_bit= 8 I_REF[uA]= 10.0003 -----
+MIN[uA]= 78.9225 MAX[uA]= 79.5179 AVG[uA]= 79.2224 SIGMA[uA]= 0.123896 sigma/AVG[%]= 0.15639
+
+----- dac_bit= 16 I_REF[uA]= 10.0003 -----
+MIN[uA]= 158.069 MAX[uA]= 159.087 AVG[uA]= 158.452 SIGMA[uA]= 0.181487 sigma/AVG[%]= 0.114538
+
+----- dac_bit= 31 I_REF[uA]= 10.0003 -----
+MIN[uA]= 306.385 MAX[uA]= 307.664 AVG[uA]= 306.976 SIGMA[uA]= 0.262648 sigma/AVG[%]= 0.0855596
+

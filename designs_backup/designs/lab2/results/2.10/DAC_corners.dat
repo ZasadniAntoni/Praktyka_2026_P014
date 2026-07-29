@@ -1,0 +1,10 @@
+-- corner= tt | dac_bit= 31 | I_DAC[uA]= 306.99 --
+
+-- corner= ss | dac_bit= 31 | I_DAC[uA]= 293.943 --
+
+-- corner= ff | dac_bit= 31 | I_DAC[uA]= 319.098 --
+
+-- corner= sf | dac_bit= 31 | I_DAC[uA]= 276.24 --
+
+-- corner= fs | dac_bit= 31 | I_DAC[uA]= 336.884 --
+

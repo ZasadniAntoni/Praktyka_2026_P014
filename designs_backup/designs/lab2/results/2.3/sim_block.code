@@ -1,25 +1,31 @@
 name=sim_block only_toplevel=false 
 value="
 .param VDD = 1.8
-.param RES_DAC = 26.8k
+.param RES_DAC = 11.37k
 .param dac_bit = 0
 .options savecurrents
 
 .control
-  save all
+  shell mkdir -p /foss/designs/lab2/results/2.3
+  shell rm -f /foss/designs/lab2/results/2.3/V0_test.dat
 
   let d_val = 0
+  reset
+  op
+  let Id_ref = @m.xm_ref.msky130_fd_pr__pfet_01v8[id] * 1e6
+  let vth_ref = @m.xm_ref.msky130_fd_pr__pfet_01v8[vth]
+  let vgs_ref = @m.xm_ref.msky130_fd_pr__pfet_01v8[vgs]
+  echo -- Id_M_REF[uA]= $&Id_ref  | Vth_M_REF[V]= $&vth_ref | Vgs_M_REF[V]= $&vgs_ref -- >> /foss/designs/lab2/results/2.3/V0_test.dat
   dowhile d_val <= 5
     alterparam dac_bit = $&d_val
     reset
     op
-
-    let Id_ref = @m.xm_ref.msky130_fd_pr__pfet_01v8[id]
-    let v_b0 = v(b\[0\])
-
-    echo dac_bit: $&d_val  |  Id_M_REF: $&Id_ref  |  V(b[0]): $&v_b0 >> /foss/designs/lab2/results/2.3/test_run.dat
-
-    let d_val = d_val + 1
+    let vb0 = v(\"b[0]\")
+    let v0_val = @v0[dc]
+    echo dac_bit= $&d_val | V0[V]= $&v0_val | net_b0[V]= $&vb0 >> /foss/designs/lab2/results/2.3/V0_test.dat
+    echo >> /foss/designs/lab2/results/2.3/V0_test.dat
+    let d_val = $&d_val + 1
   end
 .endc
 "
+

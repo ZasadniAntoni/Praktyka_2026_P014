@@ -1,0 +1,48 @@
+name=sim_block only_toplevel=false
+value="
+.param VDD = 1.8
+.param RES_DAC = 11.37k
+.param dac_bit = 0
+.options savecurrents
+
+.control
+  let runs = 100
+  shell mkdir -p /foss/designs/lab2/results/2.5
+  shell rm -f /foss/designs/lab2/results/2.5/DAC_stats.dat /foss/designs/lab2/results/2.5/DAC_Iruns.dat
+
+  foreach dac_val 1 2 4 8 16 31
+    alterparam dac_bit = $dac_val
+    
+    * allocate vector for currents
+    let Ivec = vector(runs)
+    let r = 0
+
+    reset
+    op
+    
+    let I_ref = @m.xm_ref.xideal.msky130_fd_pr__pfet_01v8[id] * 1e6
+    echo ----- dac_bit= $dac_val I_REF[uA]= $&I_ref ----- >> /foss/designs/lab2/results/2.5/DAC_Iruns.dat
+    echo ----- dac_bit= $dac_val I_REF[uA]= $&I_ref ----- >> /foss/designs/lab2/results/2.5/DAC_stats.dat
+    
+    dowhile r < runs
+      reset
+      op
+      let Ivec[r] = @res_out[i] * 1e6
+      let curI = Ivec[r]
+      set appendwrite 
+      echo RUN= $&r I[uA]= $&curI >> /foss/designs/lab2/results/2.5/DAC_Iruns.dat
+      let r = r + 1
+    end
+
+    * calculate stats
+    let avgI = mean(Ivec)
+    let sigI = stddev(Ivec)
+    let ratio = (sigI / avgI) * 100
+    let minI = minimum(Ivec)
+    let maxI = maximum(Ivec)
+    
+    echo MIN[uA]= $&minI MAX[uA]= $&maxI AVG[uA]= $&avgI SIGMA[uA]= $&sigI sigma/AVG[%]= $&ratio >> /foss/designs/lab2/results/2.5/DAC_stats.dat
+    echo >> /foss/designs/lab2/results/2.5/DAC_stats.dat
+  end
+.endc
+"

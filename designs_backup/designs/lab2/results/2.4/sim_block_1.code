@@ -1,0 +1,32 @@
+name=sim_block only_toplevel=false 
+value="
+.param VDD = 1.8
+.param RES_DAC = 11.37k
+.param dac_bit = 0
+.options savecurrents
+
+.control
+  shell mkdir -p /foss/designs/lab2/results/2.4
+  shell rm -f /foss/designs/lab2/results/2.4/Idac_results_1.dat
+
+  let d_val = 0
+  reset
+  op
+  let Id_ref = @m.xm_ref.msky130_fd_pr__pfet_01v8[id] * 1e6
+  let vth_ref = @m.xm_ref.msky130_fd_pr__pfet_01v8[vth]
+  let vgs_ref = @m.xm_ref.msky130_fd_pr__pfet_01v8[vgs]
+  echo -- Id_M_REF[uA]= $&Id_ref  | Vth_M_REF[V]= $&vth_ref | Vgs_M_REF[V]= $&vgs_ref -- >> /foss/designs/lab2/results/2.4/Idac_results_1.dat
+  echo >> /foss/designs/lab2/results/2.4/Idac_results_1.dat
+  dowhile d_val <= 31
+    alterparam dac_bit = $&d_val
+    reset
+    op
+    let I_dac = @res_out[i] * 1e6
+    echo dac_bit= $&d_val  |  I_dac[uA]= $&I_dac >> /foss/designs/lab2/results/2.4/Idac_results_1.dat
+    let d_val = $&d_val + 1
+  end
+.endc
+"
+
+
+

@@ -1,0 +1,20 @@
+name=sim_block only_toplevel=false
+value="
+.param VDD = 1.8
+.param RES_DAC = 11.37k
+.param dac_bit = 31
+.options savecurrents
+
+.control
+  shell mkdir -p /foss/designs/lab2/results/2.10
+
+  let dac_val = 31
+  set corner = tt
+  reset
+  op
+  let I_dac = @res_out[i] * 1e6
+  echo -- corner= $corner  |  dac_bit= $&dac_val  |  I_DAC[uA]= $&I_dac -- >> /foss/designs/lab2/results/2.10/DAC_corners.dat
+  echo >> /foss/designs/lab2/results/2.10/DAC_corners.dat
+.endc
+"
+

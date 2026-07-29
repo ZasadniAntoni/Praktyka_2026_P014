@@ -1,18 +1,18 @@
------ W/L= 0.42 / 0.18 IDAC= 100n -----
-MIN[uA]= 0.0507302 MAX[uA]= 0.181505 AVG[uA]= 0.101878 SIGMA[uA]= 0.0316222 sigma/AVG[%]= 31.0392
+----- W/L= 0.42 / 0.15 IDAC= 100n -----
+MIN[uA]= 0.0374891 MAX[uA]= 0.215392 AVG[uA]= 0.108069 SIGMA[uA]= 0.036183 sigma/AVG[%]= 33.4814
 
------ W/L= 5 / 2 IDAC= 100n -----
-MIN[uA]= 0.0928828 MAX[uA]= 0.105705 AVG[uA]= 0.0998048 SIGMA[uA]= 0.00308636 sigma/AVG[%]= 3.0924
+----- W/L= 5 / 3.5 IDAC= 100n -----
+MIN[uA]= 0.0937592 MAX[uA]= 0.106155 AVG[uA]= 0.100225 SIGMA[uA]= 0.00240312 sigma/AVG[%]= 2.39772
 
------ W/L= 2 / 5 IDAC= 100n -----
-MIN[uA]= 0.0908813 MAX[uA]= 0.106182 AVG[uA]= 0.100156 SIGMA[uA]= 0.00288534 sigma/AVG[%]= 2.88084
+----- W/L= 3.5 / 5 IDAC= 100n -----
+MIN[uA]= 0.0945529 MAX[uA]= 0.106422 AVG[uA]= 0.0999304 SIGMA[uA]= 0.00256819 sigma/AVG[%]= 2.56998
 
------ W/L= 0.42 / 0.18 IDAC= 10u -----
-MIN[uA]= 8.34286 MAX[uA]= 12.3737 AVG[uA]= 10.0746 SIGMA[uA]= 0.903481 sigma/AVG[%]= 8.96795
+----- W/L= 0.42 / 0.15 IDAC= 10u -----
+MIN[uA]= 8.11471 MAX[uA]= 11.7203 AVG[uA]= 10.0057 SIGMA[uA]= 0.823332 sigma/AVG[%]= 8.22865
 
------ W/L= 5 / 2 IDAC= 10u -----
-MIN[uA]= 9.80003 MAX[uA]= 10.361 AVG[uA]= 9.98994 SIGMA[uA]= 0.106119 sigma/AVG[%]= 1.06226
+----- W/L= 5 / 3.5 IDAC= 10u -----
+MIN[uA]= 9.8432 MAX[uA]= 10.1931 AVG[uA]= 9.9968 SIGMA[uA]= 0.0716895 sigma/AVG[%]= 0.717125
 
------ W/L= 2 / 5 IDAC= 10u -----
-MIN[uA]= 9.87652 MAX[uA]= 10.1187 AVG[uA]= 10.0053 SIGMA[uA]= 0.0485622 sigma/AVG[%]= 0.485366
+----- W/L= 3.5 / 5 IDAC= 10u -----
+MIN[uA]= 9.90457 MAX[uA]= 10.13 AVG[uA]= 9.99655 SIGMA[uA]= 0.043852 sigma/AVG[%]= 0.438671
 
