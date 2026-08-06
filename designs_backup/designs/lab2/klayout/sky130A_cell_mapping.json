@@ -1,0 +1,24 @@
+{
+  "entries": [
+    {
+      "netlist_device": "sky130_fd_pr__pfet_01v8",
+      "layout_cell_library": "skywater130",
+      "layout_cell": "pfet",
+      "layout_cell_type": "pcell",
+      "parameter_mapping": {
+        "entries": {
+          "w": "@W",
+          "l": "@L",
+          "ng": "@nf"
+        }
+      },
+      "multiplier": "@m",
+      "netlist_node_order": [
+        "d",
+        "g",
+        "s",
+        "b"
+      ]
+    }
+  ]
+}

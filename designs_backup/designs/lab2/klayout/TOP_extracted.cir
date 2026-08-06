@@ -1,0 +1,148 @@
+* Extracted by KLayout with SKY130 LVS runset on : 06/08/2026 15:18
+
+* cell DAC_BASE_MK
+.SUBCKT DAC_BASE_MK
+* device instance $1 r0 *1 0.375,0.21 sky130_fd_pr__pfet_01v8
+XM$1 \$1 \$3 \$2 \$4 sky130_fd_pr__pfet_01v8 L=150000 W=420000 AS=126000000000
++ AD=126000000000 PS=1440000 PD=1440000
+.ENDS DAC_BASE_MK
+
+* cell TOP
+.SUBCKT TOP
+* cell instance $1 r0 *1 49.68,25.56
+X$1 \$I62 \$I124 \$I186 DAC_BASE_MCS
+* cell instance $2 r0 *1 49.68,21.3
+X$2 \$I62 \$I124 \$I186 DAC_BASE_MCS
+* cell instance $3 r0 *1 49.68,17.04
+X$3 \$I62 \$I124 \$I186 DAC_BASE_MCS
+* cell instance $4 r0 *1 49.68,12.78
+X$4 \$I62 \$I124 \$I186 DAC_BASE_MCS
+* cell instance $5 r0 *1 49.68,8.52
+X$5 \$I62 \$I124 \$I186 DAC_BASE_MCS
+* cell instance $6 r0 *1 49.68,4.26
+X$6 \$I62 \$I124 \$I186 DAC_BASE_MCS
+* cell instance $7 r0 *1 49.68,0
+X$7 \$I62 \$I124 \$I186 DAC_BASE_MCS
+* cell instance $8 r0 *1 43.47,25.56
+X$8 \$I55 \$I124 \$I179 DAC_BASE_MCS
+* cell instance $9 r0 *1 43.47,21.3
+X$9 \$I55 \$I124 \$I179 DAC_BASE_MCS
+* cell instance $10 r0 *1 43.47,17.04
+X$10 \$I55 \$I124 \$I179 DAC_BASE_MCS
+* cell instance $11 r0 *1 43.47,12.78
+X$11 \$I55 \$I124 \$I179 DAC_BASE_MCS
+* cell instance $12 r0 *1 43.47,8.52
+X$12 \$I55 \$I124 \$I179 DAC_BASE_MCS
+* cell instance $13 r0 *1 43.47,4.26
+X$13 \$I55 \$I124 \$I179 DAC_BASE_MCS
+* cell instance $14 r0 *1 43.47,0
+X$14 \$I55 \$I124 \$I179 DAC_BASE_MCS
+* cell instance $15 r0 *1 37.26,25.56
+X$15 \$I48 \$I124 \$I172 DAC_BASE_MCS
+* cell instance $16 r0 *1 37.26,21.3
+X$16 \$I48 \$I124 \$I172 DAC_BASE_MCS
+* cell instance $17 r0 *1 37.26,17.04
+X$17 \$I48 \$I124 \$I172 DAC_BASE_MCS
+* cell instance $18 r0 *1 37.26,12.78
+X$18 \$I48 \$I124 \$I172 DAC_BASE_MCS
+* cell instance $19 r0 *1 37.26,8.52
+X$19 \$I48 \$I124 \$I172 DAC_BASE_MCS
+* cell instance $20 r0 *1 37.26,4.26
+X$20 \$I48 \$I124 \$I172 DAC_BASE_MCS
+* cell instance $21 r0 *1 37.26,0
+X$21 \$I48 \$I124 \$I172 DAC_BASE_MCS
+* cell instance $22 r0 *1 31.05,25.56
+X$22 \$I41 \$I124 \$I165 DAC_BASE_MCS
+* cell instance $23 r0 *1 31.05,21.3
+X$23 \$I41 \$I124 \$I165 DAC_BASE_MCS
+* cell instance $24 r0 *1 31.05,17.04
+X$24 \$I41 \$I124 \$I165 DAC_BASE_MCS
+* cell instance $25 r0 *1 31.05,12.78
+X$25 \$I41 \$I124 \$I165 DAC_BASE_MCS
+* cell instance $26 r0 *1 31.05,8.52
+X$26 \$I41 \$I124 \$I165 DAC_BASE_MCS
+* cell instance $27 r0 *1 31.05,4.26
+X$27 \$I41 \$I124 \$I165 DAC_BASE_MCS
+* cell instance $28 r0 *1 31.05,0
+X$28 \$I41 \$I124 \$I165 DAC_BASE_MCS
+* cell instance $29 r0 *1 24.84,25.56
+X$29 \$I34 \$I124 \$I158 DAC_BASE_MCS
+* cell instance $30 r0 *1 24.84,21.3
+X$30 \$I34 \$I124 \$I158 DAC_BASE_MCS
+* cell instance $31 r0 *1 24.84,17.04
+X$31 \$I34 \$I124 \$I158 DAC_BASE_MCS
+* cell instance $32 r0 *1 24.84,12.78
+X$32 \$I34 \$I124 \$I158 DAC_BASE_MCS
+* cell instance $33 r0 *1 24.84,8.52
+X$33 \$I34 \$I124 \$I158 DAC_BASE_MCS
+* cell instance $34 r0 *1 24.84,4.26
+X$34 \$I34 \$I124 \$I158 DAC_BASE_MCS
+* cell instance $35 r0 *1 24.84,0
+X$35 \$I34 \$I124 \$I158 DAC_BASE_MCS
+* cell instance $36 r0 *1 18.63,25.56
+X$36 \$I27 \$I124 \$I151 DAC_BASE_MCS
+* cell instance $37 r0 *1 18.63,21.3
+X$37 \$I27 \$I124 \$I151 DAC_BASE_MCS
+* cell instance $38 r0 *1 18.63,17.04
+X$38 \$I27 \$I124 \$I151 DAC_BASE_MCS
+* cell instance $39 r0 *1 18.63,12.78
+X$39 \$I27 \$I124 \$I151 DAC_BASE_MCS
+* cell instance $40 r0 *1 18.63,8.52
+X$40 \$I27 \$I124 \$I151 DAC_BASE_MCS
+* cell instance $41 r0 *1 18.63,4.26
+X$41 \$I27 \$I124 \$I151 DAC_BASE_MCS
+* cell instance $42 r0 *1 18.63,0
+X$42 \$I27 \$I124 \$I151 DAC_BASE_MCS
+* cell instance $43 r0 *1 12.42,25.56
+X$43 \$I20 \$I124 \$I144 DAC_BASE_MCS
+* cell instance $44 r0 *1 12.42,21.3
+X$44 \$I20 \$I124 \$I144 DAC_BASE_MCS
+* cell instance $45 r0 *1 12.42,17.04
+X$45 \$I20 \$I124 \$I144 DAC_BASE_MCS
+* cell instance $46 r0 *1 12.42,12.78
+X$46 \$I20 \$I124 \$I144 DAC_BASE_MCS
+* cell instance $47 r0 *1 12.42,8.52
+X$47 \$I20 \$I124 \$I144 DAC_BASE_MCS
+* cell instance $48 r0 *1 12.42,4.26
+X$48 \$I20 \$I124 \$I144 DAC_BASE_MCS
+* cell instance $49 r0 *1 12.42,0
+X$49 \$I20 \$I124 \$I144 DAC_BASE_MCS
+* cell instance $50 r0 *1 6.21,25.56
+X$50 \$I13 \$I124 \$I137 DAC_BASE_MCS
+* cell instance $51 r0 *1 6.21,21.3
+X$51 \$I13 \$I124 \$I137 DAC_BASE_MCS
+* cell instance $52 r0 *1 6.21,17.04
+X$52 \$I13 \$I124 \$I137 DAC_BASE_MCS
+* cell instance $53 r0 *1 6.21,12.78
+X$53 \$I13 \$I124 \$I137 DAC_BASE_MCS
+* cell instance $54 r0 *1 6.21,8.52
+X$54 \$I13 \$I124 \$I137 DAC_BASE_MCS
+* cell instance $55 r0 *1 6.21,4.26
+X$55 \$I13 \$I124 \$I137 DAC_BASE_MCS
+* cell instance $56 r0 *1 6.21,0
+X$56 \$I13 \$I124 \$I137 DAC_BASE_MCS
+* cell instance $57 r0 *1 0,25.56
+X$57 \$I6 \$I124 \$I130 DAC_BASE_MCS
+* cell instance $58 r0 *1 0,21.3
+X$58 \$I6 \$I124 \$I130 DAC_BASE_MCS
+* cell instance $59 r0 *1 0,17.04
+X$59 \$I6 \$I124 \$I130 DAC_BASE_MCS
+* cell instance $60 r0 *1 0,12.78
+X$60 \$I6 \$I124 \$I130 DAC_BASE_MCS
+* cell instance $61 r0 *1 0,8.52
+X$61 \$I6 \$I124 \$I130 DAC_BASE_MCS
+* cell instance $62 r0 *1 0,4.26
+X$62 \$I6 \$I124 \$I130 DAC_BASE_MCS
+* cell instance $63 r0 *1 0,0
+X$63 \$I6 \$I124 \$I130 DAC_BASE_MCS
+.ENDS TOP
+
+* cell DAC_BASE_MCS
+* pin 
+* pin 
+* pin 
+.SUBCKT DAC_BASE_MCS \$2 \$3 \$4
+* device instance $1 r0 *1 2.8,1.75 sky130_fd_pr__pfet_01v8
+XM$1 \$1 \$4 \$2 \$3 sky130_fd_pr__pfet_01v8 L=5000000 W=3500000 AS=1.05e+12
++ AD=1.05e+12 PS=7600000 PD=7600000
+.ENDS DAC_BASE_MCS
