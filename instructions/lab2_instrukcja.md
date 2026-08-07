@@ -1,7 +1,17 @@
 # **PPAU VLSI - Labolatorium 2**
 
 Podczas tych zajęć poddane będą analizie rozrzuty technologiczne, jakie występują w zintegrowanych układach elektronicznych. W pierwszych krokach będą analizowane rozrzuty prądu klasycznego źródła prądowego i parametry od jakich one zależą, a następnie zbudowany będzie 5-cio bitowy przetwornik cyfrowo-analogowy DAC z ważonymi prądami.  
-Wykorzystywane środowisko to IIC-OSIC-TOOLS ([github](https://github.com/iic-jku/iic-osic-tools)), a używany PDK to sky130A od SkyWater Foundries ([pdk-documentation](https://skywater-pdk.readthedocs.io/en/main/index.html)). Sama biblioteka sky130 ma wiele przykładowych komórek bazowych jak i testów dla różnych układów. Dostęp do wszystkich można znaleźć w różnych folderach tej biblioteki, gdzie przykładowo `sky130_tests/` zawiera wiele przykładowych bloków symulacji dla różnych układów, w tym wykorzystywane na tym labolatorium analizy parametryczne jak Monte Carlo. Ponieważ symulacje nie są kontrolowane za pomocą interfejsu graficznego, należy zapoznać się ze składnią poleceń ngspice (do sprawdzania składni i przykładów - [manual](https://ngspice.sourceforge.io/docs/ngspice-manual.pdf))
+Wykorzystywane środowisko to IIC-OSIC-TOOLS ([github](https://github.com/iic-jku/iic-osic-tools)), a używany PDK to sky130A od SkyWater Foundries ([pdk-documentation](https://skywater-pdk.readthedocs.io/en/main/index.html)). Sama biblioteka sky130 ma wiele przykładowych komórek bazowych jak i testów dla różnych układów. Dostęp do wszystkich można znaleźć w różnych folderach tej biblioteki, gdzie przykładowo `sky130_tests/` zawiera wiele przykładowych bloków symulacji dla różnych układów, w tym wykorzystywane na tym labolatorium analizy parametryczne jak Monte Carlo. Ponieważ symulacje nie są kontrolowane za pomocą interfejsu graficznego, należy zapoznać się ze składnią poleceń ngspice (do sprawdzania składni i przykładów - [manual](https://ngspice.sourceforge.io/docs/ngspice-manual.pdf))  
+Drzewo folderów, w których będzie wykonywana instrukcja wygląda następująco:  
+``` bash
+└── lab2
+    ├── klayout
+    ├── results
+    └── xschem
+```
+Oczywiście można przyjąć inną koncepcję grupowania plików, mogą nawet być wszystkie w jednym folderze - należy tylko dostosować niektóre komendy w trakcie wykonywania instrukcji (przykładowo - w podpunktcie 3.1. przy kopiowaniu netlisty z folderu `simulations/` ).  
+
+
 
 ## **1. Rozrzuty w zintegrowanych układach logicznych**
 ---
@@ -89,6 +99,8 @@ Wyniki zapisz w sprawozdaniu. Czy są one zgodne z Twoimi przypuszczeniami? Dlac
 1.11. Powtórz symulacje z poprzedniego punktu uwzględniając proces. 
 > Uwzględnij rozrzuty Process i Mismatch (`.mc_mm_switch=1 .mc_pr_switch=1`). Wyjaśnij występujące różnice.  
 
+
+
 ## **2. Schemat 5-bitowego DAC-a**
 ---
 
@@ -122,37 +134,33 @@ Rezystory oraz źródła napięciowe widoczne na schemacie pochodzą z bibliotek
 
 W powyższym zapisie VDD i dac_bit oznaczają parametry (zmienne projektowe) odpowiednio napięcia zasilania 1.8 V i cyfrowego słowa na wejściach b[4:0], które zmienia się w zakresie 0-31.
 Powyższą składnia ma za zadanie generować napięcia na wyjściach źródeł V0 - V4 tak by dla zmian dac_bit w zakresie 0-31 we właściwy sposób ustawić wejścia b[4:0] (od stanu 00000 do stanu 11111 włącznie).  
-> Przetestuj działanie źródła V0 dla wartości parametru dac_bit z zakresu 0-5 i zanotuj napięcie tego źródła dla tego zakresu. Możesz zasymulować działanie układu poprzez wektory ngspice lub wykorzystać stworzony układ (podpowiedź: wykorzystaj odwołanie do wartości elementu `@v0[dc]`) Możesz wykorzystać Uzyskane wyniki zapisz w sprawozdaniu. 
+> Przetestuj działanie źródła V0 dla wartości parametru dac_bit z zakresu 0-5 i zanotuj napięcie tego źródła dla tego zakresu. Możesz zasymulować działanie układu poprzez wektory ngspice lub wykorzystać stworzony układ (podpowiedź: wykorzystaj odwołanie do wartości elementu `@v0[dc]`) Możesz wykorzystać Uzyskane wyniki zapisz w sprawozdaniu.  
 
-2.4. **TBD**  
-> Zapisz w sprawozdaniu:  
+2.4. Po wykonaniu poprzedniego punktu przeprowadź analizę *OP* dla wartości słowa wejściowego 0 - 31.  
+> Wyznacz charakterystykę przejściową DAC-a dla zmian dac_bit 0 - 31 z krokiem 1. Umieść ją w sprawozdaniu. Aby zweryfikować poprawność swojej odpowiedzi na pytanie z podpunktu 2.2. - wyznacz również charakterystykę przejściową zmodyfikowanego DAC-a, w którym każdy z kluczy MK0 - MK4 zastąpisz pojedynczym tranzystorem (co sprowadza się do zmiany wartości parametru mult na 1 dla każdej gałęzi). Umieść obie charakterystyki w sprawozdaniu. Czy Twoje przypuszczenia były poprawne?  
+> Zapisz również w sprawozdaniu:  
 > * Rezystancję RES_DAC, dla której źródło prądowe generuje 10 μA  
 > * największy generowany przez przetwornik prąd I<sub>DAC_MAX</sub>.  
-> 
-> Za pomocą analizy DC wyznacz charakterystykę przejściową DAC-a dla zmian słowa wejściowego 0-31 z krokiem 1. Umieść ją w sprawozdaniu. Aby zweryfikować poprawność swojej odpowiedzi na pytanie z podpunktu 2.2. - wyznacz również charakterystykę przejściową zmodyfikowanego DAC-a, w którym każdy z kluczy MK0 - MK4 zastąpisz pojedynczym tranzystorem (co sprowadza się do zmiany wartości parametru mult na 1 dla każdej gałęzi). Umieść obie charakterystyki w sprawozdaniu. Czy Twoje przypuszczenia były poprawne?  
 
 **UWAGA:** „napraw" schemat przetwornika przed przejściem do kolejnych kroków - liczba kluczy powinna się zgadzać z liczbą źródeł prądowych w danej gałęzi.  
 
-2.5. **TBD**  
-> Wyznacz, ile wynoszą rozrzuty prądów generowanych przez DAC-a (σ) oraz ile wynosi wartość σ/AVG. Pod uwagę weź jedynie Mismatch oraz rozrzuty samego bloku *DAC_CORE_5bit*. Rozpatrz wartości zmiennej dac_bit: 1, 2, 4, 8, 16, 31.  
-> Czy dostrzegasz jakieś związki pomiędzy poszczególnymi wynikami a liczbą załączonych tranzystorów? Jakie są to relacje?  
+2.5. Wyznacz, ile wynoszą rozrzuty prądów generowanych przez DAC-a (σ) oraz ile wynosi wartość σ/AVG. Pod uwagę weź jedynie Mismatch oraz rozrzuty samego bloku *DAC_CORE_5bit*. Rozpatrz wartości zmiennej dac_bit: 1, 2, 4, 8, 16, 31.  
+> Wyniki z tego podpunktu zapisz w sprawozdaniu. Czy dostrzegasz jakieś związki pomiędzy poszczególnymi wynikami a liczbą załączonych tranzystorów? Jakie są to relacje?  
 
-2.6. **TBD**  
-> Przeprowadź analizę MC (tylko bloku DAC i jedynie z opcją Mismatch) charakterystyk wyjściowych DAC-a. Ile wynosi wartość średnia, maksymalna i minimalna generowanego prądu dla dac_bit = 31?  
+2.6. Przeprowadź analizę MC (tylko bloku DAC i jedynie z opcją Mismatch) charakterystyk wyjściowych DAC-a.  
+> Ile wynosi wartość średnia, maksymalna i minimalna generowanego prądu dla dac_bit = 31?  
 
-**PONIŻEJ ZAKUTALIZOWAĆ DLA NGSPICE'A**  
-2.7. Teraz skonfigurujesz środowisko by móc przeprowadzić analizy brzegowe. W tym celu w oknie Data View (ADE Assembler) zaznacz opcję Corners, zmień profil symulacji na Single Run, Sweeps and Corners a następnie kliknij w pole Click to add corner (Rys. 2.3). Pojawi się okno Corners Setup (Rys. 2.3). Obecnie okno zawiera tylko jeden profil symulacyjny - jest to profil nominalny.  
+2.7. Teraz skonfigurujesz środowisko by móc przeprowadzić analizy brzegowe. Jak już pewnie zauważyłeś - blok TT_MODELS od razu przypisuje profil nominalny dla naszych symulacji. Jeżeli przeglądałeś plik `sky130.lib.spice` na pewno zauważyłeś dużą ilość i różnorodność analiz brzegowych.  
 
-2.8. Twoim zadaniem będzie zdefiniowanie analiz brzegowych. Standardowo realizuje się to w oparciu o dokumentację dostawcy technologii (na zajęciach przeprowadzisz kilka z tych analiz). W tym celu w oknie Corners Setup dodaj cztery kolumny (przycisk Add New Corner w głównym menu okna Corners Setup). Następnie w polu Model Files kliknij opcję Click to add. W oknie, które się pojawi, wybierz opcję Import From Tests. Zostanie wczytana biblioteka modeli, z której obecnie korzystasz (Rys. 2.4). Następnie kliknij OK.  
+2.8. Twoim zadaniem będzie zdefiniowanie analiz brzegowych. Standardowo realizuje się to w oparciu o dokumentację dostawcy technologii (na zajęciach przeprowadzisz kilka z tych analiz). W tym celu zmodyfikuj odpowiednio blok kodu, w którym definiowałeś symulacje - będziesz wykonywał pojedyńczą symulację *OP* i zapisywał prąd wyjściowy DAC-a. Parametry powinny być takie same jak w poprzednich krokach instrukcji.  
 
-2.9. W dalszej kolejności wypełnij tabelkę okna Corners Setup jak na Rys. 2.5 (by wypełnić dane pole należy kliknąć na nie dwukrotnie). Nazwy, które tutaj wpisujesz, oznaczają definicję analiz brzegowych, które zaleca dostawca technologii. Odnoszą się one do warunków brzegowych procesu, takich jak najmniejsza/największa ruchliwość nośników, najmniejsze/największe napięcie progowe. Zauważ, że dodatkowo możesz zdefiniować zakres zmian temperatury czy też parametrów w symulowanym obwodzie. W tej części ćwiczenia pozostaw jednak te pola puste. Po zdefiniowaniu analiz brzegowych kliknij OK.  
+2.9. Nazwy cornerów, które wpisujesz, odnoszą się do warunków brzegowych procesu, takich jak najmniejsza/największa ruchliwość nośników, najmniejsze/największe napięcie progowe. Po zdefiniowaniu analizy brzegowej stwórz netlistę i włącz symulację cornerową - prąd dla corneru tt powinien pokrywać się z maksymalnym prądem otrzymanym w podpunkcie 2.4. 
 
-2.10. **TBD**  
-> Uruchom symulacje i zanotuj typowy, maksymalny i minimalny prąd jaki generuje DAC dla dac_bit = 31. Porównaj go z przeprowadzonymi wcześniej analizami MC. Które wyniki są mniej korzystne i dlaczego?  
+2.10. Powtórz proces symulacji obwodu dla cornerów: tt, ss, ff, sf, fs.  
+> Zanotuj typowy, maksymalny i minimalny prąd jaki generuje DAC dla dac_bit = 31. Porównaj go z przeprowadzonymi wcześniej analizami MC. Które wyniki są mniej korzystne i dlaczego?  
 
 ## **3. Layout 5-bitowego DAC-a**
 ---
-
 
 3.1. W kolejnej części zajęć będziesz tworzyć projekt masek testowanego uprzednio przetwornika cyfrowo-analogowego. W tym celu otwórz program Klayout w trybie edycji: `klayout -e`. Utwórz nowy layout wybierając na pasku menu `File -> New Layout`. Powinieneś zobaczyć okno jak na Rys 3.1., na razie nic nie zmieniaj i kliknij *OK*.  
 Pomimo tego, że Klayout automatycznie jest włączany z sky130A PDK, to w samym programie i tak trzeba wybrać wykorzystywaną technologię - może być to zrobione w każdym momencie wykonywania layoutu, ale najlepiej od tego zacząć przed pracą. Na pasku narzędzi widoczna jest ikona zębatki z literą 'T' - rozwiń to narzędzie, wybierz technologię sky130A i kliknij na ikonę. Po prawej stronie powinieneś zobaczyć warstwy zdefiniowane w tej technologii. Jeżeli nadal ich nie widzisz to dlatego, że są nie używane i domyślnie są ukryte - kliknij prawym przyciskiem myszy w oknie *Layers* i odznacz *Hide Empty Layers*.  
@@ -164,14 +172,14 @@ Pomimo tego, że Klayout automatycznie jest włączany z sky130A PDK, to w samym
 
 **UWAGA:** Aby ten fragment instrukcji przebiegł pomyślnie, należy zaktualizować "NetlistImportPlugin" ( `Tools -> Manage Packages` ); w przeciwnym wypadku wersja 0.6XXX będzie zwracać błędy makr przy importowaniu elementów dla zmodyfikowanych parametrów.  
 
-Jeżeli przed tym punktem wyłączałeś sesję dockera i nie zrobiłeś kopii netlisty schematu *DAC_CORE_5bit* do folderu wspołdzielonego ( `/foss/designs/...` - podfoldery i pliki tego folderu są współdzielone między twoim użytkownikiem i sesjami dockera) to musisz stworzyć netlistę tego schematu jeszcze raz w programie Xschem. Gdy uruchomisz schemat wybierz `Simulation -> LVS -> LVS netlist + Top level is a .subckt`. Utworzone przez Xschem netlisty domyślnie znajdują się w folderze `/headless/.xschem/simulations` - dlatego skopiuj ją do swoich plików. Netlista nazywa się identycznie jak schematic, różni się tylko rozszerzeniem - *.spice*. Poniższe polecenie skopiuje tą netlistę - zakładając, że pracujesz w folderze lab2, jeżeli korzystasz z innego drzewa plików, zamień `/foss/designs/lab2/` konsekwentnie.  
+Jeżeli przed tym punktem wyłączałeś sesję dockera i nie zrobiłeś kopii netlisty schematu *DAC_CORE_5bit* do folderu wspołdzielonego ( `/foss/designs/...` - podfoldery i pliki tego folderu są współdzielone między twoim użytkownikiem i sesjami dockera) to musisz stworzyć netlistę tego schematu jeszcze raz w programie Xschem. Gdy uruchomisz schemat wybierz `Simulation -> LVS -> LVS netlist + Top level is a .subckt`. Utworzone przez Xschem netlisty domyślnie znajdują się w folderze `/headless/.xschem/simulations` - dlatego skopiuj ją do swoich plików. Netlista nazywa się identycznie jak schematic, różni się tylko rozszerzeniem - *.spice*. Poniższe polecenie skopiuje tą netlistę - zakładając, że pracujesz w folderze lab2, jeżeli korzystasz z innego drzewa plików, zamień fragment `/foss/designs/lab2/xschem/` konsekwentnie.  
 ``` bash
-cp /headless/.xschem/simulations/DAC_CORE_5bit.spice /foss/designs/lab2/
+cp /headless/.xschem/simulations/DAC_CORE_5bit.spice /foss/designs/lab2/xschem/
 ```
 Teraz zaimportujesz do utworzonego okna Layoutu elementy uprzednio stworzonego schematu *DAC_CORE_5bit*. Z paska menu wybierz `File -> Import -> Netlist`. Jeżeli zaktualizowałeś Plugin w obecnej sesji to Klayout wyświetli powiadomienie o zmianie Cell Mapping - kliknij *Yes* i kontynuuj importowanie. Powinieneś zobaczyć okno do importowania - w polu *Source File* wybierz plik z netlistą klikając *...* po prawej stronie pola lub bezpośrednio wpisz ścieżkę do pliku (można też samą nazwę pliku - domyślnie wyszukuje w folderze, z którego został włączony klayout). Kliknij **Reload Net** w prawym dolnym rogu. Po rozwinięciu `Reference - TOP` powinieneś zobaczyć wszystkie elementy, które poprzenio naniosłeś na schemat. Powinieneś zobaczyć okno jak na Rys 3.2.  
 
 <figure style="text-align: center; page-break-inside: avoid; break-inside: avoid;">
-  <img src="screenshots/03_import_no_mapping.png" style="width: 75%; height: auto;">
+  <img src="screenshots/03_import_no_mapping.png" style="width: 90%; height: auto;">
   <figcaption>Rys. 3.2. Okno importowania elementów z netlisty.</figcaption>
 </figure>
 
@@ -185,20 +193,21 @@ Tech Cell Mapping to etap translacji, w którym KLayout łączy tekstowe nazwy e
 3. Opcjonalnie: można zapisać konfigurację dla PMOS-ów i w przyszłości przy używaniu większej różnorodności elementów z biblioteki można dopisywać tylko pozycje do konfiguracji - Kliknij *Save As...* i wybierz ścieżkę gdzie zapisać plik.
 
 W zakładce *Layout* ustaw **Pitch** na 6.5 μm Okno importowania powinno wyglądać tak jak na Rys. 3.3.a) na zakładce X, a na zakładce Y - zgodnie z Rys. 3.3.b) .  
-<figure style="text-align: center; page-break-inside: avoid; break-inside: avoid; margin: 15px 0;">
-  <table style="width: 100%; border-collapse: collapse; border: none; margin: 0 auto;">
-    <tr style="border: none;">
-      <td style="width: 50%; vertical-align: bottom; text-align: center; border: none; padding: 0 5px;">
+
+<figure style="margin: 12px 0;">
+  <table style="width: 100%; border-collapse: collapse;">
+    <tr>
+      <td style="width: 50%; text-align: center; vertical-align: bottom; padding: 0 5px;">
         <img src="screenshots/03_import_mapping.png" style="max-width: 100%; height: auto;">
         <div>a)</div>
       </td>
-      <td style="width: 50%; vertical-align: bottom; text-align: center; border: none; padding: 0 5px;">
+      <td style="width: 50%; text-align: center; vertical-align: bottom; padding: 0 5px;">
         <img src="screenshots/03_import_tech_cell.png" style="max-width: 100%; height: auto;">
         <div>b)</div>
       </td>
     </tr>
   </table>
-  <figcaption>Rys. 3.3. Okno importowania elementów z netlisty: a) zakładka Netlist Source, b) zakładka Tech Cell Mapping.</figcaption>
+  <figcaption style="text-align: center;">Rys. 3.3. Okno importowania elementów z netlisty: a) zakładka Netlist Source, b) zakładka Tech Cell Mapping.</figcaption>
 </figure>
 
 Jeżeli wszystko wygląda tak samo - kliknij **Import**. Powinien wyświetlić się raport z importowania - jeżeli wszystko przebiegło pomyślnie, zobaczysz w raporcie "Cells succeeded: 1 ... Instances succeeded: 62" Okno twojego projektu powinno wyglądać jak na Rys. 3.4. - utworzony przez Ciebie widok zawiera po 31 tranzystorów pełniących funkcję źródeł prądowych oraz kluczy elektronicznych.  
@@ -208,22 +217,65 @@ Jeżeli wszystko wygląda tak samo - kliknij **Import**. Powinien wyświetlić s
   <figcaption>Rys. 3.4. Widok layoutu komórki DAC_CORE_5bit po zaimportowaniu elementów z netlisty.</figcaption>
 </figure>
 
-**PONIŻEJ ZAKUTALIZOWAĆ DLA KLAYOUT**  
-3.2. Zauważ, że masz do czynienia z dwiema grupami tranzystorów: są to źródła prądowe oraz klucze elektroniczne, przy czym każda z tych grup ma te same wymiary kanałów. Wiemy również, że jedną z metod, która pozwala ograniczyć rozrzuty technologiczne jest grupowanie elementów o takich samych wymiarach blisko siebie oraz wykorzystanie metody minimalizacji gradientu domieszek czy temperatury na powierzchni układu scalonego (metoda common centroid). Dlatego warto przy projekcie masek przetwornika, ułożyć tranzystory w postaci matrycy. Możesz to zrobić poprzez ręczne dodanie tranzystorów wykorzystując Create Instance (bądź skrót klawiszowy). Następnie utwórz matrycę tranzystorów pracujących jako źródła prądowe poprzez wybranie sekcji Mosaic w oknie Create Instance. Wypełnij pojawiające się okno jak na rysunku Rys. 3.2, na razie nie modyfikuj pola Delta Y oraz Delta X (służą one do definiowania odstępów pomiędzy elementami tworzącymi matrycę). Zwróć uwagę, że na tym etapie tworzysz matrycę 6 x 6 elementów - być może będziesz tę ilość później modyfikować. Po naciśnięciu przycisku Hide umieść matrycę w oknie VLGXL. Otrzymany widok powinien przypominać Rys. 3.2.  
-Rys. 3.2: Ręczne wygenerowanie matrycy tranzystorów pracujących jako źródła prądowe: (a) Konfiguracja w oknie Create Instance, (b) Rezultat. Uwaga: liczba tranzystorów w kolumnach i wierszach ulegnie później zmianie  
+3.2. Zauważ, że masz do czynienia z dwiema grupami tranzystorów: są to źródła prądowe oraz klucze elektroniczne, przy czym każda z tych grup ma te same wymiary kanałów. Wiemy również, że jedną z metod, która pozwala ograniczyć rozrzuty technologiczne jest grupowanie elementów o takich samych wymiarach blisko siebie oraz wykorzystanie metody minimalizacji gradientu domieszek czy temperatury na powierzchni układu scalonego (metoda common centroid). Dlatego warto przy projekcie masek przetwornika, ułożyć tranzystory w postaci matrycy.  
+Usuń zaimportowane instancje tranzystorów z poprzedniego kroku, tak aby pozostało ci puste okno layoutu. Dodaj ręcznie tranzystor PMOS:
+* wykorzystując *Create a cell Instance* z paska narzędzi (bądź skrót klawiszowy ***I***) i w lewym dolnym rogu wybierz instancję `pfet` z biblioteki **skywater130 - sky130 Pcells**.  
+* wybierając bibliotekę **skywater130 - sky130 Pcells** w narzędziu *Libraries* (lewe okno narzędzi) przeciągając instancję `pfet`.  
 
-3.3. Zauważ, że wszystkie tranzystory pracujące jako źródła prądowe mają kilka wspólnych punktów (przypomnij sobie rysunek Rys. 2.1). Są to: bramka (na potencjale DAC_REF) oraz podłoże i źródło (na potencjale górnej szyny zasilania VDD). Ponieważ bramka jest wykonana z przewodzącego prąd polikrzemu a w tym układzie nie będzie przez nią płynął prąd to każdą z bramek tranzystorów MO - M4 można ze sobą połączyć polikrzemem. Każdy ze wspomnianych punktów wspólnych możesz połączyć ręcznie ale nie zaleca się takiego podejścia. Właściwym podejściem jest utworzenie swojej własnej komórki podstawowej, która po złożeniu w matrycę będzie łączyła ze sobą trzy wspólne punkty.  
+Dostosuj wymiary tej komórki zgodnie ze źródłami prądowymi ze schematu - możesz to zrobić w trakcie umieszczania modelu wykorzystując jedną z zakładek narzędzia *Tool Options -> Pcell* lub edytować położoną instancję w oknie ***Instance Properties*** dostępnego po kliknięciu na PMOS-a lewym przyciskiem myszy i następnie kliknięciu skrótu klawiszowego ***Q***. Rys 3.5.a) przedstawiono okno, które powinieneś zobaczyć.  
+Następnie utwórz matrycę tranzystorów pracujących jako źródła prądowe poprzez wybranie w sekcji *Geometry* w oknie *Instance Properties* opcji **Array Instance**. Wypełnij okno jak na rysunku Rys. 3.5.b), Pola Column/Row vector (x,y) służą do definiowania odstępów pomiędzy elementami tworzącymi matrycę - jeżeli nie zostaną uzupełnione to wszystkie instancje będą w jednym miejcu co zaprzecza temu co chcemy otrzymać. Zwróć uwagę, że na tym etapie tworzysz matrycę 6 x 6 elementów - być może będziesz tę ilość później modyfikować. Po wypełnieniu sekcji *Geometry* naciśnij *OK*. Otrzymany widok powinien przypominać Rys. 3.6.  
 
-3.4. W tym celu utwórz nową komórkę w swojej bibliotece (jedynie o widoku layout) i nazwij ją DAC_BASE_CELL_1. Po otworzeniu okna Virtuoso Layout umieść w nim jeden tranzystor PMOS o wymiarach kanału jak źródła prądowe MO - M4. Następnie zmodyfikuj tak wygląd masek tego tranzystora by po złożeniu go w matrycę, połączone były ze sobą bramka, źródło oraz podłoże. Zauważ, że już na Rys. 3.2, przy przyjęciu domyślnych ustawień Delta Y oraz Delta X podłoża były ze sobą połączone, w związku z czym nie musisz nic robić z warstwą podłoża tranzystora PMOS. Użyj masek polikrzemu P01 oraz ME1 tak by Twoja komórka spełniała założony cel (przykład przed i po zmianach znajduje się na rysunku Rys. 3.3).  
+<figure style="margin: 12px 0;">
+  <table style="width: 100%; border-collapse: collapse;">
+    <tr>
+      <td style="width: 50%; text-align: center; vertical-align: bottom; padding: 0 5px;">
+        <img src="screenshots/03_inst_properties_pcell.png" style="max-width: 100%; height: auto;">
+        <div>a)</div>
+      </td>
+      <td style="width: 50%; text-align: center; vertical-align: bottom; padding: 0 5px;">
+        <img src="screenshots/03_inst_properties_geom.png" style="max-width: 100%; height: auto;">
+        <div>b)</div>
+      </td>
+    </tr>
+  </table>
+  <figcaption style="text-align: center;">Rys. 3.5. Okno edytowania własności instancji: a) zakładka PCell parameters, b) zakładka Geometry.</figcaption>
+</figure> 
 
-3.5. Następnie w komórce *DAC_CORE_5bit* umieść matrycę 6 × 6 elementów Twojej komórki podstawowej DAC_BASE_CELL_1. Rezultatem operacji powinien być widok jak na rysunku Rys. 3.4. Jeśli poprzednia matryca nie została przez Ciebie usunięta, wybierz jej właściwości - klawisz *Q* i zamień komórkę P_18_MM na Twoją komórkę podstawową DAC_BASE_CELL_1.  
+<figure style="text-align: center; page-break-inside: avoid; break-inside: avoid;">
+  <img src="screenshots/03_matrix_6x6.png">
+  <figcaption>Rys. 3.6. Wygenerowana matryca tranzystorów pracujących jako źródła prądowe</figcaption>
+</figure>
 
-3.6. Usuń na chwilę tranzystory pracujące jako klucze elektroniczne, a następnie uruchom analizę DRC, by sprawdzić, czy w projekcie nie ma złamanych reguł w projekcie masek. Powinny pojawić się błędy jak na rysunku Rys. 3.5. Są to błędy dotyczące braku podpięcia podłoża układu do jakiekolwiek potencjału oraz błąd związany z obwodami wyjściowymi układu scalonego. Na razie nie zajmuj się rozwiązaniem tych dwóch błędów. Jeśli występują u Ciebie inne, to je wyeliminuj tak by otrzymać widok jak na Rys. 3.5.  
-Rys. 3.5: Dopuszczalne błędy DRC na etapie przygotowania matrycy komórek podstawowych  
+3.3. Zauważ, że wszystkie tranzystory pracujące jako źródła prądowe mają kilka wspólnych punktów (przypomnij sobie rysunek Rys. 2.1.). Są to: bramka (na potencjale DAC_REF) oraz podłoże i źródło (na potencjale górnej szyny zasilania VDD). Ponieważ bramka jest wykonana z przewodzącego prąd polikrzemu a w tym układzie nie będzie przez nią płynął prąd to każdą z bramek tranzystorów M0 - M4 można ze sobą połączyć polikrzemem. Każdy ze wspomnianych punktów wspólnych możesz połączyć ręcznie ale nie zaleca się takiego podejścia. Właściwym podejściem jest utworzenie swojej własnej komórki podstawowej, która po złożeniu w matrycę będzie łączyła ze sobą trzy wspólne punkty. Ważnym aspektem tego kroku jest również to, że biblioteka sky130A nie ma zdefiniowanej możliwości wyłączenia obecności kontaktu do bramki tranzystora - nie chcemy go mieć dla źródeł prądowych, gdyż będziemy podłączać każde źródło do DAC_REF jednym, wspólnym wyprowadzeniem na *met2*.  
+
+
+3.4. W tym celu utwórz nową komórkę w oknie *Cells* (lewe okno narzędzi) i nazwij ją *DAC_BASE_MCS*. Powinieneś automatycznie pojawić się wewnątrz layoutu komórki - jeżeli tak się jednak nie stało to kliknij prawym przyciskiem myszy na komórkę *DAC_BASE_MCS* w oknie *Cells* i użyj `Show As New Top` .  
+Po otworzeniu okna nowego layoutu umieść w nim jeden tranzystor PMOS o wymiarach kanału jak źródła prądowe M0 - M4. Następnie powinieneś spłaszczyć instancję PMOS-a aby mieć dostęp do modyfikacji jego warstw. Aby to zrobić kliknij raz na PMOS-a i z paska menu wybierz `Edit -> Selection -> Flatten Instances` i kliknij OK. Teraz możesz przejść do modyfikacji wyglądu maski - tak, aby po złożeniu go w matrycę, połączone były ze sobą bramka, źródło oraz podłoże. Użyj masek polikrzemu **poly** oraz pierwszej warstwy metalu **met1**, tak by Twoja komórka spełniała założony cel. Warto użyć narzędzia *Partial* z paska narzędzi do rozciągania elementów warstw (skrót klawiszowy *S*). Na Rys. 3.6., przy ustawieniach Column/Row vector (x,y) takich jak na Rys. 3.5.b) (Column(x)/Row(y) vector równe wymiarom komórki), podłoża były ze sobą połączone, w związku z czym nie musisz dodawać nowych elementów warstwy podłoża tranzystora PMOS. Skróć jedynie warstwę **nwell**, aby była symetryczna względem dolnej części - pamiętaj, że będziesz musiał zmienić wartość Row(y) vector aby podłoża. Zapisz efekty swojej zmiany wybierając z paska menu `File -> Save As` . Przykład przed i po zmianach znajduje się na Rys. 3.7.  
+
+<figure style="margin: 12px 0;">
+  <table style="width: 100%; border-collapse: collapse;">
+    <tr>
+      <td style="width: 46.5%; text-align: center; vertical-align: bottom; padding: 0 5px;">
+        <img src="screenshots/03_PMOS_before.png" style="max-width: 100%; height: auto;">
+        <div>a)</div>
+      </td>
+      <td style="width: 50%; text-align: center; vertical-align: bottom; padding: 0 5px;">
+        <img src="screenshots/03_PMOS_after.png" style="max-width: 100%; height: auto;">
+        <div>b)</div>
+      </td>
+    </tr>
+  </table>
+  <figcaption style="text-align: center;">Rys. 3.7. PMOS pracujący jako źródło prądowe: a) przed zmianami, b) po zmianach.</figcaption>
+</figure> 
+
+3.5. Następnie w komórce *DAC_CORE_5bit* (zmień na tą komórkę klikając prawym na nią w oknie *Cells* i wybierając `Show As New Top` ) umieść matrycę 6 × 6 elementów Twojej komórki podstawowej *DAC_BASE_MCS*. Rezultatem operacji powinien być widok jak na rysunku Rys. 3.x. Jeśli poprzednia matryca nie została przez Ciebie usunięta, wybierz jej właściwości - klawisz *Q* i zamień komórkę `pfet` na Twoją komórkę podstawową `DAC_BASE_CELL_1` (zamień Library na *Local (no library)* i wybierz swoją komórkę z listy).  
+
+3.6. Uruchom teraz analizę DRC (z paska menu `Efabless sky130 -> Run DRC (Full)` ), by sprawdzić, czy w projekcie nie ma złamanych reguł w projekcie masek. Powinien wielokrotnie pojawić się wyłącznie błąd **psdm.1**. Jest to błąd związany z zbyt małymi odległościami między obszarami domieszkowanymi. Na razie nie zajmuj się rozwiązaniem tego błędu. Jeśli występują u Ciebie inne, to je wyeliminuj tak by otrzymać wyłącznie ten błąd.  
 
 3.7. **TBD**  
 > Czy podobną metodą, opartą o komórkę podstawową, można zestawić matrycę kluczy elektronicznych? Jeśli tak to jakie połączenia będą tam wspólne?  
 
+**-- ZMODYFIKUJ PONIŻEJ DLA KLAYOUT --**  
 3.8. Przygotuj matryce źródeł prądowych oraz kluczy elektronicznych do prowadzenia połączeń. Miej na uwadze by zminimalizować błędy wprowadzane przez nieidentyczne otoczenie elementów układu. Jest to szczególnie istotne w odniesieniu do źródeł prądowych przetwornika DAC. Dlatego warto w projekcie masek źródeł prądowych umieścić dodatkowe (identyczne jeśli chodzi o wymiar kanału) tranzystory otaczające matrycę źródeł prądowych (nazwij je MD) - w tym projekcie proponuje się użyć matrycy 9 × 7 tranzystorów.  
 
 3.9. Umieść matrycę 9 × 7 tranzystorów źródeł prądowych, a tranzystory zewnętrzne opisz etykietą MD wykorzystując warstwę TEXT (drawing ). Zwróć uwagę, że wnętrze matrycy zawiera 35 tranzystorów, podczas gdy Ty potrzebujesz tylko 31 do realizacji źródeł prądowych. Tych 4 dodatkowych tranzystorów również użyjesz jako MD, ale nieco później. Matryca tranzystorów źródeł prądowych powinna wyglądać  
@@ -244,9 +296,15 @@ Rys. 3.7: Schemat przetwornika cyfrowo-analogowego po umieszczeniu tranzystorów
 3.15. Jeżeli zdecydowałeś się na dodatkowe kroki, które pomogły ci w tworzeniu schematu, symulacji, layoutu to:  
 > Opisz te dodatkowe operacje jakie wykonałeś przy realizacji tego projektu (przykłady: dodatkowe struktury, sposób realizacji masek kluczy elektronicznych, itd.).  
 
-## 4. Possible simulation errors
-
-TBD
+## 4. Napotkane (niektóre/wybrane) problemy
+* Przy włączaniu schematica *DAC_CORE_5bit_test.sch* schemat potrafi się zablokować i nie dać możliwości do edycji pliku. Dzieje się tak zazwyczaj gdy użytkownik chce edytować parametry i zamknie okno dialogowe edytowania parametrów.  
+  Błąd w konsoli:  
+  ```
+  xschem [/foss/designs/lab2/xschem] tcleval(): evaluation of script: edit_prop {Input property:} failed
+         : window ".dialog" was deleted before its visibility changed
+  ```
+  Rozwiązanie: Zauważyłem, że dzieje się tak gdy użytkownik przed edycją nie stworzy netlisty schematu przed edycją - czyli po włączeniu schematu należy zbudować netlistę. Nie znalazłem jeszcze konkretnego powodu dlaczego to ma wpływ, więc jest to chwilowe rozwiązanie.  
+**TBD**
 
 ## TODO LIST
 1. Znaleźć sposób na uwzględnienie rozrzutów tylko pojedynczego tranzystora i uzupełnić punkty 1.5 - 1.7 (znalazłem sposób - trzeba uzupełnić insturkcję) - zrobione (chyba dobrze)
