@@ -39,8 +39,6 @@ time: 3h
 22.07 - 14.30 - 17.00 -> Kontynuacja wykonywania instrukcji lab2 w środowisku IIC-OSIC-TOOLS ; DAC_CORE_5_bit_test, sprawdzanie lvt - zrezygnowano, zmieniać W/L i RES_DAC
 time: 2,5h
 
-
-
 27.07 - 16.00 - 18.00 -> Kontynuacja wykonywania instrukcji lab2 w środowisku IIC-OSIC-TOOLS ; Konfiguracja DAC_CORE i schematu z pkt 1. instrukcji, szukanie optymalnego W/L 
 time: 2h
 
@@ -50,6 +48,8 @@ time: 2h
 29.07 - 14.00 - 17.00 -> Kontynuacja wykonywania instrukcji lab2 w środowisku IIC-OSIC-TOOLS ; Wykonywanie symulacji z instrukcji 2.4 - 2.10, uzupełnianie instukcji lab2
 time: 3h
 
+
+>>>>> NOT IN THE LOG YET <<<<<
 05.08 - 13.00 - 16.30 -> Kontynuacja wykonywania instrukcji lab2 w środowisku IIC-OSIC-TOOLS ; Rozpoczęcie pracy z programem Klayout, zapoznawanie się ze środowiskiem, jego możliwościami i ograniczeniami, importowanie z netlisty, tworzenie matryc (Mosaic w Cadence) instancji, pythonowe makra, dostępne pluginy
 time: 3.5h
 
@@ -57,14 +57,18 @@ time: 3.5h
         14.00 - 17.00 -> Kontynuacja wykonywania instrukcji lab2 w środowisku IIC-OSIC-TOOLS ; Lab2 pkt 3.2 - 3.6, modyfikowanie instrukcji i wykonywanie jej w Klayout
 time: 6.5h
 
-07.08 - 15.30 - 19.30 -> Kontynuacja wykonywania instrukcji lab2 w środowisku IIC-OSIC-TOOLS ; uzupełnianie, poprawianie instrukcji lab2 (2.1 - 2.10); dalsze wykonywanie Layoutu DAC-a i instrukcji (do 3.6 włącznie powinno być gotowe ok)
+07.08 - 15.30 - 19.30 -> Kontynuacja wykonywania instrukcji lab2 w środowisku IIC-OSIC-TOOLS ; uzupełnianie, poprawianie instrukcji lab2 (2.1 - 2.10); dalsze wykonywanie Layoutu DAC-a i instrukcji (do 3.6 włącznie powinno być gotowe)
 time: 4h
 
+11.08 - 12.00 - 16.00 -> Kontynuacja wykonywania instrukcji lab2 w środowisku IIC-OSIC-TOOLS ; Uzupełnianie instrukcji, wykonywanie layoutu, layout prawie skończony, dokończyć połączenia i wyprowadzenia na piny, DRC sprawdzane na bierząco
+        17.00 - 19.00 ->  ---||---
+time: 6h
 
-
+12.08 - 
+time: xh
 ---
 
-TOTAL TIME SO FAR: 68h / 90h
+TOTAL TIME SO FAR: 74h / 90h
 
 ---
 
