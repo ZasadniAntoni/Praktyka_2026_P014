@@ -1,0 +1,53 @@
+Signal number: 6
+Address: 0x3e800000155
+Program Version: KLayout 0.30.9 (2026-07-27 r62708771)
+
+Backtrace:
+/foss/tools/klayout/libklayout_lay.so.0 +0x30fd4f lay::enable_signal_handler_gui(bool) [??:?]
+/lib/x86_64-linux-gnu/libc.so.6 +0x45330
+/lib/x86_64-linux-gnu/libc.so.6 +0x9eb2c pthread_kill
+/lib/x86_64-linux-gnu/libc.so.6 +0x4527e gsignal
+/lib/x86_64-linux-gnu/libc.so.6 +0x288ff abort
+klayout +0x4883
+/lib/x86_64-linux-gnu/libQt6Core.so.6 +0xe026b
+/lib/x86_64-linux-gnu/libQt6Core.so.6 +0xe037e
+/lib/x86_64-linux-gnu/libQt6Core.so.6 +0xa91fb _ZNK14QMessageLogger5fatalEPKcz
+/lib/x86_64-linux-gnu/libQt6Gui.so.6 +0x11d48f
+/lib/x86_64-linux-gnu/libQt6Gui.so.6 +0x34e814 _ZN20QFontDatabasePrivate8findFontERK8QFontDefib
+/lib/x86_64-linux-gnu/libQt6Gui.so.6 +0x34f9d3 _ZN20QFontDatabasePrivate4loadEPK12QFontPrivatei
+/lib/x86_64-linux-gnu/libQt6Gui.so.6 +0x3302c0 _ZNK12QFontPrivate15engineForScriptEi
+/lib/x86_64-linux-gnu/libQt6Gui.so.6 +0x335895 _ZNK9QFontInfo10fixedPitchEv
+/lib/x86_64-linux-gnu/libQt6Gui.so.6 +0x48ee81
+/lib/x86_64-linux-gnu/libQt6Gui.so.6 +0x491256 _ZN19QTextMarkdownWriter10writeFrameEPK10QTextFrame
+/lib/x86_64-linux-gnu/libQt6Gui.so.6 +0x491283 _ZN19QTextMarkdownWriter8writeAllEPK13QTextDocument
+/lib/x86_64-linux-gnu/libQt6Gui.so.6 +0x379bb1 _ZNK13QTextDocument10toMarkdownE6QFlagsINS_15MarkdownFeatureEE
+/lib/x86_64-linux-gnu/libQt6Gui.so.6 +0x382c3e _ZNK21QTextDocumentFragment10toMarkdownE6QFlagsIN13QTextDocument15MarkdownFeatureEE
+/lib/x86_64-linux-gnu/libQt6Widgets.so.6 +0x3b77a4
+/lib/x86_64-linux-gnu/libQt6Widgets.so.6 +0x3b7ba8
+/lib/x86_64-linux-gnu/libQt6Core.so.6 +0x17287e
+/lib/x86_64-linux-gnu/libQt6Core.so.6 +0x1735f0 _ZNK9QMimeData4dataERK7QString
+/lib/x86_64-linux-gnu/libQt6Gui.so.6 +0x1b381f _ZN17QInternalMimeData16renderDataHelperERK7QStringPK9QMimeData
+/lib/x86_64-linux-gnu/libQt6XcbQpa.so.6 +0x5f58d
+/lib/x86_64-linux-gnu/libQt6XcbQpa.so.6 +0x387cc _ZN14QXcbConnection14handleXcbEventEP19xcb_generic_event_t
+/lib/x86_64-linux-gnu/libQt6XcbQpa.so.6 +0x39da8
+/lib/x86_64-linux-gnu/libQt6XcbQpa.so.6 +0x3a037
+/lib/x86_64-linux-gnu/libQt6XcbQpa.so.6 +0x3ab42 _ZN14QXcbConnectionD1Ev
+/lib/x86_64-linux-gnu/libQt6XcbQpa.so.6 +0x5a744 _ZN15QXcbIntegrationD1Ev
+/lib/x86_64-linux-gnu/libQt6XcbQpa.so.6 +0x5a835 _ZN15QXcbIntegrationD0Ev
+/lib/x86_64-linux-gnu/libQt6Gui.so.6 +0x195e24 _ZN22QGuiApplicationPrivateD1Ev
+/lib/x86_64-linux-gnu/libQt6Widgets.so.6 +0x17a6b5 _ZN19QApplicationPrivateD0Ev
+/foss/tools/klayout/libklayout_lay.so.0 +0x15ac81 _ZThn16_N3lay14GuiApplicationD0Ev
+klayout +0x4aad
+/foss/tools/klayout/libklayout_rba.so.0 +0x2a3e4
+/lib/x86_64-linux-gnu/libruby-3.2.so.3.2 +0x24d930
+/lib/x86_64-linux-gnu/libruby-3.2.so.3.2 +0x25013f
+/lib/x86_64-linux-gnu/libruby-3.2.so.3.2 +0x253212
+/lib/x86_64-linux-gnu/libruby-3.2.so.3.2 +0x257b4a rb_vm_exec
+/lib/x86_64-linux-gnu/libruby-3.2.so.3.2 +0xb4e2c
+/lib/x86_64-linux-gnu/libruby-3.2.so.3.2 +0xb9153 ruby_run_node
+/foss/tools/klayout/libklayout_rba.so.0 +0x2b7c2 _ZN3rba15RubyInterpreter10initializeERiPPcPFiS1_S3_E
+klayout +0x558b
+klayout +0x4242
+/lib/x86_64-linux-gnu/libc.so.6 +0x2a1ca
+/lib/x86_64-linux-gnu/libc.so.6 +0x2a28b __libc_start_main
+klayout +0x4305

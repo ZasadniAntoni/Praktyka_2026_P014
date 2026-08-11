@@ -1,0 +1,32 @@
+** sch_path: /foss/designs/lab2/xschem/DAC_CORE_5bit.sch
+**.subckt DAC_CORE_5bit VDD DAC_REF I_DAC b[4],b[3],b[2],b[1],b[0]
+*.iopin DAC_REF
+*.ipin b[4],b[3],b[2],b[1],b[0]
+*.iopin VDD
+*.opin I_DAC
+XM1 M1_C DAC_REF VDD VDD sky130_fd_pr__pfet_01v8 L=5 W=3.5 nf=1 ad=1.015 as=1.015 pd=7.58 ps=7.58 nrd=0.0828571428571429
++ nrs=0.0828571428571429 sa=0 sb=0 sd=0 mult=2 m=2
+XM2 M2_C DAC_REF VDD VDD sky130_fd_pr__pfet_01v8 L=5 W=3.5 nf=1 ad=1.015 as=1.015 pd=7.58 ps=7.58 nrd=0.0828571428571429
++ nrs=0.0828571428571429 sa=0 sb=0 sd=0 mult=4 m=4
+XM3 M3_C DAC_REF VDD VDD sky130_fd_pr__pfet_01v8 L=5 W=3.5 nf=1 ad=1.015 as=1.015 pd=7.58 ps=7.58 nrd=0.0828571428571429
++ nrs=0.0828571428571429 sa=0 sb=0 sd=0 mult=8 m=8
+XM4 M4_C DAC_REF VDD VDD sky130_fd_pr__pfet_01v8 L=5 W=3.5 nf=1 ad=1.015 as=1.015 pd=7.58 ps=7.58 nrd=0.0828571428571429
++ nrs=0.0828571428571429 sa=0 sb=0 sd=0 mult=16 m=16
+XM0 M0_C DAC_REF VDD VDD sky130_fd_pr__pfet_01v8 L=5 W=3.5 nf=1 ad=1.015 as=1.015 pd=7.58 ps=7.58 nrd=0.0828571428571429
++ nrs=0.0828571428571429 sa=0 sb=0 sd=0 mult=1
+XMK0 I_DAC b[0] M0_C VDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 ad=0.1218 as=0.1218 pd=1.42 ps=1.42 nrd=0.69047619047619
++ nrs=0.69047619047619 sa=0 sb=0 sd=0 mult=1
+XMK1 I_DAC b[1] M1_C VDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 ad=0.1218 as=0.1218 pd=1.42 ps=1.42 nrd=0.69047619047619
++ nrs=0.69047619047619 sa=0 sb=0 sd=0 mult=2 m=2
+XMK2 I_DAC b[2] M2_C VDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 ad=0.1218 as=0.1218 pd=1.42 ps=1.42 nrd=0.69047619047619
++ nrs=0.69047619047619 sa=0 sb=0 sd=0 mult=4 m=4
+XMK3 I_DAC b[3] M3_C VDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 ad=0.1218 as=0.1218 pd=1.42 ps=1.42 nrd=0.69047619047619
++ nrs=0.69047619047619 sa=0 sb=0 sd=0 mult=8 m=8
+XMK4 I_DAC b[4] M4_C VDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 ad=0.1218 as=0.1218 pd=1.42 ps=1.42 nrd=0.69047619047619
++ nrs=0.69047619047619 sa=0 sb=0 sd=0 mult=16 m=16
+XMD VDD DAC_REF VDD VDD sky130_fd_pr__pfet_01v8 L=5 W=3.5 nf=1 ad=1.015 as=1.015 pd=7.58 ps=7.58 nrd=0.0828571428571429
++ nrs=0.0828571428571429 sa=0 sb=0 sd=0 mult=32 m=32
+XMKD I_DAC b[1] I_DAC VDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 ad=0.1218 as=0.1218 pd=1.42 ps=1.42 nrd=0.69047619047619
++ nrs=0.69047619047619 sa=0 sb=0 sd=0 mult=1
+**.ends
+.end

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <report-database>
  <description>SKY130 DRC runset</description>
- <original-file>/foss/designs/lab2/klayout/DAC_CORE_5bit.gds</original-file>
+ <original-file>/foss/designs/lab2/klayout/test/DAC_CORE_5bit_t.gds</original-file>
  <generator>drc: script='/foss/pdks/sky130A/libs.tech/klayout/macros/run_drc_full.lydrc'</generator>
- <top-cell>DAC_CORE_5bit</top-cell>
+ <top-cell>DAC_CORE_5bit_t</top-cell>
  <tags>
  </tags>
  <categories>
@@ -1546,7 +1546,7 @@
  </categories>
  <cells>
   <cell>
-   <name>DAC_CORE_5bit</name>
+   <name>DAC_CORE_5bit_t</name>
    <variant/>
    <layout-name/>
    <references>
