@@ -1,0 +1,148 @@
+* k_void=3.9
+D FasterCap_Input_1_outside=(void)_inside=fox.geo 3.9 4.632 0 0 0 0 0 0
+D FasterCap_Input_2_outside=fox_inside=iox.geo 4.632 0.39 0 0 0 0 0 0
+D FasterCap_Input_3_outside=fox_inside=spnit.geo 4.632 7.5 0 0 0 0 0 0
+D FasterCap_Input_4_outside=fox_inside=psg.geo 4.632 3.9 0 0 0 0 0 0
+D FasterCap_Input_5_outside=iox_inside=spnit.geo 0.39 7.5 0 0 0 0 0 0
+D FasterCap_Input_6_outside=spnit_inside=psg.geo 7.5 3.9 0 0 0 0 0 0
+D FasterCap_Input_7_outside=psg_inside=lint.geo 3.9 7.3 0 0 0 0 0 0
+D FasterCap_Input_8_outside=lint_inside=nild2.geo 7.3 4.05 0 0 0 0 0 0
+D FasterCap_Input_9_outside=nild2_inside=nild3c.geo 4.05 3.5 0 0 0 0 0 0
+D FasterCap_Input_10_outside=nild2_inside=nild3.geo 4.05 4.5 0 0 0 0 0 0
+D FasterCap_Input_11_outside=nild3c_inside=nild3.geo 3.5 4.5 0 0 0 0 0 0
+D FasterCap_Input_12_outside=nild3_inside=nild4c.geo 4.5 3.5 0 0 0 0 0 0
+D FasterCap_Input_13_outside=nild3_inside=nild4.geo 4.5 4.2 0 0 0 0 0 0
+D FasterCap_Input_14_outside=nild4c_inside=nild4.geo 3.5 4.2 0 0 0 0 0 0
+D FasterCap_Input_15_outside=nild4_inside=nild5.geo 4.2 4.1 0 0 0 0 0 0
+D FasterCap_Input_16_outside=nild5_inside=nild6.geo 4.1 4 0 0 0 0 0 0
+D FasterCap_Input_17_outside=nild6_inside=air.geo 4 3 0 0 0 0 0 0
+D FasterCap_Input_18_outside=air_inside=(void).geo 3 3.9 0 0 0 0 0 0
+D FasterCap_Input_19_outside=(void)_inside=psg.geo 3.9 3.9 0 0 0 0 0 0
+D FasterCap_Input_20_outside=(void)_inside=lint.geo 3.9 7.3 0 0 0 0 0 0
+D FasterCap_Input_21_outside=(void)_inside=nild2.geo 3.9 4.05 0 0 0 0 0 0
+D FasterCap_Input_22_outside=(void)_inside=nild3.geo 3.9 4.5 0 0 0 0 0 0
+D FasterCap_Input_23_outside=(void)_inside=nild4.geo 3.9 4.2 0 0 0 0 0 0
+D FasterCap_Input_24_outside=(void)_inside=nild5.geo 3.9 4.1 0 0 0 0 0 0
+D FasterCap_Input_25_outside=(void)_inside=nild6.geo 3.9 4 0 0 0 0 0 0
+C FasterCap_Input_26_outside=(void)_net=VSUBS.geo  3.9  0 0 0
+C FasterCap_Input_27_outside=(void)_net=I_DAC.geo  3.9  0 0 0 +
+C FasterCap_Input_28_outside=fox_net=I_DAC.geo  4.632  0 0 0 +
+C FasterCap_Input_29_outside=psg_net=I_DAC.geo  3.9  0 0 0 +
+C FasterCap_Input_30_outside=lint_net=I_DAC.geo  7.3  0 0 0 +
+C FasterCap_Input_31_outside=nild2_net=I_DAC.geo  4.05  0 0 0 +
+C FasterCap_Input_32_outside=nild3_net=I_DAC.geo  4.5  0 0 0 +
+C FasterCap_Input_33_outside=nild4_net=I_DAC.geo  4.2  0 0 0 +
+C FasterCap_Input_34_outside=nild3c_net=I_DAC.geo  3.5  0 0 0 +
+C FasterCap_Input_35_outside=nild4c_net=I_DAC.geo  3.5  0 0 0
+C FasterCap_Input_36_outside=(void)_net=$2.geo  3.9  0 0 0 +
+C FasterCap_Input_37_outside=fox_net=$2.geo  4.632  0 0 0 +
+C FasterCap_Input_38_outside=psg_net=$2.geo  3.9  0 0 0 +
+C FasterCap_Input_39_outside=lint_net=$2.geo  7.3  0 0 0 +
+C FasterCap_Input_40_outside=nild2_net=$2.geo  4.05  0 0 0 +
+C FasterCap_Input_41_outside=nild3_net=$2.geo  4.5  0 0 0 +
+C FasterCap_Input_42_outside=nild4_net=$2.geo  4.2  0 0 0 +
+C FasterCap_Input_43_outside=nild3c_net=$2.geo  3.5  0 0 0 +
+C FasterCap_Input_44_outside=nild4c_net=$2.geo  3.5  0 0 0
+C FasterCap_Input_45_outside=(void)_net=$3.geo  3.9  0 0 0 +
+C FasterCap_Input_46_outside=fox_net=$3.geo  4.632  0 0 0 +
+C FasterCap_Input_47_outside=psg_net=$3.geo  3.9  0 0 0 +
+C FasterCap_Input_48_outside=lint_net=$3.geo  7.3  0 0 0 +
+C FasterCap_Input_49_outside=nild2_net=$3.geo  4.05  0 0 0 +
+C FasterCap_Input_50_outside=nild3_net=$3.geo  4.5  0 0 0 +
+C FasterCap_Input_51_outside=nild4_net=$3.geo  4.2  0 0 0 +
+C FasterCap_Input_52_outside=nild3c_net=$3.geo  3.5  0 0 0 +
+C FasterCap_Input_53_outside=nild4c_net=$3.geo  3.5  0 0 0
+C FasterCap_Input_54_outside=(void)_net=VDD.geo  3.9  0 0 0 +
+C FasterCap_Input_55_outside=fox_net=VDD.geo  4.632  0 0 0 +
+C FasterCap_Input_56_outside=psg_net=VDD.geo  3.9  0 0 0 +
+C FasterCap_Input_57_outside=lint_net=VDD.geo  7.3  0 0 0 +
+C FasterCap_Input_58_outside=nild2_net=VDD.geo  4.05  0 0 0 +
+C FasterCap_Input_59_outside=nild3_net=VDD.geo  4.5  0 0 0 +
+C FasterCap_Input_60_outside=nild3c_net=VDD.geo  3.5  0 0 0
+C FasterCap_Input_61_outside=(void)_net=$10.geo  3.9  0 0 0 +
+C FasterCap_Input_62_outside=fox_net=$10.geo  4.632  0 0 0 +
+C FasterCap_Input_63_outside=psg_net=$10.geo  3.9  0 0 0 +
+C FasterCap_Input_64_outside=lint_net=$10.geo  7.3  0 0 0 +
+C FasterCap_Input_65_outside=nild2_net=$10.geo  4.05  0 0 0 +
+C FasterCap_Input_66_outside=nild3_net=$10.geo  4.5  0 0 0 +
+C FasterCap_Input_67_outside=nild4_net=$10.geo  4.2  0 0 0 +
+C FasterCap_Input_68_outside=nild3c_net=$10.geo  3.5  0 0 0 +
+C FasterCap_Input_69_outside=nild4c_net=$10.geo  3.5  0 0 0
+C FasterCap_Input_70_outside=(void)_net=$12.geo  3.9  0 0 0 +
+C FasterCap_Input_71_outside=fox_net=$12.geo  4.632  0 0 0 +
+C FasterCap_Input_72_outside=psg_net=$12.geo  3.9  0 0 0 +
+C FasterCap_Input_73_outside=lint_net=$12.geo  7.3  0 0 0 +
+C FasterCap_Input_74_outside=nild2_net=$12.geo  4.05  0 0 0 +
+C FasterCap_Input_75_outside=nild3_net=$12.geo  4.5  0 0 0 +
+C FasterCap_Input_76_outside=nild4_net=$12.geo  4.2  0 0 0 +
+C FasterCap_Input_77_outside=nild3c_net=$12.geo  3.5  0 0 0 +
+C FasterCap_Input_78_outside=nild4c_net=$12.geo  3.5  0 0 0
+C FasterCap_Input_79_outside=(void)_net=$39.geo  3.9  0 0 0 +
+C FasterCap_Input_80_outside=fox_net=$39.geo  4.632  0 0 0 +
+C FasterCap_Input_81_outside=psg_net=$39.geo  3.9  0 0 0 +
+C FasterCap_Input_82_outside=lint_net=$39.geo  7.3  0 0 0 +
+C FasterCap_Input_83_outside=nild2_net=$39.geo  4.05  0 0 0 +
+C FasterCap_Input_84_outside=nild3_net=$39.geo  4.5  0 0 0 +
+C FasterCap_Input_85_outside=nild4_net=$39.geo  4.2  0 0 0 +
+C FasterCap_Input_86_outside=nild3c_net=$39.geo  3.5  0 0 0 +
+C FasterCap_Input_87_outside=nild4c_net=$39.geo  3.5  0 0 0
+C FasterCap_Input_88_outside=fox_net=B[0].geo  4.632  0 0 0 +
+C FasterCap_Input_89_outside=spnit_net=B[0].geo  7.5  0 0 0 +
+C FasterCap_Input_90_outside=psg_net=B[0].geo  3.9  0 0 0 +
+C FasterCap_Input_91_outside=lint_net=B[0].geo  7.3  0 0 0 +
+C FasterCap_Input_92_outside=nild2_net=B[0].geo  4.05  0 0 0 +
+C FasterCap_Input_93_outside=nild3_net=B[0].geo  4.5  0 0 0 +
+C FasterCap_Input_94_outside=nild4_net=B[0].geo  4.2  0 0 0 +
+C FasterCap_Input_95_outside=iox_net=B[0].geo  0.39  0 0 0 +
+C FasterCap_Input_96_outside=nild3c_net=B[0].geo  3.5  0 0 0 +
+C FasterCap_Input_97_outside=nild4c_net=B[0].geo  3.5  0 0 0
+C FasterCap_Input_98_outside=fox_net=B[1].geo  4.632  0 0 0 +
+C FasterCap_Input_99_outside=spnit_net=B[1].geo  7.5  0 0 0 +
+C FasterCap_Input_100_outside=psg_net=B[1].geo  3.9  0 0 0 +
+C FasterCap_Input_101_outside=lint_net=B[1].geo  7.3  0 0 0 +
+C FasterCap_Input_102_outside=nild2_net=B[1].geo  4.05  0 0 0 +
+C FasterCap_Input_103_outside=nild3_net=B[1].geo  4.5  0 0 0 +
+C FasterCap_Input_104_outside=nild4_net=B[1].geo  4.2  0 0 0 +
+C FasterCap_Input_105_outside=iox_net=B[1].geo  0.39  0 0 0 +
+C FasterCap_Input_106_outside=nild3c_net=B[1].geo  3.5  0 0 0 +
+C FasterCap_Input_107_outside=nild4c_net=B[1].geo  3.5  0 0 0
+C FasterCap_Input_108_outside=fox_net=B[2].geo  4.632  0 0 0 +
+C FasterCap_Input_109_outside=spnit_net=B[2].geo  7.5  0 0 0 +
+C FasterCap_Input_110_outside=psg_net=B[2].geo  3.9  0 0 0 +
+C FasterCap_Input_111_outside=lint_net=B[2].geo  7.3  0 0 0 +
+C FasterCap_Input_112_outside=nild2_net=B[2].geo  4.05  0 0 0 +
+C FasterCap_Input_113_outside=nild3_net=B[2].geo  4.5  0 0 0 +
+C FasterCap_Input_114_outside=nild4_net=B[2].geo  4.2  0 0 0 +
+C FasterCap_Input_115_outside=iox_net=B[2].geo  0.39  0 0 0 +
+C FasterCap_Input_116_outside=nild3c_net=B[2].geo  3.5  0 0 0 +
+C FasterCap_Input_117_outside=nild4c_net=B[2].geo  3.5  0 0 0
+C FasterCap_Input_118_outside=fox_net=B[3].geo  4.632  0 0 0 +
+C FasterCap_Input_119_outside=spnit_net=B[3].geo  7.5  0 0 0 +
+C FasterCap_Input_120_outside=psg_net=B[3].geo  3.9  0 0 0 +
+C FasterCap_Input_121_outside=lint_net=B[3].geo  7.3  0 0 0 +
+C FasterCap_Input_122_outside=nild2_net=B[3].geo  4.05  0 0 0 +
+C FasterCap_Input_123_outside=nild3_net=B[3].geo  4.5  0 0 0 +
+C FasterCap_Input_124_outside=nild4_net=B[3].geo  4.2  0 0 0 +
+C FasterCap_Input_125_outside=iox_net=B[3].geo  0.39  0 0 0 +
+C FasterCap_Input_126_outside=nild3c_net=B[3].geo  3.5  0 0 0 +
+C FasterCap_Input_127_outside=nild4c_net=B[3].geo  3.5  0 0 0
+C FasterCap_Input_128_outside=fox_net=B[4].geo  4.632  0 0 0 +
+C FasterCap_Input_129_outside=spnit_net=B[4].geo  7.5  0 0 0 +
+C FasterCap_Input_130_outside=psg_net=B[4].geo  3.9  0 0 0 +
+C FasterCap_Input_131_outside=lint_net=B[4].geo  7.3  0 0 0 +
+C FasterCap_Input_132_outside=nild2_net=B[4].geo  4.05  0 0 0 +
+C FasterCap_Input_133_outside=nild3_net=B[4].geo  4.5  0 0 0 +
+C FasterCap_Input_134_outside=nild4_net=B[4].geo  4.2  0 0 0 +
+C FasterCap_Input_135_outside=iox_net=B[4].geo  0.39  0 0 0 +
+C FasterCap_Input_136_outside=nild3c_net=B[4].geo  3.5  0 0 0 +
+C FasterCap_Input_137_outside=nild4c_net=B[4].geo  3.5  0 0 0
+C FasterCap_Input_138_outside=fox_net=DAC_REF.geo  4.632  0 0 0 +
+C FasterCap_Input_139_outside=spnit_net=DAC_REF.geo  7.5  0 0 0 +
+C FasterCap_Input_140_outside=psg_net=DAC_REF.geo  3.9  0 0 0 +
+C FasterCap_Input_141_outside=lint_net=DAC_REF.geo  7.3  0 0 0 +
+C FasterCap_Input_142_outside=nild2_net=DAC_REF.geo  4.05  0 0 0 +
+C FasterCap_Input_143_outside=nild3_net=DAC_REF.geo  4.5  0 0 0 +
+C FasterCap_Input_144_outside=nild4_net=DAC_REF.geo  4.2  0 0 0 +
+C FasterCap_Input_145_outside=iox_net=DAC_REF.geo  0.39  0 0 0 +
+C FasterCap_Input_146_outside=nild3c_net=DAC_REF.geo  3.5  0 0 0 +
+C FasterCap_Input_147_outside=nild4c_net=DAC_REF.geo  3.5  0 0 0

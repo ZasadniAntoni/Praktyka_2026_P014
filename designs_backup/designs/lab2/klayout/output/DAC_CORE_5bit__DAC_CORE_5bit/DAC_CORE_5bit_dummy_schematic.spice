@@ -1,0 +1,3 @@
+.subckt DAC_CORE_5bit VDD VSS
+.ends
+.end

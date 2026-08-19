@@ -1,0 +1,188 @@
+* NGSPICE file created from DAC_CORE_5bit.ext - technology: sky130A
+
+.subckt DAC_CORE_5bit DAC_REF B[0] B[1] B[4] I_DAC B[2] B[3] VDD
+X0 a_n1864_2898# B[2] I_DAC w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X1 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=99.75 ps=722 w=3.5 l=5
+X2 a_n1864_3918# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X3 a_n1494_2558# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X4 a_n1864_3918# B[4] I_DAC w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X5 a_n1864_3918# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X6 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X7 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X8 I_DAC B[4] a_n1864_3918# w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X9 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X10 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X11 I_DAC B[1] a_n1494_2558# w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X12 a_n1864_3238# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X13 I_DAC B[4] a_n1864_3918# w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X14 a_n1864_3918# B[4] I_DAC w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X15 a_n1864_3918# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X16 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X17 a_n934_2558# B[0] I_DAC w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X18 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X19 I_DAC B[3] a_n1864_3238# w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X20 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X21 a_n1494_2558# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X22 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X23 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X24 a_n1864_3918# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X25 a_n1864_2898# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X26 a_n1864_3918# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X27 a_n1864_3918# B[4] I_DAC w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X28 a_n1864_3918# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X29 a_n1864_3918# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X30 a_n1864_3238# B[3] I_DAC w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X31 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X32 a_n1864_3918# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X33 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X34 I_DAC B[3] a_n1864_3238# w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X35 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X36 a_n1864_3918# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X37 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X38 a_n1864_3238# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X39 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X40 a_n1864_2898# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X41 I_DAC B[4] a_n1864_3918# w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X42 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X43 I_DAC B[3] a_n1864_3238# w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X44 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X45 a_n1864_2898# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X46 a_n1864_3918# B[4] I_DAC w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X47 a_n1864_3238# B[3] I_DAC w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X48 a_n1864_3918# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X49 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X50 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X51 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X52 I_DAC B[4] a_n1864_3918# w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X53 a_n1864_3238# B[3] I_DAC w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X54 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X55 I_DAC B[3] a_n1864_3238# w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X56 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X57 a_n1864_3918# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X58 a_n1864_3918# B[4] I_DAC w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X59 a_n1864_3238# B[3] I_DAC w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X60 a_n1864_3238# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X61 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X62 I_DAC B[4] a_n1864_3918# w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X63 I_DAC B[2] a_n1864_2898# w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X64 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X65 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X66 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X67 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X68 a_n934_2558# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X69 a_n1864_3238# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X70 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X71 I_DAC B[4] a_n1864_3918# w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X72 I_DAC B[4] a_n1864_3918# w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X73 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X74 a_n1864_3918# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X75 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X76 a_n1864_3918# B[4] I_DAC w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X77 a_n1864_2898# B[2] I_DAC w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X78 a_n1864_3918# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X79 a_n1864_3918# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X80 I_DAC B[1] I_DAC w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=4.158 ps=47.52 w=0.42 l=0.15
+X81 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X82 a_n1864_3918# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X83 a_n1864_3918# B[4] I_DAC w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X84 a_n1864_3238# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X85 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X86 a_n1864_3918# B[4] I_DAC w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X87 a_n1864_3238# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X88 I_DAC B[4] a_n1864_3918# w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X89 I_DAC B[2] a_n1864_2898# w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X90 a_n1864_3238# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X91 a_n1494_2558# B[1] I_DAC w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X92 a_n1864_3238# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X93 a_n1864_2898# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X94 a_n1864_3918# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+C0 VDD a_n2024_2042# 0.61936f
+C1 w_n65_n76# DAC_REF 38.3052f
+C2 w_n65_n76# VDD 14.8364f
+C3 w_n1948_2482# B[3] 1.04456f
+C4 w_n65_n76# a_n1864_3918# 1.93543f
+C5 B[3] B[2] 0.13721f
+C6 w_n1948_2482# a_n1494_2558# 0.07399f
+C7 w_n1948_2482# B[4] 2.06516f
+C8 VDD B[3] 0.23279f
+C9 DAC_REF a_n1494_2558# 3.70795f
+C10 VDD a_n1494_2558# 2.10532f
+C11 VDD B[4] 0.6983f
+C12 w_n1948_2482# B[0] 0.12332f
+C13 w_n1948_2482# a_n934_2558# 0.02211f
+C14 B[0] B[2] 0.01859f
+C15 DAC_REF a_n934_2558# 1.50649f
+C16 VDD B[0] 0.75127f
+C17 VDD a_n934_2558# 1.72216f
+C18 w_n1948_2482# I_DAC 1.50571f
+C19 a_n1864_3918# B[3] 0.29849f
+C20 I_DAC B[2] 0.44587f
+C21 DAC_REF I_DAC 0.01718f
+C22 VDD I_DAC 1.3383f
+C23 w_n1948_2482# B[1] 0.38978f
+C24 a_n1494_2558# a_n1864_3918# 0.60287f
+C25 B[4] a_n1864_3918# 4.16313f
+C26 B[2] B[1] 0.14666f
+C27 w_n1948_2482# a_n1864_2898# 0.15209f
+C28 VDD B[1] 0.11265f
+C29 a_n1864_2898# B[2] 0.62243f
+C30 DAC_REF a_n1864_2898# 6.52816f
+C31 VDD a_n1864_2898# 4.74911f
+C32 a_n1864_3918# a_n934_2558# 0.60144f
+C33 w_n1948_2482# a_n1864_3238# 0.35951f
+C34 a_n1864_3918# I_DAC 2.4225f
+C35 a_n1864_3238# B[2] 0.29852f
+C36 a_n1864_3238# DAC_REF 7.62442f
+C37 w_n65_n76# a_n1494_2558# 0.27899f
+C38 a_n1864_3238# VDD 6.64425f
+C39 a_n1864_2898# a_n1864_3918# 1.03115f
+C40 w_n65_n76# a_n934_2558# 0.16051f
+C41 a_n1864_3238# a_n1864_3918# 1.42402f
+C42 VDD a_n140_n151# 2.44841f
+C43 B[4] B[3] 0.12324f
+C44 w_n65_n76# a_n1864_2898# 0.52804f
+C45 a_n1494_2558# B[0] 0.25655f
+C46 a_n1494_2558# a_n934_2558# 0.90037f
+C47 B[3] I_DAC 0.89277f
+C48 w_n65_n76# a_n1864_3238# 1.07753f
+C49 a_n1494_2558# I_DAC 0.37274f
+C50 B[4] I_DAC 1.7506f
+C51 B[0] a_n934_2558# 0.18148f
+C52 a_n1494_2558# B[1] 0.17934f
+C53 B[0] I_DAC 0.55504f
+C54 a_n934_2558# I_DAC 0.18075f
+C55 a_n1494_2558# a_n1864_2898# 0.87879f
+C56 B[0] B[1] 0.05195f
+C57 a_n1864_3238# B[3] 1.80681f
+C58 a_n1864_2898# B[0] 0.11452f
+C59 a_n1864_2898# a_n934_2558# 0.41595f
+C60 a_n1864_3238# a_n1494_2558# 1.94261f
+C61 I_DAC B[1] 0.42682f
+C62 w_n1948_2482# B[2] 0.52379f
+C63 a_n1864_2898# I_DAC 0.48898f
+C64 w_n1948_2482# VDD 0.99502f
+C65 VDD B[2] 0.12987f
+C66 a_n1864_3238# a_n934_2558# 1.13585f
+C67 VDD DAC_REF 39.9763f
+C68 a_n1864_2898# B[1] 0.2104f
+C69 a_n1864_3238# I_DAC 1.15902f
+C70 w_n1948_2482# a_n1864_3918# 0.76278f
+C71 a_n1864_3238# a_n1864_2898# 2.07851f
+C72 DAC_REF a_n1864_3918# 13.3243f
+C73 VDD a_n1864_3918# 13.8016f
+C74 VDD VSUBS 19.5671f
+C75 DAC_REF VSUBS 5.83423f
+C76 B[0] VSUBS 0.87958f
+C77 B[1] VSUBS 0.2115f
+C78 B[2] VSUBS 0.13149f
+C79 B[3] VSUBS 0.29098f
+C80 I_DAC VSUBS 1.04519f
+C81 B[4] VSUBS 0.68408f
+C82 a_n934_2558# VSUBS 0.36581f ; **FLOATING
+C83 a_n1494_2558# VSUBS 0.43671f ; **FLOATING
+C84 a_n1864_2898# VSUBS 0.54127f ; **FLOATING
+C85 a_n1864_3238# VSUBS 0.17979f ; **FLOATING
+C86 a_n1864_3918# VSUBS 1.06761f ; **FLOATING
+C87 w_n1948_2482# VSUBS 9.5674f ; **FLOATING
+C88 w_n65_n76# VSUBS 0.21124p ; **FLOATING
+.ends

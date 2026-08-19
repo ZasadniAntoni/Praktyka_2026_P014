@@ -1,0 +1,4 @@
+
+set xschem_execute_scripts 1
+
+source $env(PDK_ROOT)/$env(PDK)/libs.tech/xschem/xschemrc

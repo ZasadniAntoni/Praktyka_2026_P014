@@ -1,0 +1,7 @@
+[2026-08-13 15:45:38,713] [ERROR]    No PEX engines activated
+[2026-08-13 15:45:38,714] [SUBPROCESS]    
+
+Please activate one or more engines using the arguments:
+[2026-08-13 15:45:38,721] [INFO]    GDS input file passed, running in LVS mode
+[2026-08-13 15:45:38,723] [INFO]    Found cell DAC_CORE_5bit in GDS DAC_CORE_5bit.gds (only top cell)
+[2026-08-13 15:45:38,724] [INFO]    LVS input schematic not specified (argument --schematic), using dummy schematic

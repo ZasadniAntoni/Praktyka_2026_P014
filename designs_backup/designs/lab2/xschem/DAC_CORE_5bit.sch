@@ -12,7 +12,7 @@ N 160 -100 160 -60 {lab=VDD}
 N 560 -100 560 -60 {lab=VDD}
 N 360 -100 360 -60 {lab=VDD}
 N -240 0 -240 60 {lab=M0_C}
-N -40 0 -40 60 {lab=M0_C}
+N -40 0 -40 60 {lab=M1_C}
 N 160 0 160 60 {lab=M2_C}
 N 360 0 360 60 {lab=M3_C}
 N 560 0 560 60 {lab=M4_C}
@@ -249,8 +249,8 @@ spiceprefix=X
 C {lab_wire.sym} 250 -190 0 0 {name=p16 sig_type=std_logic lab=b[1]}
 C {lab_wire.sym} 60 -240 0 0 {name=p19 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 310 -240 0 0 {name=p20 sig_type=std_logic lab=I_DAC}
-C {lab_wire.sym} -240 30 0 0 {name=p21 sig_type=std_logic lab=M0_C}
 C {lab_wire.sym} -40 30 0 0 {name=p22 sig_type=std_logic lab=M1_C}
 C {lab_wire.sym} 160 30 0 0 {name=p23 sig_type=std_logic lab=M2_C}
 C {lab_wire.sym} 360 30 0 0 {name=p24 sig_type=std_logic lab=M3_C}
 C {lab_wire.sym} 560 30 0 0 {name=p25 sig_type=std_logic lab=M4_C}
+C {lab_wire.sym} -240 30 0 0 {name=p21 sig_type=std_logic lab=M0_C}

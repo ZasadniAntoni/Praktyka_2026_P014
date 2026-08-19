@@ -1,0 +1,242 @@
+[2026-08-13 16:17:33,121] [INFO]    GDS input file passed, running in LVS mode
+[2026-08-13 16:17:33,123] [INFO]    Found cell DAC_CORE_5bit in GDS DAC_CORE_5bit.gds (only top cell)
+[2026-08-13 16:17:33,129] [INFO]    Calling MAGIC
+[2026-08-13 16:17:33,130] [SUBPROCESS]    magic -dnull -noconsole -rcfile /foss/pdks/sky130A/libs.tech/magic/sky130A.magicrc output/DAC_CORE_5bit__DAC_CORE_5bit/magic_CC/DAC_CORE_5bit_MAGIC_CC_Script.tcl, output file: output/DAC_CORE_5bit__DAC_CORE_5bit/magic_CC/DAC_CORE_5bit_MAGIC_CC_Output.txt
+[2026-08-13 16:17:33,144] [SUBPROCESS]    
+[2026-08-13 16:17:33,145] [SUBPROCESS]    Magic 8.3 revision 678 - Compiled on Mon Jul 27 03:07:22 PM CEST 2026.
+[2026-08-13 16:17:33,145] [SUBPROCESS]    Starting magic under Tcl interpreter
+[2026-08-13 16:17:33,146] [SUBPROCESS]    Using the terminal as the console.
+[2026-08-13 16:17:33,146] [SUBPROCESS]    Using NULL graphics device.
+[2026-08-13 16:17:33,179] [SUBPROCESS]    Processing system .magicrc file
+[2026-08-13 16:17:33,189] [SUBPROCESS]    Switching to WIRING tool.
+[2026-08-13 16:17:33,190] [SUBPROCESS]    Switching to NETLIST tool.
+[2026-08-13 16:17:33,190] [SUBPROCESS]    Switching to PICK tool.
+[2026-08-13 16:17:33,191] [SUBPROCESS]    Switching to BOX tool.
+[2026-08-13 16:17:33,191] [SUBPROCESS]    Sourcing design .magicrc for technology sky130A ...
+[2026-08-13 16:17:33,192] [SUBPROCESS]    2 Magic internal units = 1 Lambda
+[2026-08-13 16:17:33,222] [SUBPROCESS]    Input style sky130(): scaleFactor=2, multiplier=2
+[2026-08-13 16:17:33,394] [SUBPROCESS]    The following types are not handled by extraction and will be treated as non-electrical types:
+[2026-08-13 16:17:33,395] [SUBPROCESS]        ubm 
+[2026-08-13 16:17:33,403] [SUBPROCESS]    Scaled tech values by 2 / 1 to match internal grid scaling
+[2026-08-13 16:17:33,406] [SUBPROCESS]    Loading sky130A Device Generator Menu ...
+[2026-08-13 16:17:33,407] [SUBPROCESS]    Loading "output/DAC_CORE_5bit__DAC_CORE_5bit/magic_CC/DAC_CORE_5bit_MAGIC_CC_Script.tcl" from command line.
+[2026-08-13 16:17:33,408] [SUBPROCESS]    Warning: Calma reading is not undoable!  I hope that's OK.
+[2026-08-13 16:17:33,408] [SUBPROCESS]    Library written using GDS-II Release 6.0
+[2026-08-13 16:17:33,409] [SUBPROCESS]    Library name: LIB
+[2026-08-13 16:17:33,409] [SUBPROCESS]    Reading "$$$CONTEXT_INFO$$$".
+[2026-08-13 16:17:33,409] [SUBPROCESS]    Reading "vias_gen$6".
+[2026-08-13 16:17:33,410] [SUBPROCESS]    Reading "guard_ring_gen$3".
+[2026-08-13 16:17:33,412] [SUBPROCESS]    Reading "vias_gen$5".
+[2026-08-13 16:17:33,413] [SUBPROCESS]    Reading "vias_gen$4".
+[2026-08-13 16:17:33,414] [SUBPROCESS]    Reading "TEXT$5".
+[2026-08-13 16:17:33,415] [SUBPROCESS]    Reading "TEXT$4".
+[2026-08-13 16:17:33,416] [SUBPROCESS]    Reading "TEXT$2".
+[2026-08-13 16:17:33,417] [SUBPROCESS]    Reading "TEXT$1".
+[2026-08-13 16:17:33,418] [SUBPROCESS]    Reading "TEXT$3".
+[2026-08-13 16:17:33,418] [SUBPROCESS]    Reading "vias_gen$3".
+[2026-08-13 16:17:33,419] [SUBPROCESS]    Reading "vias_gen".
+[2026-08-13 16:17:33,420] [SUBPROCESS]    Reading "DAC_BASE_MCS".
+[2026-08-13 16:17:33,421] [SUBPROCESS]    Reading "DAC_BASE_MK".
+[2026-08-13 16:17:33,422] [SUBPROCESS]    Reading "TEXT".
+[2026-08-13 16:17:33,423] [SUBPROCESS]    Reading "guard_ring_gen".
+[2026-08-13 16:17:33,432] [SUBPROCESS]    Reading "DAC_CORE_5bit".
+[2026-08-13 16:17:33,432] [SUBPROCESS]    CIF file read warning: CIF style sky130(): units rescaled by factor of 5 / 1
+[2026-08-13 16:17:33,433] [SUBPROCESS]    CIF file read warning: Input off lambda grid by 2/5; snapped to grid.
+[2026-08-13 16:17:33,443] [SUBPROCESS]    Extracting DAC_CORE_5bit into /foss/designs/lab2/klayout/output/DAC_CORE_5bit__DAC_CORE_5bit/magic_CC/DAC_CORE_5bit.ext:
+[2026-08-13 16:17:33,444] [SUBPROCESS]    Processing DAC_CORE_5bit
+[2026-08-13 16:17:33,510] [SUBPROCESS]    DAC_CORE_5bit: 33 warnings
+[2026-08-13 16:17:33,511] [SUBPROCESS]    Total of 33 warnings.
+[2026-08-13 16:17:33,511] [SUBPROCESS]    exttospice finished.
+[2026-08-13 16:17:33,518] [INFO]    MAGIC succeeded after 0.3862s
+[2026-08-13 16:17:33,525] [SUBPROCESS]    Report DB saved at: output/DAC_CORE_5bit__DAC_CORE_5bit/magic_CC/DAC_CORE_5bit_MAGIC_report.rdb.gz
+[2026-08-13 16:17:33,525] [SUBPROCESS]    SPICE netlist saved at: output/DAC_CORE_5bit__DAC_CORE_5bit/magic_CC/DAC_CORE_5bit.pex.spice
+[2026-08-13 16:17:33,526] [INFO]    Copied expanded SPICE netlist to: DAC_CORE_5bit_pex.spice
+[2026-08-13 16:17:33,527] [SUBPROCESS]    * NGSPICE file created from DAC_CORE_5bit.ext - technology: sky130A
+
+.subckt DAC_CORE_5bit DAC_REF B[0] B[1] B[4] I_DAC B[2] B[3] VDD
+X0 a_n1864_2898# B[2] I_DAC w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X1 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=99.75 ps=722 w=3.5 l=5
+X2 a_n1864_3918# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X3 a_n1494_2558# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X4 a_n1864_3918# B[4] I_DAC w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X5 a_n1864_3918# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X6 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X7 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X8 I_DAC B[4] a_n1864_3918# w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X9 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X10 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X11 I_DAC B[1] a_n1494_2558# w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X12 a_n1864_3238# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X13 I_DAC B[4] a_n1864_3918# w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X14 a_n1864_3918# B[4] I_DAC w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X15 a_n1864_3918# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X16 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X17 a_n934_2558# B[0] I_DAC w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X18 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X19 I_DAC B[3] a_n1864_3238# w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X20 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X21 a_n1494_2558# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X22 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X23 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X24 a_n1864_3918# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X25 a_n1864_2898# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X26 a_n1864_3918# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X27 a_n1864_3918# B[4] I_DAC w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X28 a_n1864_3918# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X29 a_n1864_3918# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X30 a_n1864_3238# B[3] I_DAC w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X31 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X32 a_n1864_3918# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X33 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X34 I_DAC B[3] a_n1864_3238# w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X35 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X36 a_n1864_3918# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X37 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X38 a_n1864_3238# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X39 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X40 a_n1864_2898# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X41 I_DAC B[4] a_n1864_3918# w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X42 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X43 I_DAC B[3] a_n1864_3238# w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X44 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X45 a_n1864_2898# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X46 a_n1864_3918# B[4] I_DAC w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X47 a_n1864_3238# B[3] I_DAC w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X48 a_n1864_3918# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X49 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X50 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X51 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X52 I_DAC B[4] a_n1864_3918# w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X53 a_n1864_3238# B[3] I_DAC w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X54 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X55 I_DAC B[3] a_n1864_3238# w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X56 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X57 a_n1864_3918# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X58 a_n1864_3918# B[4] I_DAC w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X59 a_n1864_3238# B[3] I_DAC w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X60 a_n1864_3238# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X61 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X62 I_DAC B[4] a_n1864_3918# w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X63 I_DAC B[2] a_n1864_2898# w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X64 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X65 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X66 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X67 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X68 a_n934_2558# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X69 a_n1864_3238# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X70 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X71 I_DAC B[4] a_n1864_3918# w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X72 I_DAC B[4] a_n1864_3918# w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X73 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X74 a_n1864_3918# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X75 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X76 a_n1864_3918# B[4] I_DAC w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X77 a_n1864_2898# B[2] I_DAC w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X78 a_n1864_3918# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X79 a_n1864_3918# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X80 I_DAC B[1] I_DAC w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=4.158 ps=47.52 w=0.42 l=0.15
+X81 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X82 a_n1864_3918# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X83 a_n1864_3918# B[4] I_DAC w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X84 a_n1864_3238# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X85 VDD DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=0 ps=0 w=3.5 l=5
+X86 a_n1864_3918# B[4] I_DAC w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X87 a_n1864_3238# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X88 I_DAC B[4] a_n1864_3918# w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X89 I_DAC B[2] a_n1864_2898# w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X90 a_n1864_3238# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X91 a_n1494_2558# B[1] I_DAC w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
+X92 a_n1864_3238# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X93 a_n1864_2898# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+X94 a_n1864_3918# DAC_REF VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
+C0 a_n1864_3238# I_DAC 1.15902f
+C1 w_n1948_2482# a_n1864_3918# 0.76278f
+C2 a_n1864_3238# a_n1864_2898# 2.07851f
+C3 DAC_REF a_n1864_3918# 13.3243f
+C4 VDD a_n1864_3918# 13.8016f
+C5 VDD a_n2024_2042# 0.61936f
+C6 w_n65_n76# DAC_REF 38.3052f
+C7 w_n65_n76# VDD 14.8364f
+C8 w_n1948_2482# B[3] 1.04456f
+C9 w_n65_n76# a_n1864_3918# 1.93543f
+C10 B[3] B[2] 0.13721f
+C11 w_n1948_2482# a_n1494_2558# 0.07399f
+C12 w_n1948_2482# B[4] 2.06516f
+C13 VDD B[3] 0.23279f
+C14 DAC_REF a_n1494_2558# 3.70795f
+C15 VDD a_n1494_2558# 2.10532f
+C16 VDD B[4] 0.6983f
+C17 w_n1948_2482# B[0] 0.12332f
+C18 w_n1948_2482# a_n934_2558# 0.02211f
+C19 B[0] B[2] 0.01859f
+C20 DAC_REF a_n934_2558# 1.50649f
+C21 VDD B[0] 0.75127f
+C22 VDD a_n934_2558# 1.72216f
+C23 w_n1948_2482# I_DAC 1.50571f
+C24 a_n1864_3918# B[3] 0.29849f
+C25 I_DAC B[2] 0.44587f
+C26 DAC_REF I_DAC 0.01718f
+C27 VDD I_DAC 1.3383f
+C28 w_n1948_2482# B[1] 0.38978f
+C29 a_n1494_2558# a_n1864_3918# 0.60287f
+C30 B[4] a_n1864_3918# 4.16313f
+C31 B[2] B[1] 0.14666f
+C32 w_n1948_2482# a_n1864_2898# 0.15209f
+C33 VDD B[1] 0.11265f
+C34 a_n1864_2898# B[2] 0.62243f
+C35 DAC_REF a_n1864_2898# 6.52816f
+C36 VDD a_n1864_2898# 4.74911f
+C37 a_n1864_3918# a_n934_2558# 0.60144f
+C38 w_n1948_2482# a_n1864_3238# 0.35951f
+C39 a_n1864_3918# I_DAC 2.4225f
+C40 a_n1864_3238# B[2] 0.29852f
+C41 a_n1864_3238# DAC_REF 7.62442f
+C42 w_n65_n76# a_n1494_2558# 0.27899f
+C43 a_n1864_3238# VDD 6.64425f
+C44 a_n1864_2898# a_n1864_3918# 1.03115f
+C45 w_n65_n76# a_n934_2558# 0.16051f
+C46 a_n1864_3238# a_n1864_3918# 1.42402f
+C47 VDD a_n140_n151# 2.44841f
+C48 B[4] B[3] 0.12324f
+C49 w_n65_n76# a_n1864_2898# 0.52804f
+C50 a_n1494_2558# B[0] 0.25655f
+C51 a_n1494_2558# a_n934_2558# 0.90037f
+C52 B[3] I_DAC 0.89277f
+C53 w_n65_n76# a_n1864_3238# 1.07753f
+C54 a_n1494_2558# I_DAC 0.37274f
+C55 B[4] I_DAC 1.7506f
+C56 B[0] a_n934_2558# 0.18148f
+C57 a_n1494_2558# B[1] 0.17934f
+C58 B[0] I_DAC 0.55504f
+C59 a_n934_2558# I_DAC 0.18075f
+C60 a_n1494_2558# a_n1864_2898# 0.87879f
+C61 B[0] B[1] 0.05195f
+C62 a_n1864_3238# B[3] 1.80681f
+C63 a_n1864_2898# B[0] 0.11452f
+C64 a_n1864_2898# a_n934_2558# 0.41595f
+C65 a_n1864_3238# a_n1494_2558# 1.94261f
+C66 I_DAC B[1] 0.42682f
+C67 w_n1948_2482# B[2] 0.52379f
+C68 a_n1864_2898# I_DAC 0.48898f
+C69 w_n1948_2482# VDD 0.99502f
+C70 VDD B[2] 0.12987f
+C71 a_n1864_3238# a_n934_2558# 1.13585f
+C72 VDD DAC_REF 39.9763f
+C73 a_n1864_2898# B[1] 0.2104f
+C74 VDD VSUBS 19.5671f
+C75 DAC_REF VSUBS 5.83423f
+C76 B[0] VSUBS 0.87958f
+C77 B[1] VSUBS 0.2115f
+C78 B[2] VSUBS 0.13149f
+C79 B[3] VSUBS 0.29098f
+C80 I_DAC VSUBS 1.04519f
+C81 B[4] VSUBS 0.68408f
+C82 a_n934_2558# VSUBS 0.36581f ; **FLOATING
+C83 a_n1494_2558# VSUBS 0.43671f ; **FLOATING
+C84 a_n1864_2898# VSUBS 0.54127f ; **FLOATING
+C85 a_n1864_3238# VSUBS 0.17979f ; **FLOATING
+C86 a_n1864_3918# VSUBS 1.06761f ; **FLOATING
+C87 w_n1948_2482# VSUBS 9.5674f ; **FLOATING
+C88 w_n65_n76# VSUBS 0.21124p ; **FLOATING
+.ends
+

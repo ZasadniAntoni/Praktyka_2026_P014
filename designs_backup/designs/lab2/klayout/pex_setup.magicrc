@@ -1,0 +1,2 @@
+ext2spice ground VDD
+ext2spice defaultsub VDD

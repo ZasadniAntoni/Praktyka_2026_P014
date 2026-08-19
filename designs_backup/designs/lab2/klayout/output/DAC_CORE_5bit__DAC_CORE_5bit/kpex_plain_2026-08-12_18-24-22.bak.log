@@ -1,0 +1,3 @@
+GDS input file passed, running in LVS mode
+Found cell DAC_CORE_5bit in GDS DAC_CORE_5bit.gds (only top cell)
+Can't read schematic (LVS input) at path ../xschem/dac_core_5bit.spice

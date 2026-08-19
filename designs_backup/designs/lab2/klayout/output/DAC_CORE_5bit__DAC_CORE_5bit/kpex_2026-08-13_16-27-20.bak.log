@@ -1,0 +1,3 @@
+[2026-08-13 16:27:20,848] [INFO]    GDS input file passed, running in LVS mode
+[2026-08-13 16:27:20,850] [INFO]    Found cell DAC_CORE_5bit in GDS DAC_CORE_5bit.gds (only top cell)
+[2026-08-13 16:27:20,851] [ERROR]    Can't read schematic (LVS input) at path /foss/designs/lab2/xschem/dac_core_5bit.spice
