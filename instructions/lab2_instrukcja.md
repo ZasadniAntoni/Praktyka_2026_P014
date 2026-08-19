@@ -282,25 +282,24 @@ Po otworzeniu okna nowego layoutu umieść w nim jeden tranzystor PMOS o wymiara
 
 3.8. Przygotuj matryce źródeł prądowych oraz kluczy elektronicznych do prowadzenia połączeń. Miej na uwadze by zminimalizować błędy wprowadzane przez nieidentyczne otoczenie elementów układu. Jest to szczególnie istotne w odniesieniu do źródeł prądowych przetwornika DAC. Dlatego warto w projekcie masek źródeł prądowych umieścić dodatkowe (identyczne jeśli chodzi o wymiar kanału) tranzystory otaczające matrycę źródeł prądowych (nazwij je MD) - w tym projekcie proponuje się użyć matrycy 9 × 7 tranzystorów.  
 
-3.9. Umieść matrycę 9 × 7 tranzystorów źródeł prądowych, a tranzystory zewnętrzne opisz etykietą "MD" wykorzystując obiekt `TEXT` z biblioteki **Basic** na warstwie *text.drawing - 83:44*. Zwróć uwagę, że wnętrze matrycy zawiera 35 tranzystorów, podczas gdy Ty potrzebujesz tylko 31 do realizacji źródeł prądowych. Tych 4 dodatkowych tranzystorów również użyjesz jako MD, ale nieco później. Matryca tranzystorów źródeł prądowych powinna wyglądać jak na Rys 3.9.  
+3.9. Umieść matrycę 9 × 7 tranzystorów źródeł prądowych, a tranzystory zewnętrzne opisz etykietą "MD". Możesz wykorzystać obiekt `TEXT` z biblioteki **Basic** lub *Text* z paska narzędzi. Którykolwiek sposób wybierzesz - umieść tekst na warstwie *text.drawing - 83:44*. Zwróć uwagę, że wnętrze matrycy zawiera 35 tranzystorów, podczas gdy Ty potrzebujesz tylko 31 do realizacji źródeł prądowych. Tych 4 dodatkowych tranzystorów również użyjesz jako MD, ale nieco później. Matryca tranzystorów źródeł prądowych powinna wyglądać jak na Rys 3.9. (Na zdjęciu wykorzystano wspomnianą komórkę z biblioteki Basic).  
 
 <figure style="text-align: center; page-break-inside: avoid; break-inside: avoid;">
   <img src="screenshots/03_matrix_9x7_base_cell.png" style="max-width: 80%; height: auto;">
   <figcaption>Rys. 3.9. Matryca tranzystorów pracujących jako źródła prądowe wraz z tranzystorami dummy.</figcaption>
 </figure>
 
-3.10. Teraz umieść taką samą ilość tranzystorów dodatkowych MD na schemacie (będzie ich w sumie 33, jedno z nich będzie tranzystorem dummy dla kluczy). Częstą praktyką jest wykorzystanie tego typu dodatkowych elementów do innych zadań, np. do odprzęgania krytycznych linii. Dlatego wykorzystaj tranzystory MD jako kondensatory odprzęgające linię DAC_REF. Twój schemat po modyfikacjach powinien wyglądać jak na Rys. 3.10.  
-UWAGA: zwróć uwagę na etykiety pomiędzy kluczami a źródłami prądowymi. Bez tych etykiet możesz mieć problem z analizą LVS. **CZY NA PEWNO???**    
+3.10. Teraz umieść taką samą ilość tranzystorów dodatkowych MD na schemacie (będzie ich w sumie 33, jedno z nich będzie tranzystorem dummy dla kluczy). Częstą praktyką jest wykorzystanie tego typu dodatkowych elementów do innych zadań, np. do odprzęgania krytycznych linii. Dlatego wykorzystaj tranzystory MD jako kondensatory odprzęgające linię DAC_REF. Twój schemat po modyfikacjach powinien wyglądać jak na Rys. 3.10. - pamiętaj że zmieni się netlista schematu, więc należy ponownie ją skopiować, tak jak robiłeś to w punkcie 3.1., aby mieć poprawną netlistę do analizy LVS.   
+**UWAGA**: zwróć uwagę na etykiety pomiędzy kluczami a źródłami prądowymi.  
 
 <figure style="text-align: center; page-break-inside: avoid; break-inside: avoid;">
   <img src="screenshots/03_schematic_w.png">
   <figcaption>Rys. 3.10. Schemat przetwornika cyfrowo-analogowego po umieszczeniu tranzystorów dodatkowych MD (dummy). UWAGA: zwróć uwagę na etykiety M*_C pomiędzy kluczami i źródłami prądowymi.</figcaption>
 </figure>
 
-**-- ZMODYFIKUJ PONIŻEJ DLA KLAYOUT --**  
-3.11. Dodaj do tranzystorów pracujących jako źródła prądowe kontakty do ich bramek oraz pierścienie ochronne wokół dwóch grup tranzystorów: źródeł prądowych oraz kluczy elektronicznych. Weryfikuj swoje prace analizami DRC - teraz możesz rozwiązać wcześniejsze naruszenie reguł związanego z warstwą *psdm*. Są różne sposoby na rozwiązanie tego błędu - przykładowo można edytować *DAC_BASE_MCS* i rozszerzyć warstwę *nwell*, ale należy pamiętać że zmieni się wtedy wymiar komórki co ma wpływ na matrycę tranzystorów. Wstępny widok Twoich masek przetwornika DAC powinien przypominać ten na Rys. 3.11. 
+
+3.11. Dodaj do tranzystorów pracujących jako źródła prądowe kontakty do ich bramek oraz pierścienie ochronne wokół dwóch grup tranzystorów: źródeł prądowych oraz kluczy elektronicznych. Weryfikuj swoje prace analizami DRC - teraz możesz rozwiązać wcześniejsze naruszenie reguł związanego z warstwą *psdm*. Są różne sposoby na rozwiązanie tego błędu, przykładowo można edytować *DAC_BASE_MCS* i rozszerzyć warstwę *nwell*, ale należy pamiętać że zmieni się wtedy wymiar całej komórki - co ma wpływ na matrycę tranzystorów. Wstępny widok Twoich masek przetwornika DAC powinien przypominać ten na Rys. 3.11.  
 **UWAGA**: Na Twoim planie masek matryca kluczy (po lewej) powinna składać się z 4 × 8 tranzystorów, a matryca źródeł prądowych (po prawej) powinna składać się z 9 × 7 tranzystorów.  
-<!-- Na tym etapie powinny pozostać Ci tylko błędy dotyczące zbyt małych powierzchni metalu ME1 na bramkach kluczy elektronicznych (Rys. 3.9). Na tym etapie zaakceptuj ten błąd, bo w miarę jak będziesz realizować połączenia między elementami, zostaną one wyeliminowane.   -->
 
 <figure style="text-align: center; page-break-inside: avoid; break-inside: avoid;">
   <img src="screenshots/03_layout_sample.png">
@@ -310,40 +309,47 @@ UWAGA: zwróć uwagę na etykiety pomiędzy kluczami a źródłami prądowymi. B
 3.12. Teraz rozmieść źródła prądowe w matrycy wewnętrznej 7 × 5. W widoku masek używaj warstwy etykiet o nazwie *text.drawing*. 
 > Ostateczne rozplanowanie tranzystorów umieść w tabelce ze sprawozdania.  
 
-3.13. Przeprowadź połączenia wszystkich elementów przetwornika DAC tak by używać maksymalnie metalu na warstwie ME2. Poglądowy widok kompletnego projektu przedstawiony jest na Rys. 3.X. zaś na kolejnych rysunkach widoczne są poszczególne warstwy masek (Rys. 3.11 tylko ME1, Rys. 3.12 - tylko ME2).  
+3.13. Przeprowadź połączenia wszystkich elementów przetwornika DAC tak by używać maksymalnie metalu na warstwie ME2. Poglądowy widok kompletnego projektu przedstawiony jest na Rys. 3.12. zaś na kolejnych rysunkach widoczne są poszczególne warstwy masek (Rys. 3.14 tylko ME1, Rys. 3.15 - tylko ME2). Rys 3.13. przedstawia wynik analiz DRC i LVS - powinny przechodzić w całości bez żadnych błędów dla komórki *DAC_CORE_5bit*.  
 
-3.14. **TBD**  
-> Po zakończeniu etapu tworzenia masek, braku błędów DRC i poprawnej weryfikacji LVS przeprowadź symulacje postekstrakcyjne przetwornika. Przy generacji widoku z elementami pasożytniczymi ustaw parametr Extraction Ref Node = VDD (zastanów się, dlaczego?). Sprawdź, czy występują różnice w analizie charakterystyki przejściowej przetwornika na poziomie schematu i postekstrakcji (odczytaj prądy przetwornika dla trzech różnych ustawień linii b<0:4> i zapisz je w sprawozdaniu).  
+**-- ZMODYFIKUJ PONIŻEJ DLA KLAYOUT --**  
+3.14. Po zakończeniu etapu tworzenia masek, braku błędów DRC i poprawnej weryfikacji LVS:  
+> Przeprowadź symulacje postekstrakcyjne przetwornika. Przy generacji widoku z elementami pasożytniczymi ustaw parametr Extraction Ref Node = VDD (zastanów się, dlaczego?). Sprawdź, czy występują różnice w analizie charakterystyki przejściowej przetwornika na poziomie schematu i postekstrakcji (odczytaj prądy przetwornika dla trzech różnych ustawień linii b<0:4> i zapisz je w sprawozdaniu).  
 > Jeśli występują różnice, wyjaśnij ich źródło pochodzenia.  
+> 
+**UWAGA**: Sprawdź, czy otrzymany .SUBCKT ma dokładnie taką samą kolejność pinów co instancja twojego DAC-a w netliście - jeżeli nie to popraw ten podobwód.  
+[Tutaj](https://github.com/StefanSchippers/xschem/issues/46) znajdziesz kilka sposobów na przeprowadzenie symulacji poekstrakcyjnych. Do samej ekstrakcji możesz wykorzystać narzędzie Klayout-pex.  
 
 3.15. Jeżeli zdecydowałeś się na dodatkowe kroki, które pomogły ci w tworzeniu schematu, symulacji, layoutu to:  
 > Opisz te dodatkowe operacje jakie wykonałeś przy realizacji tego projektu (przykłady: dodatkowe struktury, sposób realizacji masek kluczy elektronicznych, etc.).  
 
-## 4. Napotkane (niektóre/wybrane) problemy
-* Przy włączaniu schematica *DAC_CORE_5bit_test.sch* schemat potrafi się zablokować i nie dać możliwości do edycji pliku. Dzieje się tak zazwyczaj gdy użytkownik chce edytować parametry i zamknie okno dialogowe edytowania parametrów.  
-  Błąd w konsoli:  
-  ```
-  xschem [/foss/designs/lab2/xschem] tcleval(): evaluation of script: edit_prop {Input property:} failed
-         : window ".dialog" was deleted before its visibility changed
-  ```
-  Rozwiązanie: Zauważyłem, że dzieje się tak gdy użytkownik przed edycją nie stworzy netlisty schematu przed edycją - czyli po włączeniu schematu należy zbudować netlistę. Nie znalazłem jeszcze konkretnego powodu dlaczego to ma wpływ, więc jest to chwilowe rozwiązanie.  
-**TBD**
+<figure style="text-align: center; page-break-inside: avoid; break-inside: avoid;">
+  <img src="screenshots/03_layout_final.png" style="max-width: 90%; height: auto;">
+  <figcaption>Rys. 3.12. Ukończony plan masek komórki DAC_CORE_5bit, widok all layers: skrót klawiszowy '0'.</figcaption>
+</figure>
 
-## TODO LIST
-1. Znaleźć sposób na uwzględnienie rozrzutów tylko pojedynczego tranzystora i uzupełnić punkty 1.5 - 1.7 (znalazłem sposób - trzeba uzupełnić insturkcję) - zrobione (chyba dobrze)
-   * *To co Defaultowo jest przez `SKY130->Add models symbol` może być zmienione poprzez modyfikację /foss/pdks/sky130A/libs.tech/xschem/xschemrc, ale to nie będzie pernamentna zmiana, a wyłącznie na obecną sesję dockera, do stałej zmiany można dodać plik /foss/designs/xschemrc **POD WARUNKIEM że będziemy startować każdy schematic z folderu /foss/designs co przy dużej ilości podfolderów i plików, czy kilkuosobowej pracy nad jednym projektem, może być niewygodne (trzeba być zapoznanym z drzewem folderów)***
-   * *dla bardzo małych prądów, mogą powstawać niedokładności między dużą ilością powtórzeń. Czemu? Może to przez niedokładności w modelowaniu? to raczej nie jest problem tylko z .subckt - dla pfetów prosto z sky130 też tak to wygląda - sprawdzić jeszcze trzeba i sie zastanowić*
-2. Przeprowadź analizę MC z punktu 1.8 i zapisz wyniki (kod do symulacji gotowy - ustawić M_REF jako mosfet idealny) - zrobione
-3. Zaktualizuj polecenie 1.10 uwzględniając odpowiednie parametry i sposoby na rozrzucanie pojedynczego tranzystora - zrobione
-4. Wykonaj symulacje zgodnie z punktem 1.11 - zrobione
-5. **5BIT DAC SCHEMATIC** - zrobione
-6. Stwórz symbol dla 5bit dac - zrobione
-7. Stwórz schemat symulacyjny - zrobione
-8. Przeprowadź symulacje działania układu - VTH jest na poziomie 1V dla W/L= 2/5 przez co nie jesteśmy w stanie uzyskać prądu bliskiego 10uA, nie bawić się w lvt-pfets, dla W/L= 2/5 vgs ~= 1.9V dla zasilania 1.8V X_X - modyfikacja W/L, obecnie 3.5/5, bez problemu można by było zostać przy W = 2 i zmniejszać L do momentu uzyskania odpowiedniego prądu
-9.  Zastanów się jak zrobić symulacje cornerowe dla każdego przypadku (chodzi o każdy corner w jednej symulacji - czy jest to wogóle możliwe, jesli nie - po prostu zmieniaj corner co symulacje) - zostałem przy drugiej opcji, pierwsza do sprawdzenia
-10. Layout DAC-a - TBD
-11. Klayout jest dość intuicyjny, ale importowanie z netlisty wymaga aktualizacji "Packages", co trzeba robić za każdym odpaleniem dockera - nie znalazłem jeszcze jednoznacznego rozwiązania, dzięki któremu mógłbym mieć najnowsze makra dla każdej instancji dockera (.designinit w folderze design - do testu; widzę że na gitcie iic osic tools jest nadal rozwijane, w zeszłym tygodniu był commit o updatecie niektórych narzędzi na branch next_release); 
-12. tworzenie własnych makr (wymaga wiedzy o samym klayout i pdk'ach; kodowanie w pythonie) i dostęp do utworzonych przez użytkowników na plus - obecnie nie jest ich wiele ale, niektóre są przydatne, pomagają w nauce oprogramowania (przykłady: import from netlist, graphical layout keybindings); 
-13. najlepiej od razu odpalać klayout w trybie do edycji `klayout -e`, podobny problem jak z makrami da się zmienić żeby default launch był w trybie edycji, ale jak zrobić żeby zmiana została zapisana (znowu .designinit, albo klayoutrc, modyfikacja samego iic tools albo skryptu starnowego?, )
-14. Ekstrakcja parasitic - TBD
-15. Co do samej instrukcji - dodać więcej zdjęć (łatwiej się pracuje z referencyjnymi zdjęciami) lub wstawiać pomocnicze fragmenty kodu (większość ustawiania to po prostu ngspice code)
+<figure style="margin: 12px 0;">
+  <table style="width: 100%; border-collapse: collapse;">
+    <tr>
+      <td style="width: 34.9%; text-align: center; vertical-align: bottom; padding: 0 5px;">
+        <img src="screenshots/03_result_DRC.png" style="max-width: 100%; height: auto;">
+        <div>a)</div>
+      </td>
+      <td style="width: 50%; text-align: center; vertical-align: bottom; padding: 0 5px;">
+        <img src="screenshots/03_result_LVS.png" style="max-width: 100%; height: auto;">
+        <div>b)</div>
+      </td>
+    </tr>
+  </table>
+  <figcaption style="text-align: center;">Rys. 3.13. Oczekiwany wynik analiz po zakończeniu tworzenia layoutu: a) DRC, b) LVS.</figcaption>
+</figure> 
+
+<figure style="text-align: center; page-break-inside: avoid; break-inside: avoid;">
+  <img src="screenshots/03_layout_final_me1.png" style="max-width: 90%; height: auto;">
+  <figcaption>Rys. 3.14. Ukończony plan masek komórki DAC_CORE_5bit, widok me1: skrót klawiszowy '2'.</figcaption>
+</figure>
+
+<figure style="text-align: center; page-break-inside: avoid; break-inside: avoid;">
+  <img src="screenshots/03_layout_final_me2.png" style="max-width: 90%; height: auto;">
+  <figcaption>Rys. 3.15. Ukończony plan masek komórki DAC_CORE_5bit, widok me2: skrót klawiszowy '3'.</figcaption>
+</figure>
+

@@ -64,11 +64,16 @@ time: 4h
         17.00 - 19.00 ->  ---||---
 time: 6h
 
-12.08 - 
-time: xh
+12.08 - 14.30 - 19.00 -> Kontynuacja wykonywania instrukcji lab2 w środowisku IIC-OSIC-TOOLS ; Kończenie layoutu, naprawianie błędów LVS; Layout ukończony, układ przechodzi DRC i LVS pomyślnie
+time: 4.5h
+
+13.08 - 14.30 - 17.00 -> Kontynuacja wykonywania instrukcji lab2 w środowisku IIC-OSIC-TOOLS ; Ustawianie testbenchu, Ekstrakcja parasitic, korzystanie z klayout-pex do ekstrakcji (pliki pex) i używanie ich w Xschem
+time: 2.5h
+
+
 ---
 
-TOTAL TIME SO FAR: 74h / 90h
+TOTAL TIME SO FAR: 81h / 90h
 
 ---
 
@@ -88,3 +93,8 @@ TOTAL TIME SO FAR: 74h / 90h
 - brak -
 
 13.08 - NOTES:
+
+jak skończę przetestować jak zrobić symulację mieszaną:
+inwerter kontrolowany cyfrowo() i analogowo 
+przykładowo 3 inwertery - 1szy opisany kodem verilog, drugi analogowo na tranzystorach, trzeci w kodzie verilog znowu
+spectre do xschema
