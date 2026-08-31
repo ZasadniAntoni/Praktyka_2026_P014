@@ -70,6 +70,7 @@ time: 4.5h
 13.08 - 14.30 - 17.00 -> Kontynuacja wykonywania instrukcji lab2 w środowisku IIC-OSIC-TOOLS ; Ustawianie testbenchu, Ekstrakcja parasitic, korzystanie z klayout-pex do ekstrakcji (pliki pex) i używanie ich w Xschem
 time: 2.5h
 
+31.08 - 12.00 - xxxxx -> Uzupełnianie wyników labolatorium 2, przeprowadzanie symulacji mieszanej
 
 ---
 
