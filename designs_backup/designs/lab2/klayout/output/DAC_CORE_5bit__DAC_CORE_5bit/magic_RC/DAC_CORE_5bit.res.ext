@@ -1,0 +1,467 @@
+scale 1000 1 500000
+killnode "a_n1864_3918#"
+rnode "a_n1864_3918.n0" 0 8020.22 3590 3194 0
+rnode "a_n1864_3918.n1" 0 253.073 -836 4300 0
+rnode "a_n1864_3918.n2" 0 126.498 -836 4300 0
+rnode "a_n1864_3918.n3" 0 252.8 -836 4640 0
+rnode "a_n1864_3918.n4" 0 85.5633 -836 4640 0
+rnode "a_n1864_3918.n5" 0 295.815 -1902 4640 0
+rnode "a_n1864_3918.n6" 0 296.089 -1902 4300 0
+rnode "a_n1864_3918.n7" 0 555.045 -1369 4602 0
+rnode "a_n1864_3918.n8" 0 1175.13 -588 4640 0
+rnode "a_n1864_3918.n9" 0 360.894 -588 4300 0
+rnode "a_n1864_3918.t27" 0 220.628 3560 2054 0
+rnode "a_n1864_3918.t30" 0 228.361 3560 1202 0
+rnode "a_n1864_3918.n10" 0 3295.89 9840 2690 0
+rnode "a_n1864_3918.n11" 0 1811.08 9840 3542 0
+rnode "a_n1864_3918.n12" 0 3295.89 8590 1838 0
+rnode "a_n1864_3918.n13" 0 1518.09 8590 3194 0
+rnode "a_n1864_3918.n14" 0 1647.6 8590 4046 0
+rnode "a_n1864_3918.n15" 0 1558.64 8590 4394 0
+rnode "a_n1864_3918.n16" 0 3295.89 2340 2690 0
+rnode "a_n1864_3918.n17" 0 1596.17 2340 3542 0
+rnode "a_n1864_3918.n18" 0 166.148 -1369 4942 0
+rnode "a_n1864_3918.t11" 0 26.6137 -934 4300 0
+rnode "a_n1864_3918.t12" 0 26.6137 -1804 3960 0
+rnode "a_n1864_3918.t6" 0 26.6221 -1244 4640 0
+rnode "a_n1864_3918.t10" 0 26.6221 -1244 4300 0
+rnode "a_n1864_3918.t9" 0 26.6219 -1494 4300 0
+rnode "a_n1864_3918.t8" 0 26.6137 -1804 4300 0
+rnode "a_n1864_3918.t4" 0 26.6137 -1804 4640 0
+rnode "a_n1864_3918.t0" 0 26.6137 -1804 4980 0
+rnode "a_n1864_3918.t7" 0 26.6137 -934 4640 0
+rnode "a_n1864_3918.t3" 0 26.6137 -934 4980 0
+rnode "a_n1864_3918.t21" 0 220.62 9810 3758 0
+rnode "a_n1864_3918.t25" 0 220.628 9810 2906 0
+rnode "a_n1864_3918.t29" 0 228.357 9810 2054 0
+rnode "a_n1864_3918.t17" 0 220.62 8560 4610 0
+rnode "a_n1864_3918.t20" 0 220.62 8560 3758 0
+rnode "a_n1864_3918.t24" 0 220.62 8560 2906 0
+rnode "a_n1864_3918.t28" 0 220.628 8560 2054 0
+rnode "a_n1864_3918.t31" 0 228.361 8560 1202 0
+rnode "a_n1864_3918.n19" 0 2372.23 8383 5462 0
+rnode "a_n1864_3918.t16" 0 220.62 3560 4610 0
+rnode "a_n1864_3918.t19" 0 220.62 3560 3758 0
+rnode "a_n1864_3918.t23" 0 220.62 3560 2906 0
+rnode "a_n1864_3918.n20" 0 1855.94 3383 5462 0
+rnode "a_n1864_3918.t18" 0 220.62 2310 3758 0
+rnode "a_n1864_3918.t22" 0 220.628 2310 2906 0
+rnode "a_n1864_3918.t26" 0 228.362 2310 2054 0
+rnode "a_n1864_3918.n21" 0 1535.23 2133 5462 0
+rnode "a_n1864_3918.t2" 0 26.6221 -1244 4980 0
+rnode "a_n1864_3918.t1" 0 26.6219 -1494 4980 0
+rnode "a_n1864_3918.n22" 0 266.49 -1370 4980 0
+rnode "a_n1864_3918.t5" 0 26.6219 -1494 4640 0
+rnode "a_n1864_3918.n23" 0 231.608 -1370 4640 0
+rnode "a_n1864_3918.n24" 0 231.608 -1370 4300 0
+rnode "a_n1864_3918.t14" 0 26.6221 -1244 3960 0
+rnode "a_n1864_3918.t13" 0 26.6219 -1494 3960 0
+rnode "a_n1864_3918.n25" 0 281.301 -1370 3960 0
+rnode "a_n1864_3918.t15" 0 26.6137 -934 3960 0
+resist "a_n1864_3918.n25" "a_n1864_3918.n2" 1.83535
+resist "a_n1864_3918.n22" "a_n1864_3918.n4" 1.85491
+resist "a_n1864_3918.n24" "a_n1864_3918.n9" 1.31771
+resist "a_n1864_3918.n23" "a_n1864_3918.n8" 1.31771
+resist "a_n1864_3918.n21" "a_n1864_3918.n20" 1.60598
+resist "a_n1864_3918.n8" "a_n1864_3918.n9" 1.7278
+resist "a_n1864_3918.n18" "a_n1864_3918.n7" 2.06908
+resist "a_n1864_3918.n19" "a_n1864_3918.n15" 2.1941
+resist "a_n1864_3918.n3" "a_n1864_3918.n1" 2.4375
+resist "a_n1864_3918.n6" "a_n1864_3918.n5" 2.4375
+resist "a_n1864_3918.n20" "a_n1864_3918.n0" 3.18185
+resist "a_n1864_3918.n21" "a_n1864_3918.n17" 3.85816
+resist "a_n1864_3918.n8" "a_n1864_3918.n21" 4.31629
+resist "a_n1864_3918.n22" "a_n1864_3918.n18" 4.5
+resist "a_n1864_3918.n7" "a_n1864_3918.n24" 4.5
+resist "a_n1864_3918.n25" "a_n1864_3918.n7" 4.5
+resist "a_n1864_3918.n23" "a_n1864_3918.n7" 4.5
+resist "a_n1864_3918.n3" "a_n1864_3918.n4" 1.98215
+resist "a_n1864_3918.n8" "a_n1864_3918.n4" 0.537197
+resist "a_n1864_3918.n9" "a_n1864_3918.n2" 0.517645
+resist "a_n1864_3918.n1" "a_n1864_3918.n2" 1.99193
+resist "a_n1864_3918.n19" "a_n1864_3918.n11" 5.46414
+resist "a_n1864_3918.n22" "a_n1864_3918.n5" 5.8125
+resist "a_n1864_3918.n24" "a_n1864_3918.n6" 5.8125
+resist "a_n1864_3918.n25" "a_n1864_3918.n6" 5.8125
+resist "a_n1864_3918.n5" "a_n1864_3918.n23" 5.8125
+resist "a_n1864_3918.n20" "a_n1864_3918.n19" 6.70109
+resist "a_n1864_3918.n10" "a_n1864_3918.t25" 74.4276
+resist "a_n1864_3918.t23" "a_n1864_3918.n0" 74.4038
+resist "a_n1864_3918.t19" "a_n1864_3918.n0" 74.4038
+resist "a_n1864_3918.n17" "a_n1864_3918.n16" 0.304894
+resist "a_n1864_3918.n16" "a_n1864_3918.t26" 74.8204
+resist "a_n1864_3918.n0" "a_n1864_3918.t30" 74.8205
+resist "a_n1864_3918.n14" "a_n1864_3918.n15" 0.341429
+resist "a_n1864_3918.n13" "a_n1864_3918.n14" 0.341429
+resist "a_n1864_3918.n12" "a_n1864_3918.n13" 0.304894
+resist "a_n1864_3918.n12" "a_n1864_3918.t31" 74.8205
+resist "a_n1864_3918.n10" "a_n1864_3918.n11" 0.304894
+resist "a_n1864_3918.n10" "a_n1864_3918.t29" 74.8201
+resist "a_n1864_3918.n0" "a_n1864_3918.t16" 74.4033
+resist "a_n1864_3918.n17" "a_n1864_3918.t18" 74.4033
+resist "a_n1864_3918.n16" "a_n1864_3918.t22" 74.4276
+resist "a_n1864_3918.n0" "a_n1864_3918.t27" 74.4276
+resist "a_n1864_3918.n12" "a_n1864_3918.t28" 74.4276
+resist "a_n1864_3918.t17" "a_n1864_3918.n15" 74.4033
+resist "a_n1864_3918.t20" "a_n1864_3918.n14" 74.4034
+resist "a_n1864_3918.t24" "a_n1864_3918.n13" 74.4034
+resist "a_n1864_3918.t21" "a_n1864_3918.n11" 74.4033
+resist "a_n1864_3918.n1" "a_n1864_3918.t11" 664.72
+resist "a_n1864_3918.n3" "a_n1864_3918.t7" 664.72
+resist "a_n1864_3918.n3" "a_n1864_3918.t3" 664.72
+resist "a_n1864_3918.n5" "a_n1864_3918.t4" 664.72
+resist "a_n1864_3918.n6" "a_n1864_3918.t8" 664.72
+resist "a_n1864_3918.n6" "a_n1864_3918.t12" 664.72
+resist "a_n1864_3918.n5" "a_n1864_3918.t0" 664.72
+resist "a_n1864_3918.t15" "a_n1864_3918.n1" 664.72
+resist "a_n1864_3918.n7" "a_n1864_3918.t13" 664.836
+resist "a_n1864_3918.n18" "a_n1864_3918.t1" 664.836
+resist "a_n1864_3918.n7" "a_n1864_3918.t5" 664.836
+resist "a_n1864_3918.n7" "a_n1864_3918.t9" 664.836
+resist "a_n1864_3918.n7" "a_n1864_3918.t14" 664.839
+resist "a_n1864_3918.n18" "a_n1864_3918.t2" 664.839
+resist "a_n1864_3918.n7" "a_n1864_3918.t6" 664.839
+resist "a_n1864_3918.n7" "a_n1864_3918.t10" 664.839
+killnode "a_n1864_3238#"
+rnode "a_n1864_3238.n0" 0 282.84 -1902 3280 0
+rnode "a_n1864_3238.n1" 0 101.363 -836 3620 0
+rnode "a_n1864_3238.n2" 0 237.476 -836 3620 0
+rnode "a_n1864_3238.n3" 0 647.508 -550 3526 0
+rnode "a_n1864_3238.n4" 0 351.014 -1369 3318 0
+rnode "a_n1864_3238.n5" 0 3662.98 7340 3830 0
+rnode "a_n1864_3238.n6" 0 3041.02 4840 3830 0
+rnode "a_n1864_3238.n7" 0 3660.89 7340 2342 0
+rnode "a_n1864_3238.n8" 0 3034.24 4840 2342 0
+rnode "a_n1864_3238.t10" 0 28.0755 -1244 3620 0
+rnode "a_n1864_3238.t13" 0 28.0753 -1494 3280 0
+rnode "a_n1864_3238.t12" 0 28.0667 -1804 3280 0
+rnode "a_n1864_3238.t8" 0 28.0667 -1804 3620 0
+rnode "a_n1864_3238.t3" 0 232.682 7310 3758 0
+rnode "a_n1864_3238.t1" 0 240.822 7310 4610 0
+rnode "a_n1864_3238.t2" 0 232.682 4810 3758 0
+rnode "a_n1864_3238.t0" 0 240.823 4810 4610 0
+rnode "a_n1864_3238.n9" 0 2123.88 4633 3514 0
+rnode "a_n1864_3238.t5" 0 232.679 7310 2054 0
+rnode "a_n1864_3238.t7" 0 240.49 7310 1202 0
+rnode "a_n1864_3238.t4" 0 232.679 4810 2054 0
+rnode "a_n1864_3238.t6" 0 240.49 4810 1202 0
+rnode "a_n1864_3238.n10" 0 2832.12 4633 2298 0
+rnode "a_n1864_3238.n11" 0 2920.28 636 3514 0
+rnode "a_n1864_3238.t11" 0 28.0667 -934 3620 0
+rnode "a_n1864_3238.t15" 0 28.0667 -934 3280 0
+rnode "a_n1864_3238.t9" 0 28.0753 -1494 3620 0
+rnode "a_n1864_3238.n12" 0 244.253 -1370 3620 0
+rnode "a_n1864_3238.n13" 0 293.515 -1370 3280 0
+rnode "a_n1864_3238.t14" 0 28.0755 -1244 3280 0
+resist "a_n1864_3238.n10" "a_n1864_3238.n8" 1.1966
+resist "a_n1864_3238.n9" "a_n1864_3238.n6" 1.17291
+resist "a_n1864_3238.n12" "a_n1864_3238.n3" 1.31771
+resist "a_n1864_3238.n3" "a_n1864_3238.n11" 1.56522
+resist "a_n1864_3238.n1" "a_n1864_3238.n13" 1.95811
+resist "a_n1864_3238.n10" "a_n1864_3238.n7" 4.50095
+resist "a_n1864_3238.n9" "a_n1864_3238.n5" 4.47726
+resist "a_n1864_3238.n2" "a_n1864_3238.n1" 2.09036
+resist "a_n1864_3238.n12" "a_n1864_3238.n4" 4.5
+resist "a_n1864_3238.n4" "a_n1864_3238.n13" 5.19079
+resist "a_n1864_3238.n3" "a_n1864_3238.n1" 0.755937
+resist "a_n1864_3238.n11" "a_n1864_3238.n9" 5.33832
+resist "a_n1864_3238.n0" "a_n1864_3238.n12" 5.8125
+resist "a_n1864_3238.n13" "a_n1864_3238.n0" 6.625
+resist "a_n1864_3238.n8" "a_n1864_3238.t4" 74.4317
+resist "a_n1864_3238.n11" "a_n1864_3238.n10" 9.1481
+resist "a_n1864_3238.t6" "a_n1864_3238.n8" 74.8089
+resist "a_n1864_3238.n7" "a_n1864_3238.t7" 74.8087
+resist "a_n1864_3238.n5" "a_n1864_3238.t3" 74.4435
+resist "a_n1864_3238.n5" "a_n1864_3238.t1" 74.8322
+resist "a_n1864_3238.n6" "a_n1864_3238.t0" 74.8328
+resist "a_n1864_3238.n7" "a_n1864_3238.t5" 74.4317
+resist "a_n1864_3238.t2" "a_n1864_3238.n6" 74.4427
+resist "a_n1864_3238.n2" "a_n1864_3238.t11" 664.72
+resist "a_n1864_3238.n2" "a_n1864_3238.t15" 664.72
+resist "a_n1864_3238.n0" "a_n1864_3238.t12" 664.72
+resist "a_n1864_3238.n0" "a_n1864_3238.t8" 664.72
+resist "a_n1864_3238.n4" "a_n1864_3238.t13" 664.836
+resist "a_n1864_3238.n4" "a_n1864_3238.t9" 664.836
+resist "a_n1864_3238.n4" "a_n1864_3238.t10" 664.839
+resist "a_n1864_3238.t14" "a_n1864_3238.n4" 664.839
+killnode "a_n1864_2898#"
+rnode "a_n1864_2898.t6" 0 419.036 7310 2906 0
+rnode "a_n1864_2898.t7" 0 415.761 6060 1202 0
+rnode "a_n1864_2898.t4" 0 277.017 6060 4610 0
+rnode "a_n1864_2898.n0" 0 5040.17 5278 4364 0
+rnode "a_n1864_2898.n1" 0 3692.72 5278 4364 0
+rnode "a_n1864_2898.t5" 0 349.81 4810 2906 0
+rnode "a_n1864_2898.n2" 0 5493.71 4239 4364 0
+rnode "a_n1864_2898.t0" 0 32.1934 -1804 2940 0
+rnode "a_n1864_2898.t2" 0 31.2815 -1244 2940 0
+rnode "a_n1864_2898.t1" 0 31.2819 -1494 2940 0
+rnode "a_n1864_2898.n3" 0 143.499 -1368 2940 0
+rnode "a_n1864_2898.n4" 0 377.066 -1368 2940 0
+rnode "a_n1864_2898.n5" 0 1467.38 -836 2940 0
+rnode "a_n1864_2898.t3" 0 31.8163 -934 2940 0
+resist "a_n1864_2898.n1" "a_n1864_2898.n0" 1.125
+resist "a_n1864_2898.n5" "a_n1864_2898.n4" 1.3125
+resist "a_n1864_2898.n2" "a_n1864_2898.n1" 1.31929
+resist "a_n1864_2898.n4" "a_n1864_2898.n3" 4.5
+resist "a_n1864_2898.n5" "a_n1864_2898.n2" 14.9836
+resist "a_n1864_2898.n0" "a_n1864_2898.t4" 75.2991
+resist "a_n1864_2898.n2" "a_n1864_2898.t5" 77.8798
+resist "a_n1864_2898.n0" "a_n1864_2898.t7" 79.6833
+resist "a_n1864_2898.n1" "a_n1864_2898.t6" 79.7715
+resist "a_n1864_2898.n3" "a_n1864_2898.t2" 664.836
+resist "a_n1864_2898.n3" "a_n1864_2898.t1" 664.84
+resist "a_n1864_2898.t3" "a_n1864_2898.n5" 669.282
+resist "a_n1864_2898.n4" "a_n1864_2898.t0" 670.6
+killnode "a_n1494_2558#"
+rnode "a_n1494_2558.t3" 0 32.9345 -1244 2600 0
+rnode "a_n1494_2558.t1" 0 278.733 6060 2054 0
+rnode "a_n1494_2558.t0" 0 354.242 6060 3758 0
+rnode "a_n1494_2558.n0" 0 8348.44 5554 1810 0
+rnode "a_n1494_2558.n1" 0 2261.04 -1369 2600 0
+rnode "a_n1494_2558.t2" 0 32.9345 -1494 2600 0
+resist "a_n1494_2558.n1" "a_n1494_2558.n0" 20.9294
+resist "a_n1494_2558.n0" "a_n1494_2558.t1" 74.7353
+resist "a_n1494_2558.n0" "a_n1494_2558.t0" 77.4479
+resist "a_n1494_2558.t2" "a_n1494_2558.n1" 664.838
+resist "a_n1494_2558.n1" "a_n1494_2558.t3" 664.838
+killnode "a_n934_2558#"
+rnode "a_n934_2558.t1" 0 6105.81 6060 2906 0
+rnode "a_n934_2558.t0" 0 721.566 -934 2600 0
+resist "a_n934_2558.t0" "a_n934_2558.t1" 766.757
+rnode "DAC_REF.t7" 0 1659.2 1810 350 0
+rnode "DAC_REF.t16" 0 1659.2 1810 1202 0
+rnode "DAC_REF.t25" 0 1659.2 1810 2054 0
+rnode "DAC_REF.t34" 0 1659.2 1810 2906 0
+rnode "DAC_REF.t43" 0 1659.2 1810 3758 0
+rnode "DAC_REF.t52" 0 1659.2 1810 4610 0
+rnode "DAC_REF.t61" 0 1170.4 1810 5462 0
+rnode "DAC_REF.t6" 0 1659.2 3060 350 0
+rnode "DAC_REF.t15" 0 1659.2 3060 1202 0
+rnode "DAC_REF.t24" 0 1659.2 3060 2054 0
+rnode "DAC_REF.t33" 0 1659.2 3060 2906 0
+rnode "DAC_REF.t42" 0 1659.2 3060 3758 0
+rnode "DAC_REF.t51" 0 1659.2 3060 4610 0
+rnode "DAC_REF.t60" 0 1170.4 3060 5462 0
+rnode "DAC_REF.t5" 0 1659.2 4310 350 0
+rnode "DAC_REF.t14" 0 1659.2 4310 1202 0
+rnode "DAC_REF.t23" 0 1659.2 4310 2054 0
+rnode "DAC_REF.t32" 0 1659.2 4310 2906 0
+rnode "DAC_REF.t41" 0 1659.2 4310 3758 0
+rnode "DAC_REF.t50" 0 1659.2 4310 4610 0
+rnode "DAC_REF.t59" 0 1170.4 4310 5462 0
+rnode "DAC_REF.t4" 0 1659.2 5560 350 0
+rnode "DAC_REF.t13" 0 1659.2 5560 1202 0
+rnode "DAC_REF.t22" 0 1659.2 5560 2054 0
+rnode "DAC_REF.t31" 0 1659.2 5560 2906 0
+rnode "DAC_REF.t40" 0 1659.2 5560 3758 0
+rnode "DAC_REF.t49" 0 1659.2 5560 4610 0
+rnode "DAC_REF.t58" 0 1170.4 5560 5462 0
+rnode "DAC_REF.t3" 0 1659.2 6810 350 0
+rnode "DAC_REF.t12" 0 1659.2 6810 1202 0
+rnode "DAC_REF.t21" 0 1659.2 6810 2054 0
+rnode "DAC_REF.t30" 0 1659.2 6810 2906 0
+rnode "DAC_REF.t39" 0 1659.2 6810 3758 0
+rnode "DAC_REF.t48" 0 1659.2 6810 4610 0
+rnode "DAC_REF.t57" 0 1170.4 6810 5462 0
+rnode "DAC_REF.t2" 0 1659.2 8060 350 0
+rnode "DAC_REF.t11" 0 1659.2 8060 1202 0
+rnode "DAC_REF.t20" 0 1659.2 8060 2054 0
+rnode "DAC_REF.t29" 0 1659.2 8060 2906 0
+rnode "DAC_REF.t38" 0 1659.2 8060 3758 0
+rnode "DAC_REF.t47" 0 1659.2 8060 4610 0
+rnode "DAC_REF.t56" 0 1170.4 8060 5462 0
+rnode "DAC_REF.t1" 0 1659.2 9310 350 0
+rnode "DAC_REF.t10" 0 1659.2 9310 1202 0
+rnode "DAC_REF.t19" 0 1659.2 9310 2054 0
+rnode "DAC_REF.t28" 0 1659.2 9310 2906 0
+rnode "DAC_REF.t37" 0 1659.2 9310 3758 0
+rnode "DAC_REF.t46" 0 1659.2 9310 4610 0
+rnode "DAC_REF.t55" 0 1170.4 9310 5462 0
+rnode "DAC_REF.t0" 0 1659.2 10560 350 0
+rnode "DAC_REF.t9" 0 1659.2 10560 1202 0
+rnode "DAC_REF.t18" 0 1659.2 10560 2054 0
+rnode "DAC_REF.t27" 0 1659.2 10560 2906 0
+rnode "DAC_REF.t36" 0 1659.2 10560 3758 0
+rnode "DAC_REF.t45" 0 1659.2 10560 4610 0
+rnode "DAC_REF.t54" 0 2165.34 10560 5462 0
+rnode "DAC_REF.n0" 0 1204.67 9310 5812 0
+rnode "DAC_REF.n1" 0 1121.71 8060 5812 0
+rnode "DAC_REF.n2" 0 1121.71 6810 5812 0
+rnode "DAC_REF.n3" 0 1121.71 5560 5812 0
+rnode "DAC_REF.n4" 0 1121.71 4310 5812 0
+rnode "DAC_REF.n5" 0 1121.71 3060 5812 0
+rnode "DAC_REF.n6" 0 1119.11 1810 5812 0
+rnode "DAC_REF.t8" 0 1659.2 560 350 0
+rnode "DAC_REF.t17" 0 1659.2 560 1202 0
+rnode "DAC_REF.t26" 0 1659.2 560 2054 0
+rnode "DAC_REF.t35" 0 1659.2 560 2906 0
+rnode "DAC_REF.t44" 0 1659.2 560 3758 0
+rnode "DAC_REF.t53" 0 1659.2 560 4610 0
+rnode "DAC_REF.t62" 0 1221.73 560 5462 0
+rnode "DAC_REF.n7" 0 1050.88 570 6078 0
+rnode "DAC_REF" 0 839.051 330 6284 0
+resist "DAC_REF" "DAC_REF.n7" 12.0264
+resist "DAC_REF.n0" "DAC_REF.t55" 16.87
+resist "DAC_REF.n1" "DAC_REF.t56" 16.87
+resist "DAC_REF.n2" "DAC_REF.t57" 16.87
+resist "DAC_REF.n3" "DAC_REF.t58" 16.87
+resist "DAC_REF.n4" "DAC_REF.t59" 16.87
+resist "DAC_REF.n5" "DAC_REF.t60" 16.87
+resist "DAC_REF.n6" "DAC_REF.t61" 16.87
+resist "DAC_REF.n7" "DAC_REF.t62" 18.2239
+resist "DAC_REF.t9" "DAC_REF.t0" 41.0664
+resist "DAC_REF.t18" "DAC_REF.t9" 41.0664
+resist "DAC_REF.t27" "DAC_REF.t18" 41.0664
+resist "DAC_REF.t36" "DAC_REF.t27" 41.0664
+resist "DAC_REF.t45" "DAC_REF.t36" 41.0664
+resist "DAC_REF.t54" "DAC_REF.t45" 41.0664
+resist "DAC_REF.t10" "DAC_REF.t1" 41.0664
+resist "DAC_REF.t19" "DAC_REF.t10" 41.0664
+resist "DAC_REF.t28" "DAC_REF.t19" 41.0664
+resist "DAC_REF.t37" "DAC_REF.t28" 41.0664
+resist "DAC_REF.t46" "DAC_REF.t37" 41.0664
+resist "DAC_REF.t55" "DAC_REF.t46" 41.0664
+resist "DAC_REF.t11" "DAC_REF.t2" 41.0664
+resist "DAC_REF.t20" "DAC_REF.t11" 41.0664
+resist "DAC_REF.t29" "DAC_REF.t20" 41.0664
+resist "DAC_REF.t38" "DAC_REF.t29" 41.0664
+resist "DAC_REF.t47" "DAC_REF.t38" 41.0664
+resist "DAC_REF.t56" "DAC_REF.t47" 41.0664
+resist "DAC_REF.t12" "DAC_REF.t3" 41.0664
+resist "DAC_REF.t21" "DAC_REF.t12" 41.0664
+resist "DAC_REF.t30" "DAC_REF.t21" 41.0664
+resist "DAC_REF.t39" "DAC_REF.t30" 41.0664
+resist "DAC_REF.t48" "DAC_REF.t39" 41.0664
+resist "DAC_REF.t57" "DAC_REF.t48" 41.0664
+resist "DAC_REF.t13" "DAC_REF.t4" 41.0664
+resist "DAC_REF.t22" "DAC_REF.t13" 41.0664
+resist "DAC_REF.t31" "DAC_REF.t22" 41.0664
+resist "DAC_REF.t40" "DAC_REF.t31" 41.0664
+resist "DAC_REF.t49" "DAC_REF.t40" 41.0664
+resist "DAC_REF.t58" "DAC_REF.t49" 41.0664
+resist "DAC_REF.t14" "DAC_REF.t5" 41.0664
+resist "DAC_REF.t23" "DAC_REF.t14" 41.0664
+resist "DAC_REF.t32" "DAC_REF.t23" 41.0664
+resist "DAC_REF.t41" "DAC_REF.t32" 41.0664
+resist "DAC_REF.t50" "DAC_REF.t41" 41.0664
+resist "DAC_REF.t59" "DAC_REF.t50" 41.0664
+resist "DAC_REF.t15" "DAC_REF.t6" 41.0664
+resist "DAC_REF.t24" "DAC_REF.t15" 41.0664
+resist "DAC_REF.t33" "DAC_REF.t24" 41.0664
+resist "DAC_REF.t42" "DAC_REF.t33" 41.0664
+resist "DAC_REF.t51" "DAC_REF.t42" 41.0664
+resist "DAC_REF.t60" "DAC_REF.t51" 41.0664
+resist "DAC_REF.t16" "DAC_REF.t7" 41.0664
+resist "DAC_REF.t25" "DAC_REF.t16" 41.0664
+resist "DAC_REF.t34" "DAC_REF.t25" 41.0664
+resist "DAC_REF.t43" "DAC_REF.t34" 41.0664
+resist "DAC_REF.t52" "DAC_REF.t43" 41.0664
+resist "DAC_REF.t61" "DAC_REF.t52" 41.0664
+resist "DAC_REF.t17" "DAC_REF.t8" 41.0664
+resist "DAC_REF.t26" "DAC_REF.t17" 41.0664
+resist "DAC_REF.t35" "DAC_REF.t26" 41.0664
+resist "DAC_REF.t44" "DAC_REF.t35" 41.0664
+resist "DAC_REF.t53" "DAC_REF.t44" 41.0664
+resist "DAC_REF.t62" "DAC_REF.t53" 41.0664
+resist "DAC_REF.n7" "DAC_REF.n6" 200.984
+resist "DAC_REF.n1" "DAC_REF.n0" 202.338
+resist "DAC_REF.n2" "DAC_REF.n1" 202.338
+resist "DAC_REF.n3" "DAC_REF.n2" 202.338
+resist "DAC_REF.n4" "DAC_REF.n3" 202.338
+resist "DAC_REF.n5" "DAC_REF.n4" 202.338
+resist "DAC_REF.n6" "DAC_REF.n5" 202.338
+resist "DAC_REF.n0" "DAC_REF.t54" 219.208
+device msubckt sky130_fd_pr__pfet_01v8 -1804 4938 -1803 4939  "w_n1948_2482#" "B[4]" 60 0 "a_n1864_3918.t0" 84 5040,288 "I_DAC" 84 5040,288
+device msubckt sky130_fd_pr__pfet_01v8 -1524 4938 -1523 4939  "w_n1948_2482#" "B[4]" 60 0 "I_DAC" 84 5040,288 "a_n1864_3918.t1" 84 5040,288
+device msubckt sky130_fd_pr__pfet_01v8 -1244 4938 -1243 4939  "w_n1948_2482#" "B[4]" 60 0 "a_n1864_3918.t2" 84 5040,288 "I_DAC" 84 5040,288
+device msubckt sky130_fd_pr__pfet_01v8 -964 4938 -963 4939  "w_n1948_2482#" "B[4]" 60 0 "I_DAC" 84 5040,288 "a_n1864_3918.t3" 84 5040,288
+device msubckt sky130_fd_pr__pfet_01v8 -1804 4598 -1803 4599  "w_n1948_2482#" "B[4]" 60 0 "a_n1864_3918.t4" 84 5040,288 "I_DAC" 84 5040,288
+device msubckt sky130_fd_pr__pfet_01v8 -1524 4598 -1523 4599  "w_n1948_2482#" "B[4]" 60 0 "I_DAC" 84 5040,288 "a_n1864_3918.t5" 84 5040,288
+device msubckt sky130_fd_pr__pfet_01v8 -1244 4598 -1243 4599  "w_n1948_2482#" "B[4]" 60 0 "a_n1864_3918.t6" 84 5040,288 "I_DAC" 84 5040,288
+device msubckt sky130_fd_pr__pfet_01v8 -964 4598 -963 4599  "w_n1948_2482#" "B[4]" 60 0 "I_DAC" 84 5040,288 "a_n1864_3918.t7" 84 5040,288
+device msubckt sky130_fd_pr__pfet_01v8 -1804 4258 -1803 4259  "w_n1948_2482#" "B[4]" 60 0 "a_n1864_3918.t8" 84 5040,288 "I_DAC" 84 5040,288
+device msubckt sky130_fd_pr__pfet_01v8 -1524 4258 -1523 4259  "w_n1948_2482#" "B[4]" 60 0 "I_DAC" 84 5040,288 "a_n1864_3918.t9" 84 5040,288
+device msubckt sky130_fd_pr__pfet_01v8 -1244 4258 -1243 4259  "w_n1948_2482#" "B[4]" 60 0 "a_n1864_3918.t10" 84 5040,288 "I_DAC" 84 5040,288
+device msubckt sky130_fd_pr__pfet_01v8 -964 4258 -963 4259  "w_n1948_2482#" "B[4]" 60 0 "I_DAC" 84 5040,288 "a_n1864_3918.t11" 84 5040,288
+device msubckt sky130_fd_pr__pfet_01v8 -1804 3918 -1803 3919  "w_n1948_2482#" "B[4]" 60 0 "a_n1864_3918.t12" 84 5040,288 "I_DAC" 84 5040,288
+device msubckt sky130_fd_pr__pfet_01v8 -1524 3918 -1523 3919  "w_n1948_2482#" "B[4]" 60 0 "I_DAC" 84 5040,288 "a_n1864_3918.t13" 84 5040,288
+device msubckt sky130_fd_pr__pfet_01v8 -1244 3918 -1243 3919  "w_n1948_2482#" "B[4]" 60 0 "a_n1864_3918.t14" 84 5040,288 "I_DAC" 84 5040,288
+device msubckt sky130_fd_pr__pfet_01v8 -964 3918 -963 3919  "w_n1948_2482#" "B[4]" 60 0 "I_DAC" 84 5040,288 "a_n1864_3918.t15" 84 5040,288
+device msubckt sky130_fd_pr__pfet_01v8 -1804 3578 -1803 3579  "w_n1948_2482#" "B[3]" 60 0 "a_n1864_3238.t8" 84 5040,288 "I_DAC" 84 5040,288
+device msubckt sky130_fd_pr__pfet_01v8 -1524 3578 -1523 3579  "w_n1948_2482#" "B[3]" 60 0 "I_DAC" 84 5040,288 "a_n1864_3238.t9" 84 5040,288
+device msubckt sky130_fd_pr__pfet_01v8 -1244 3578 -1243 3579  "w_n1948_2482#" "B[3]" 60 0 "a_n1864_3238.t10" 84 5040,288 "I_DAC" 84 5040,288
+device msubckt sky130_fd_pr__pfet_01v8 -964 3578 -963 3579  "w_n1948_2482#" "B[3]" 60 0 "I_DAC" 84 5040,288 "a_n1864_3238.t11" 84 5040,288
+device msubckt sky130_fd_pr__pfet_01v8 -1804 3238 -1803 3239  "w_n1948_2482#" "B[3]" 60 0 "a_n1864_3238.t12" 84 5040,288 "I_DAC" 84 5040,288
+device msubckt sky130_fd_pr__pfet_01v8 -1524 3238 -1523 3239  "w_n1948_2482#" "B[3]" 60 0 "I_DAC" 84 5040,288 "a_n1864_3238.t13" 84 5040,288
+device msubckt sky130_fd_pr__pfet_01v8 -1244 3238 -1243 3239  "w_n1948_2482#" "B[3]" 60 0 "a_n1864_3238.t14" 84 5040,288 "I_DAC" 84 5040,288
+device msubckt sky130_fd_pr__pfet_01v8 -964 3238 -963 3239  "w_n1948_2482#" "B[3]" 60 0 "I_DAC" 84 5040,288 "a_n1864_3238.t15" 84 5040,288
+device msubckt sky130_fd_pr__pfet_01v8 -1804 2898 -1803 2899  "w_n1948_2482#" "B[2]" 60 0 "a_n1864_2898.t0" 84 5040,288 "I_DAC" 84 5040,288
+device msubckt sky130_fd_pr__pfet_01v8 -1524 2898 -1523 2899  "w_n1948_2482#" "B[2]" 60 0 "I_DAC" 84 5040,288 "a_n1864_2898.t1" 84 5040,288
+device msubckt sky130_fd_pr__pfet_01v8 -1244 2898 -1243 2899  "w_n1948_2482#" "B[2]" 60 0 "a_n1864_2898.t2" 84 5040,288 "I_DAC" 84 5040,288
+device msubckt sky130_fd_pr__pfet_01v8 -964 2898 -963 2899  "w_n1948_2482#" "B[2]" 60 0 "I_DAC" 84 5040,288 "a_n1864_2898.t3" 84 5040,288
+device msubckt sky130_fd_pr__pfet_01v8 -1524 2558 -1523 2559  "w_n1948_2482#" "B[1]" 60 0 "I_DAC" 84 5040,288 "a_n1494_2558.t2" 84 5040,288
+device msubckt sky130_fd_pr__pfet_01v8 -1244 2558 -1243 2559  "w_n1948_2482#" "B[1]" 60 0 "a_n1494_2558.t3" 84 5040,288 "I_DAC" 84 5040,288
+device msubckt sky130_fd_pr__pfet_01v8 -964 2558 -963 2559  "w_n1948_2482#" "B[0]" 60 0 "I_DAC" 84 5040,288 "a_n934_2558.t0" 84 5040,288
+device msubckt sky130_fd_pr__pfet_01v8 60 5112 61 5113  "w_n65_n76#" "DAC_REF.t62" 2000 0 "VDD" 700 0 "VDD" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 1310 5112 1311 5113  "w_n65_n76#" "DAC_REF.t61" 2000 0 "VDD" 700 0 "VDD" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 2560 5112 2561 5113  "w_n65_n76#" "DAC_REF.t60" 2000 0 "VDD" 700 0 "VDD" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 3810 5112 3811 5113  "w_n65_n76#" "DAC_REF.t59" 2000 0 "VDD" 700 0 "VDD" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 5060 5112 5061 5113  "w_n65_n76#" "DAC_REF.t58" 2000 0 "VDD" 700 0 "VDD" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 6310 5112 6311 5113  "w_n65_n76#" "DAC_REF.t57" 2000 0 "VDD" 700 0 "VDD" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 7560 5112 7561 5113  "w_n65_n76#" "DAC_REF.t56" 2000 0 "VDD" 700 0 "VDD" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 8810 5112 8811 5113  "w_n65_n76#" "DAC_REF.t55" 2000 0 "VDD" 700 0 "VDD" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 10060 5112 10061 5113  "w_n65_n76#" "DAC_REF.t54" 2000 0 "VDD" 700 0 "VDD" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 60 4260 61 4261  "w_n65_n76#" "DAC_REF.t53" 2000 0 "VDD" 700 0 "VDD" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 1310 4260 1311 4261  "w_n65_n76#" "DAC_REF.t52" 2000 0 "VDD" 700 0 "VDD" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 2560 4260 2561 4261  "w_n65_n76#" "DAC_REF.t51" 2000 0 "VDD" 700 42000,1520 "a_n1864_3918.t16" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 3810 4260 3811 4261  "w_n65_n76#" "DAC_REF.t50" 2000 0 "VDD" 700 42000,1520 "a_n1864_3238.t0" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 5060 4260 5061 4261  "w_n65_n76#" "DAC_REF.t49" 2000 0 "VDD" 700 42000,1520 "a_n1864_2898.t4" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 6310 4260 6311 4261  "w_n65_n76#" "DAC_REF.t48" 2000 0 "VDD" 700 42000,1520 "a_n1864_3238.t1" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 7560 4260 7561 4261  "w_n65_n76#" "DAC_REF.t47" 2000 0 "VDD" 700 42000,1520 "a_n1864_3918.t17" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 8810 4260 8811 4261  "w_n65_n76#" "DAC_REF.t46" 2000 0 "VDD" 700 0 "VDD" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 10060 4260 10061 4261  "w_n65_n76#" "DAC_REF.t45" 2000 0 "VDD" 700 0 "VDD" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 60 3408 61 3409  "w_n65_n76#" "DAC_REF.t44" 2000 0 "VDD" 700 0 "VDD" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 1310 3408 1311 3409  "w_n65_n76#" "DAC_REF.t43" 2000 0 "VDD" 700 42000,1520 "a_n1864_3918.t18" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 2560 3408 2561 3409  "w_n65_n76#" "DAC_REF.t42" 2000 0 "VDD" 700 42000,1520 "a_n1864_3918.t19" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 3810 3408 3811 3409  "w_n65_n76#" "DAC_REF.t41" 2000 0 "VDD" 700 42000,1520 "a_n1864_3238.t2" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 5060 3408 5061 3409  "w_n65_n76#" "DAC_REF.t40" 2000 0 "VDD" 700 42000,1520 "a_n1494_2558.t0" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 6310 3408 6311 3409  "w_n65_n76#" "DAC_REF.t39" 2000 0 "VDD" 700 42000,1520 "a_n1864_3238.t3" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 7560 3408 7561 3409  "w_n65_n76#" "DAC_REF.t38" 2000 0 "VDD" 700 42000,1520 "a_n1864_3918.t20" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 8810 3408 8811 3409  "w_n65_n76#" "DAC_REF.t37" 2000 0 "VDD" 700 42000,1520 "a_n1864_3918.t21" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 10060 3408 10061 3409  "w_n65_n76#" "DAC_REF.t36" 2000 0 "VDD" 700 0 "VDD" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 60 2556 61 2557  "w_n65_n76#" "DAC_REF.t35" 2000 0 "VDD" 700 0 "VDD" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 1310 2556 1311 2557  "w_n65_n76#" "DAC_REF.t34" 2000 0 "VDD" 700 42000,1520 "a_n1864_3918.t22" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 2560 2556 2561 2557  "w_n65_n76#" "DAC_REF.t33" 2000 0 "VDD" 700 42000,1520 "a_n1864_3918.t23" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 3810 2556 3811 2557  "w_n65_n76#" "DAC_REF.t32" 2000 0 "VDD" 700 42000,1520 "a_n1864_2898.t5" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 5060 2556 5061 2557  "w_n65_n76#" "DAC_REF.t31" 2000 0 "VDD" 700 42000,1520 "a_n934_2558.t1" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 6310 2556 6311 2557  "w_n65_n76#" "DAC_REF.t30" 2000 0 "VDD" 700 42000,1520 "a_n1864_2898.t6" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 7560 2556 7561 2557  "w_n65_n76#" "DAC_REF.t29" 2000 0 "VDD" 700 42000,1520 "a_n1864_3918.t24" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 8810 2556 8811 2557  "w_n65_n76#" "DAC_REF.t28" 2000 0 "VDD" 700 42000,1520 "a_n1864_3918.t25" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 10060 2556 10061 2557  "w_n65_n76#" "DAC_REF.t27" 2000 0 "VDD" 700 0 "VDD" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 60 1704 61 1705  "w_n65_n76#" "DAC_REF.t26" 2000 0 "VDD" 700 0 "VDD" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 1310 1704 1311 1705  "w_n65_n76#" "DAC_REF.t25" 2000 0 "VDD" 700 42000,1520 "a_n1864_3918.t26" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 2560 1704 2561 1705  "w_n65_n76#" "DAC_REF.t24" 2000 0 "VDD" 700 42000,1520 "a_n1864_3918.t27" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 3810 1704 3811 1705  "w_n65_n76#" "DAC_REF.t23" 2000 0 "VDD" 700 42000,1520 "a_n1864_3238.t4" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 5060 1704 5061 1705  "w_n65_n76#" "DAC_REF.t22" 2000 0 "VDD" 700 42000,1520 "a_n1494_2558.t1" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 6310 1704 6311 1705  "w_n65_n76#" "DAC_REF.t21" 2000 0 "VDD" 700 42000,1520 "a_n1864_3238.t5" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 7560 1704 7561 1705  "w_n65_n76#" "DAC_REF.t20" 2000 0 "VDD" 700 42000,1520 "a_n1864_3918.t28" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 8810 1704 8811 1705  "w_n65_n76#" "DAC_REF.t19" 2000 0 "VDD" 700 42000,1520 "a_n1864_3918.t29" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 10060 1704 10061 1705  "w_n65_n76#" "DAC_REF.t18" 2000 0 "VDD" 700 0 "VDD" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 60 852 61 853  "w_n65_n76#" "DAC_REF.t17" 2000 0 "VDD" 700 0 "VDD" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 1310 852 1311 853  "w_n65_n76#" "DAC_REF.t16" 2000 0 "VDD" 700 0 "VDD" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 2560 852 2561 853  "w_n65_n76#" "DAC_REF.t15" 2000 0 "VDD" 700 42000,1520 "a_n1864_3918.t30" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 3810 852 3811 853  "w_n65_n76#" "DAC_REF.t14" 2000 0 "VDD" 700 42000,1520 "a_n1864_3238.t6" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 5060 852 5061 853  "w_n65_n76#" "DAC_REF.t13" 2000 0 "VDD" 700 42000,1520 "a_n1864_2898.t7" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 6310 852 6311 853  "w_n65_n76#" "DAC_REF.t12" 2000 0 "VDD" 700 42000,1520 "a_n1864_3238.t7" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 7560 852 7561 853  "w_n65_n76#" "DAC_REF.t11" 2000 0 "VDD" 700 42000,1520 "a_n1864_3918.t31" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 8810 852 8811 853  "w_n65_n76#" "DAC_REF.t10" 2000 0 "VDD" 700 0 "VDD" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 10060 852 10061 853  "w_n65_n76#" "DAC_REF.t9" 2000 0 "VDD" 700 0 "VDD" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 60 0 61 1  "w_n65_n76#" "DAC_REF.t8" 2000 0 "VDD" 700 0 "VDD" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 1310 0 1311 1  "w_n65_n76#" "DAC_REF.t7" 2000 0 "VDD" 700 0 "VDD" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 2560 0 2561 1  "w_n65_n76#" "DAC_REF.t6" 2000 0 "VDD" 700 0 "VDD" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 3810 0 3811 1  "w_n65_n76#" "DAC_REF.t5" 2000 0 "VDD" 700 0 "VDD" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 5060 0 5061 1  "w_n65_n76#" "DAC_REF.t4" 2000 0 "VDD" 700 0 "VDD" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 6310 0 6311 1  "w_n65_n76#" "DAC_REF.t3" 2000 0 "VDD" 700 0 "VDD" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 7560 0 7561 1  "w_n65_n76#" "DAC_REF.t2" 2000 0 "VDD" 700 0 "VDD" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 8810 0 8811 1  "w_n65_n76#" "DAC_REF.t1" 2000 0 "VDD" 700 0 "VDD" 700 42000,1520
+device msubckt sky130_fd_pr__pfet_01v8 10060 0 10061 1  "w_n65_n76#" "DAC_REF.t0" 2000 0 "VDD" 700 0 "VDD" 700 42000,1520

@@ -1,10 +1,5 @@
 name=sim_block only_toplevel=false 
 value="
-.options rshunt=1e12
-.options gmin=1e-12
-.options abstol=1e-10
-.options rtol=1e-3
-
 .param VDD = 1.8
 .param RES_DAC = 11.37k
 .param dac_bit = 0

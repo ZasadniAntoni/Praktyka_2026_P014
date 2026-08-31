@@ -1,0 +1,63 @@
+
+Magic 8.3 revision 678 - Compiled on Mon Jul 27 03:07:22 PM CEST 2026.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Processing system .magicrc file
+Switching to WIRING tool.
+Switching to NETLIST tool.
+Switching to PICK tool.
+Switching to BOX tool.
+Sourcing design .magicrc for technology sky130A ...
+2 Magic internal units = 1 Lambda
+Input style sky130(): scaleFactor=2, multiplier=2
+The following types are not handled by extraction and will be treated as non-electrical types:
+    ubm 
+Scaled tech values by 2 / 1 to match internal grid scaling
+Loading sky130A Device Generator Menu ...
+Loading "output/DAC_CORE_5bit__DAC_CORE_5bit/magic_RC/DAC_CORE_5bit_MAGIC_RC_Script.tcl" from command line.
+Warning: Calma reading is not undoable!  I hope that's OK.
+Library written using GDS-II Release 6.0
+Library name: LIB
+Reading "$$$CONTEXT_INFO$$$".
+Reading "vias_gen$6".
+Reading "guard_ring_gen$3".
+Reading "vias_gen$5".
+Reading "vias_gen$4".
+Reading "TEXT$5".
+Reading "TEXT$4".
+Reading "TEXT$2".
+Reading "TEXT$1".
+Reading "TEXT$3".
+Reading "vias_gen$3".
+Reading "vias_gen".
+Reading "DAC_BASE_MCS".
+Reading "DAC_BASE_MK".
+Reading "TEXT".
+Reading "guard_ring_gen".
+Reading "DAC_CORE_5bit".
+CIF file read warning: CIF style sky130(): units rescaled by factor of 5 / 1
+CIF file read warning: Input off lambda grid by 2/5; snapped to grid.
+Extracting DAC_CORE_5bit into /foss/designs/lab2/klayout/output/DAC_CORE_5bit__DAC_CORE_5bit/magic_RC/DAC_CORE_5bit.ext:
+Processing DAC_CORE_5bit
+DAC_CORE_5bit: 33 warnings
+Total of 33 warnings.
+exttosim finished.
+Note:  This option has been deprecated and is unused.
+Extracting a_n1864_3918#
+Extracting a_n1864_3238#
+Extracting a_n1864_2898#
+Extracting a_n1494_2558#
+Extracting a_n934_2558#
+Extracting B[4]
+Extracting I_DAC
+Extracting B[3]
+Extracting B[2]
+Extracting B[1]
+Extracting B[0]
+Extracting DAC_REF
+Extracting VDD
+Total Nets: 18
+Nets extracted: 13 (0.722222)
+Nets output: 6 (0.333333)
+exttospice finished.

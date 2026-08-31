@@ -1,6 +1,6 @@
 * NGSPICE file created from DAC_CORE_5bit.ext - technology: sky130A
 
-.subckt DAC_CORE_5bit_pex VDD DAC_REF I_DAC b[4] b[3] b[2] b[1] b[0]
+.subckt DAC_CORE_5bit DAC_REF B[0] B[1] B[4] I_DAC B[2] B[3] VDD
 X0 a_n1864_2898.t3 B[2] I_DAC w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
 X1 VDD DAC_REF.t55 VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=99.75 ps=722 w=3.5 l=5
 X2 a_n1864_3918.t25 DAC_REF.t28 VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5

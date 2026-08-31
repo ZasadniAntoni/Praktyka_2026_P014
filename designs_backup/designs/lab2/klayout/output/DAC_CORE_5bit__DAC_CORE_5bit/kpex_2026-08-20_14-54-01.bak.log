@@ -1,6 +1,77 @@
-* NGSPICE file created from DAC_CORE_5bit.ext - technology: sky130A
+[2026-08-20 14:54:01,392] [INFO]    GDS input file passed, running in LVS mode
+[2026-08-20 14:54:01,394] [INFO]    Found cell DAC_CORE_5bit in GDS DAC_CORE_5bit.gds (only top cell)
+[2026-08-20 14:54:01,400] [INFO]    Calling MAGIC
+[2026-08-20 14:54:01,401] [SUBPROCESS]    magic -dnull -noconsole -rcfile /foss/pdks/sky130A/libs.tech/magic/sky130A.magicrc output/DAC_CORE_5bit__DAC_CORE_5bit/magic_RC/DAC_CORE_5bit_MAGIC_RC_Script.tcl, output file: output/DAC_CORE_5bit__DAC_CORE_5bit/magic_RC/DAC_CORE_5bit_MAGIC_RC_Output.txt
+[2026-08-20 14:54:01,414] [SUBPROCESS]    
+[2026-08-20 14:54:01,415] [SUBPROCESS]    Magic 8.3 revision 678 - Compiled on Mon Jul 27 03:07:22 PM CEST 2026.
+[2026-08-20 14:54:01,416] [SUBPROCESS]    Starting magic under Tcl interpreter
+[2026-08-20 14:54:01,417] [SUBPROCESS]    Using the terminal as the console.
+[2026-08-20 14:54:01,418] [SUBPROCESS]    Using NULL graphics device.
+[2026-08-20 14:54:01,449] [SUBPROCESS]    Processing system .magicrc file
+[2026-08-20 14:54:01,460] [SUBPROCESS]    Switching to WIRING tool.
+[2026-08-20 14:54:01,461] [SUBPROCESS]    Switching to NETLIST tool.
+[2026-08-20 14:54:01,461] [SUBPROCESS]    Switching to PICK tool.
+[2026-08-20 14:54:01,462] [SUBPROCESS]    Switching to BOX tool.
+[2026-08-20 14:54:01,462] [SUBPROCESS]    Sourcing design .magicrc for technology sky130A ...
+[2026-08-20 14:54:01,463] [SUBPROCESS]    2 Magic internal units = 1 Lambda
+[2026-08-20 14:54:01,494] [SUBPROCESS]    Input style sky130(): scaleFactor=2, multiplier=2
+[2026-08-20 14:54:01,666] [SUBPROCESS]    The following types are not handled by extraction and will be treated as non-electrical types:
+[2026-08-20 14:54:01,667] [SUBPROCESS]        ubm 
+[2026-08-20 14:54:01,675] [SUBPROCESS]    Scaled tech values by 2 / 1 to match internal grid scaling
+[2026-08-20 14:54:01,678] [SUBPROCESS]    Loading sky130A Device Generator Menu ...
+[2026-08-20 14:54:01,680] [SUBPROCESS]    Loading "output/DAC_CORE_5bit__DAC_CORE_5bit/magic_RC/DAC_CORE_5bit_MAGIC_RC_Script.tcl" from command line.
+[2026-08-20 14:54:01,680] [SUBPROCESS]    Warning: Calma reading is not undoable!  I hope that's OK.
+[2026-08-20 14:54:01,681] [SUBPROCESS]    Library written using GDS-II Release 6.0
+[2026-08-20 14:54:01,682] [SUBPROCESS]    Library name: LIB
+[2026-08-20 14:54:01,682] [SUBPROCESS]    Reading "$$$CONTEXT_INFO$$$".
+[2026-08-20 14:54:01,683] [SUBPROCESS]    Reading "vias_gen$6".
+[2026-08-20 14:54:01,683] [SUBPROCESS]    Reading "guard_ring_gen$3".
+[2026-08-20 14:54:01,687] [SUBPROCESS]    Reading "vias_gen$5".
+[2026-08-20 14:54:01,688] [SUBPROCESS]    Reading "vias_gen$4".
+[2026-08-20 14:54:01,689] [SUBPROCESS]    Reading "TEXT$5".
+[2026-08-20 14:54:01,690] [SUBPROCESS]    Reading "TEXT$4".
+[2026-08-20 14:54:01,691] [SUBPROCESS]    Reading "TEXT$2".
+[2026-08-20 14:54:01,692] [SUBPROCESS]    Reading "TEXT$1".
+[2026-08-20 14:54:01,693] [SUBPROCESS]    Reading "TEXT$3".
+[2026-08-20 14:54:01,694] [SUBPROCESS]    Reading "vias_gen$3".
+[2026-08-20 14:54:01,695] [SUBPROCESS]    Reading "vias_gen".
+[2026-08-20 14:54:01,695] [SUBPROCESS]    Reading "DAC_BASE_MCS".
+[2026-08-20 14:54:01,697] [SUBPROCESS]    Reading "DAC_BASE_MK".
+[2026-08-20 14:54:01,698] [SUBPROCESS]    Reading "TEXT".
+[2026-08-20 14:54:01,699] [SUBPROCESS]    Reading "guard_ring_gen".
+[2026-08-20 14:54:01,707] [SUBPROCESS]    Reading "DAC_CORE_5bit".
+[2026-08-20 14:54:01,708] [SUBPROCESS]    CIF file read warning: CIF style sky130(): units rescaled by factor of 5 / 1
+[2026-08-20 14:54:01,708] [SUBPROCESS]    CIF file read warning: Input off lambda grid by 2/5; snapped to grid.
+[2026-08-20 14:54:01,718] [SUBPROCESS]    Extracting DAC_CORE_5bit into /foss/designs/lab2/klayout/output/DAC_CORE_5bit__DAC_CORE_5bit/magic_RC/DAC_CORE_5bit.ext:
+[2026-08-20 14:54:01,719] [SUBPROCESS]    Processing DAC_CORE_5bit
+[2026-08-20 14:54:01,786] [SUBPROCESS]    DAC_CORE_5bit: 33 warnings
+[2026-08-20 14:54:01,787] [SUBPROCESS]    Total of 33 warnings.
+[2026-08-20 14:54:01,787] [SUBPROCESS]    exttosim finished.
+[2026-08-20 14:54:01,788] [SUBPROCESS]    Note:  This option has been deprecated and is unused.
+[2026-08-20 14:54:01,789] [SUBPROCESS]    Extracting a_n1864_3918#
+[2026-08-20 14:54:01,798] [SUBPROCESS]    Extracting a_n1864_3238#
+[2026-08-20 14:54:01,802] [SUBPROCESS]    Extracting a_n1864_2898#
+[2026-08-20 14:54:01,805] [SUBPROCESS]    Extracting a_n1494_2558#
+[2026-08-20 14:54:01,806] [SUBPROCESS]    Extracting a_n934_2558#
+[2026-08-20 14:54:01,807] [SUBPROCESS]    Extracting B[4]
+[2026-08-20 14:54:01,808] [SUBPROCESS]    Extracting I_DAC
+[2026-08-20 14:54:01,810] [SUBPROCESS]    Extracting B[3]
+[2026-08-20 14:54:01,811] [SUBPROCESS]    Extracting B[2]
+[2026-08-20 14:54:01,811] [SUBPROCESS]    Extracting B[1]
+[2026-08-20 14:54:01,812] [SUBPROCESS]    Extracting B[0]
+[2026-08-20 14:54:01,812] [SUBPROCESS]    Extracting DAC_REF
+[2026-08-20 14:54:01,814] [SUBPROCESS]    Extracting VDD
+[2026-08-20 14:54:01,876] [SUBPROCESS]    Total Nets: 18
+[2026-08-20 14:54:01,876] [SUBPROCESS]    Nets extracted: 13 (0.722222)
+[2026-08-20 14:54:01,877] [SUBPROCESS]    Nets output: 6 (0.333333)
+[2026-08-20 14:54:01,881] [SUBPROCESS]    exttospice finished.
+[2026-08-20 14:54:01,888] [INFO]    MAGIC succeeded after 0.4853s
+[2026-08-20 14:54:01,899] [SUBPROCESS]    Report DB saved at: output/DAC_CORE_5bit__DAC_CORE_5bit/magic_RC/DAC_CORE_5bit_MAGIC_report.rdb.gz
+[2026-08-20 14:54:01,899] [SUBPROCESS]    SPICE netlist saved at: output/DAC_CORE_5bit__DAC_CORE_5bit/magic_RC/DAC_CORE_5bit.pex.spice
+[2026-08-20 14:54:01,900] [INFO]    Copied expanded SPICE netlist to: DAC_CORE_5bit_pex.spice
+[2026-08-20 14:54:01,902] [SUBPROCESS]    * NGSPICE file created from DAC_CORE_5bit.ext - technology: sky130A
 
-.subckt DAC_CORE_5bit_pex VDD DAC_REF I_DAC b[4] b[3] b[2] b[1] b[0]
+.subckt DAC_CORE_5bit DAC_REF B[0] B[1] B[4] I_DAC B[2] B[3] VDD
 X0 a_n1864_2898.t3 B[2] I_DAC w_n1948_2482# sky130_fd_pr__pfet_01v8 ad=0.126 pd=1.44 as=0.126 ps=1.44 w=0.42 l=0.15
 X1 VDD DAC_REF.t55 VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=99.75 ps=722 w=3.5 l=5
 X2 a_n1864_3918.t25 DAC_REF.t28 VDD w_n65_n76# sky130_fd_pr__pfet_01v8 ad=1.05 pd=7.6 as=1.05 ps=7.6 w=3.5 l=5
@@ -502,3 +573,4 @@ C217 DAC_REF.t53 VSUBS 1.6592f ; **FLOATING
 C218 DAC_REF.t62 VSUBS 1.22173f ; **FLOATING
 C219 DAC_REF.n7 VSUBS 1.05088f ; **FLOATING
 .ends
+
