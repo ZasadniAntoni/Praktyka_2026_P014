@@ -6,10 +6,10 @@
 **Problem**: Przy włączaniu schematica *DAC_CORE_5bit_test.sch* schemat potrafi się zablokować i nie dać możliwości do edycji pliku. Dzieje się tak zazwyczaj gdy użytkownik chce edytować parametry i zamknie okno dialogowe edytowania parametrów. Na początku nie było tego problemu - musiał wystąpić po którymś z `sudo apt update && sudo apt ugrade -y` i restartach pc.  
 Błąd w konsoli:  
 
-  ```
-  xschem [/foss/designs/lab2/xschem] tcleval(): evaluation of script: edit_prop {Input property:} failed
-         : window ".dialog" was deleted before its visibility changed
-  ```
+```
+xschem [/foss/designs/lab2/xschem] tcleval(): evaluation of script: edit_prop {Input property:} failed
+        : window ".dialog" was deleted before its visibility changed
+```
 
 **Rozwiązanie**: Zauważyłem, że dzieje się tak gdy użytkownik przed edycją nie stworzy netlisty schematu przed edycją - czyli po włączeniu schematu należy zbudować netlistę. Nie znalazłem jeszcze konkretnego powodu dlaczego to ma wpływ, więc jest to chwilowe rozwiązanie.  
 * Da się to rozwiązać przez ustawienie `set xschem_execute_scripts "yes"` w pliku xschemrc, który może być stworzony w lokalnym folderze, w którym przechowujemy schematy, testy, itd dla xschema. Xschem szuka tego pliku w ścieżce wywoływania więc jeśli zrobimy `xschem /designs/xschem/files/` będąc w /designs, a xschemrc w files/ to nie zostanie wzięty pod uwagę. Dochodzą również problemy z symulacjami, które miałem, więc ostatecznie porzuciłem to rozwiązanie - bez resetu dockera miałoby to rozwiązanie o wiele więcej sensu.  

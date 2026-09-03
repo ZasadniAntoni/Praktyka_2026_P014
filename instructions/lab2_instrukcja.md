@@ -312,9 +312,9 @@ Po otworzeniu okna nowego layoutu umieść w nim jeden tranzystor PMOS o wymiara
 3.13. Przeprowadź połączenia wszystkich elementów przetwornika DAC tak by używać maksymalnie metalu na warstwie ME2. Poglądowy widok kompletnego projektu przedstawiony jest na Rys. 3.12. zaś na kolejnych rysunkach widoczne są poszczególne warstwy masek (Rys. 3.14 tylko ME1, Rys. 3.15 - tylko ME2). Rys 3.13. przedstawia wynik analiz DRC i LVS - powinny przechodzić w całości bez żadnych błędów dla komórki *DAC_CORE_5bit*.  
 
 3.14. Po zakończeniu etapu tworzenia masek, braku błędów DRC i poprawnej weryfikacji LVS:  
-> Przeprowadź symulacje postekstrakcyjne przetwornika. Przy generacji widoku z elementami pasożytniczymi. Sprawdź, czy występują różnice w analizie charakterystyki przejściowej przetwornika na poziomie schematu i postekstrakcji (odczytaj prądy przetwornika dla trzech różnych ustawień linii b<0:4> i zapisz je w sprawozdaniu).  
+> Przeprowadź symulacje postekstrakcyjne przetwornika. Sprawdź, czy występują różnice w analizie charakterystyki przejściowej przetwornika na poziomie schematu i postekstrakcji (odczytaj prądy przetwornika dla trzech różnych ustawień linii b<0:4> i zapisz je w sprawozdaniu).  
 > Jeśli występują różnice, wyjaśnij ich źródło pochodzenia.  
-> 
+
 **UWAGA**: Sprawdź, czy otrzymany .SUBCKT ma dokładnie taką samą kolejność pinów co instancja twojego DAC-a w netliście - jeżeli nie to popraw ten podobwód.  
 [Tutaj](https://github.com/StefanSchippers/xschem/issues/46) znajdziesz kilka sposobów na przeprowadzenie symulacji poekstrakcyjnych. Do samej ekstrakcji możesz wykorzystać narzędzie Klayout-pex.  
 

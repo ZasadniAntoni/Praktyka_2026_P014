@@ -94,12 +94,12 @@ Matrycę kluczy elektronicznych można stworzyć podobnie tworząc komórkę pod
 </figure>  
 
 <figure style="text-align: center; page-break-inside: avoid; break-inside: avoid;">
-  <img src="results/result_2.5.png">
+  <img src="results/plot_dac_step_ext.png">
   <figcaption>Wykres I_DAC vs dac_bit po ekstrakcji.</figcaption>
 </figure>  
 
 **Odpowiedź**:  
-xxx  
+Z otrzymanych wartości prądu (dla całego zakresu dac_bit 0 - 31) można zobaczyć, że prąd dla kroku bitowego wzrósł o ok 1.5uA, a przy większej ilości bitów jest nawet większy. To oznacza że pojemności i rezystancje pasożytnicze modyfikują punkt pracy źródeł prądowych - zwiększając Vgs lub Vds tych źródeł w matrycy prądowej.  
 
 ### **3.15**  
 **Odpowiedź**: - 
