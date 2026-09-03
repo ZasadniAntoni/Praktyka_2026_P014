@@ -68,7 +68,6 @@ time: 4.5h
 13.08 - 14.30 - 17.00 -> Kontynuacja wykonywania instrukcji lab2 w środowisku IIC-OSIC-TOOLS ; Ustawianie testbenchu, Ekstrakcja parasitic, korzystanie z klayout-pex do ekstrakcji (pliki pex) i używanie ich w Xschem
 time: 2.5h
 
->>>>> NOT IN THE LOG YET <<<<<
 31.08 - 12.00 - 18.00 -> Uzupełnianie wyników labolatorium 2, przeprowadzanie symulacji mieszanej (sky130 cmos inverter vs verilog version), próby samodzielne, analiza przykładu S. Schippers'a z ADC'kiem - jeszcze nie działa
 time: 6h
 
@@ -77,9 +76,12 @@ time: 6h
 
 03.09 - 14.30 - 16.30 -> Uzupełnianie instukcji inv_mixed, sprawdzanie wyników, rezultatów, stworzonych instrukcji z praktyk
 time: 2h
+
+>>>>> NOT IN THE LOG YET <<<<<
+
 ---
 
-TOTAL TIME SO FAR: 81h / 90h
+TOTAL TIME SO FAR: 95h / 90h
 
 ---
 
