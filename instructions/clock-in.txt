@@ -75,8 +75,8 @@ time: 6h
 02.09 - 15.00 - 21.00 -> przeprowadzanie symulacji mieszanej (sky130 cmos inverter vs verilog version); udało się przeprowadzić symulację mieszaną, problemy i rozwiązania opisane w lab2_inv_mixed_uwagi.pdf
 time: 6h
 
-03.09 - 14.30 - xxxxx ->
-
+03.09 - 14.30 - 16.30 -> Uzupełnianie instukcji inv_mixed, sprawdzanie wyników, rezultatów, stworzonych instrukcji z praktyk
+time: 2h
 ---
 
 TOTAL TIME SO FAR: 81h / 90h
