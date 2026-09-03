@@ -48,8 +48,6 @@ time: 2h
 29.07 - 14.00 - 17.00 -> Kontynuacja wykonywania instrukcji lab2 w środowisku IIC-OSIC-TOOLS ; Wykonywanie symulacji z instrukcji 2.4 - 2.10, uzupełnianie instukcji lab2
 time: 3h
 
-
->>>>> NOT IN THE LOG YET <<<<<
 05.08 - 13.00 - 16.30 -> Kontynuacja wykonywania instrukcji lab2 w środowisku IIC-OSIC-TOOLS ; Rozpoczęcie pracy z programem Klayout, zapoznawanie się ze środowiskiem, jego możliwościami i ograniczeniami, importowanie z netlisty, tworzenie matryc (Mosaic w Cadence) instancji, pythonowe makra, dostępne pluginy
 time: 3.5h
 
@@ -70,7 +68,14 @@ time: 4.5h
 13.08 - 14.30 - 17.00 -> Kontynuacja wykonywania instrukcji lab2 w środowisku IIC-OSIC-TOOLS ; Ustawianie testbenchu, Ekstrakcja parasitic, korzystanie z klayout-pex do ekstrakcji (pliki pex) i używanie ich w Xschem
 time: 2.5h
 
-31.08 - 12.00 - xxxxx -> Uzupełnianie wyników labolatorium 2, przeprowadzanie symulacji mieszanej
+>>>>> NOT IN THE LOG YET <<<<<
+31.08 - 12.00 - 18.00 -> Uzupełnianie wyników labolatorium 2, przeprowadzanie symulacji mieszanej (sky130 cmos inverter vs verilog version), próby samodzielne, analiza przykładu S. Schippers'a z ADC'kiem - jeszcze nie działa
+time: 6h
+
+02.09 - 15.00 - 21.00 -> przeprowadzanie symulacji mieszanej (sky130 cmos inverter vs verilog version); udało się przeprowadzić symulację mieszaną, problemy i rozwiązania opisane w lab2_inv_mixed_uwagi.pdf
+time: 6h
+
+03.09 - 14.30 - xxxxx ->
 
 ---
 

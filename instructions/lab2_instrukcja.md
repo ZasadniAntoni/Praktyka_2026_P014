@@ -25,12 +25,12 @@ Aby w realizowanych analizach wyeliminować błąd systematyczny związany z ró
 Wykorzystany blok kodu o nazwie **TT_MODELS** to gotowy blok, który jest łatwo i szybko dostępny wybierając na pasku menu `SKY130 -> Add model symbol` (Rys 1.2.) i dla parametrów typowych nie musi być edytowany.
 
 <figure style="text-align: center; page-break-inside: avoid; break-inside: avoid;">
-  <img src="screenshots/01_schematic_w.png">
+  <img src="lab2_ss/01/01_schematic_w.png">
   <figcaption>Rys 1.1. Schemat źródła prądowego.</figcaption>
 </figure>
 
 <figure style="text-align: center; page-break-inside: avoid; break-inside: avoid;">
-  <img src="screenshots/01_TT_models.png">
+  <img src="lab2_ss/01/01_TT_models.png">
   <figcaption>Rys 1.2. Dodanie bloku kodu zawierającego bibliotekę.</figcaption>
 </figure>
 
@@ -58,7 +58,7 @@ view sky130.lib.spice
 
 Dane można zbierać do plików za pomocą `echo [text and vectors] >> [file_path/filename]` lub przykładowo: polecenia `wrdata` , `write` (więcej informacji o formacie zapisu oraz o sposobach zapisu danych do pliku można znaleźć w [ngspice manual](https://ngspice.sourceforge.io/docs/ngspice-manual.pdf)). Aby wyświetlić wyniki w formie graficznej zebrane dane w plikach można wyeksportować i wyplotować za pomocą wbudowanego `gnuplot` bezpośrednio z otwartej konsoli dockera lub ngspice'a. Dzięki dostępowi do konsoli dockera można pisać skrypty .sh, .tcl, które z zapisanych danych będą tworzyć wykresy i zapisywać je do plików graficznych.  
 
-1.6. Rozrzuty w PDK Sky130 są sterowane globalnie poprzez parametry **mc_mm_switch** i **mc_pr_switch**. Jeśli chcesz, aby dany tranzystor (np. lustro referencyjne M_REF) nie podlegał zmianom związanym z mismatchem czy procesem należy stworzyć idealny model naszego elementu, który nie będzie brał pod uwagę globalnie zadefiniowanych rozrzutów. Sprowadzać się to będzie do stworzenia podobwodu, który będzie miał wyłączone parametry kontrolujące mismatch i process (wartości tych parametrów dla podobwodów są traktowane lokalnie, więc nie trzeba się martwić o nadpisywanie wcześniej dodanych parametrów). Nazwa modelu powinna dokładnie opisywać element i jego funkcję. Warto pamiętać przyjętej konwencji do nazywania elementów dla danej biblioteki - w naszym przypadku, dla przykładowo PMOS-a, wygląda to następująco: `sky130_fd_pr__` to fragment wskazujący na bibliotekę, a `pfet_01v8` to nazwa modelu. Można zweryfikować jak wyglądają definicje instancji sprawdzając netlistę (skrót klawiszowy *Shift + N* lub *N*, następnie `Simulation -> Edit Netlist`).  
+1.6. Rozrzuty w PDK Sky130 są sterowane globalnie poprzez parametry **mc_mm_switch** i **mc_pr_switch**. Jeśli chcesz, aby dany tranzystor (np. lustro referencyjne M_REF) nie podlegał zmianom związanym z mismatchem czy procesem należy stworzyć idealny model naszego elementu, który nie będzie brał pod uwagę globalnie zadefiniowanych rozrzutów. Sprowadzać się to będzie do stworzenia podobwodu, który będzie miał wyłączone parametry kontrolujące mismatch i process (wartości tych parametrów dla podobwodów są traktowane lokalnie, więc nie trzeba się martwić o nadpisywanie wcześniej dodanych parametrów). Nazwa modelu powinna dokładnie opisywać element i jego funkcję. Warto pamiętać przyjętej konwencji do nazywania elementów dla danej biblioteki - w naszym przypadku, dla przykładowo PMOS-a, wygląda to następująco: `sky130_fd_pr__` to fragment wskazujący na bibliotekę, a `pfet_01v8` to nazwa modelu. Można zweryfikować jak wyglądają definicje instancji sprawdzając netlistę (skrót klawiszowy *N*, następnie `Simulation -> Edit Netlist`).  
 Dzięki zachowaniu tej składni, po dodaniu fragmentu definiującego podschemat, wystarczy zamienić parametr *model* danego elementu (w naszym przypadku PMOS-a) bez tworzenia nowego symbolu dla tego modelu.  
 
 1.7. W naszych następnych symulacjach chcemy analizować rozrzuty pochodzące jedynie od tranzystora M1. Ponieważ domyślnie włączenie `.param mc_mm_switch = 1` aktywuje losowanie parametrów dla wszystkich elementów na schemacie, aby zasymulować idealne źródło referencyjne M_REF (bez rozrzutów) stworzymy dla tego schematu wspomiany subcircuit - pamiętając o konwencji nazywania elementów w bibliotece.  
@@ -107,7 +107,7 @@ Wyniki zapisz w sprawozdaniu. Czy są one zgodne z Twoimi przypuszczeniami? Dlac
 2.1. W dalszej części ćwiczenia będziesz budować 5-bitowy przetwornik DAC. Dlatego utwórz schemat i jego symbol zgodnie z Rys. 2.1. Nazwij go *DAC_CORE_5bit*. Źródła prądowe M0 - M4 mają wymiary W/L = 3.5 μm / 5 μm, zaś wymiar kluczy MK0 - MK4 to W/L = 0.42 μm / 0.15 μm.  
 
 <figure style="text-align: center; page-break-inside: avoid; break-inside: avoid;">
-  <img src="screenshots/02_schematic_w.png">
+  <img src="lab2_ss/02/02_schematic_w.png">
   <figcaption>Rys 2.1. Schemat 5-bitowego DAC-a.</figcaption>
 </figure>
 
@@ -128,7 +128,7 @@ Rezystory oraz źródła napięciowe widoczne na schemacie pochodzą z bibliotek
 * dla V4: `{ VDD * ((dac_bit - 32*int(dac_bit/32)>15)) }`  
 
 <figure style="text-align: center; page-break-inside: avoid; break-inside: avoid;">
-  <img src="screenshots/02_schematic_test_w.png">
+  <img src="lab2_ss/02/02_schematic_test_w.png">
   <figcaption>Rys 2.2. Schemat układu do symulacji.</figcaption>
 </figure>
 
@@ -166,7 +166,7 @@ Powyższą składnia ma za zadanie generować napięcia na wyjściach źródeł 
 Pomimo tego, że Klayout automatycznie jest włączany z sky130A PDK, to w samym programie i tak trzeba wybrać wykorzystywaną technologię - może być to zrobione w każdym momencie wykonywania layoutu, ale najlepiej od tego zacząć przed pracą. Na pasku narzędzi widoczna jest ikona zębatki z literą 'T' - rozwiń to narzędzie, wybierz technologię sky130A i kliknij na ikonę. Po prawej stronie powinieneś zobaczyć warstwy zdefiniowane w tej technologii. Jeżeli nadal ich nie widzisz to dlatego, że są nie używane i domyślnie są ukryte - kliknij prawym przyciskiem myszy w oknie *Layers* i odznacz *Hide Empty Layers*.  
 
 <figure style="text-align: center; page-break-inside: avoid; break-inside: avoid;">
-  <img src="screenshots/03_new_layout.png" style="width: 75%; height: auto;">
+  <img src="lab2_ss/03/03_new_layout.png" style="width: 75%; height: auto;">
   <figcaption>Rys. 3.1. Okno tworzenia nowego layoutu.</figcaption>
 </figure>
 
@@ -179,7 +179,7 @@ cp /headless/.xschem/simulations/DAC_CORE_5bit.spice /foss/designs/lab2/xschem/
 Teraz zaimportujesz do utworzonego okna Layoutu elementy uprzednio stworzonego schematu *DAC_CORE_5bit*. Z paska menu wybierz `File -> Import -> Netlist`. Jeżeli zaktualizowałeś Plugin w obecnej sesji to Klayout wyświetli powiadomienie o zmianie Cell Mapping - kliknij *Yes* i kontynuuj importowanie. Powinieneś zobaczyć okno do importowania - w polu *Source File* wybierz plik z netlistą klikając *...* po prawej stronie pola lub bezpośrednio wpisz ścieżkę do pliku (można też samą nazwę pliku - domyślnie wyszukuje w folderze, z którego został włączony klayout). Kliknij **Reload Net** w prawym dolnym rogu. Po rozwinięciu `Reference - TOP` powinieneś zobaczyć wszystkie elementy, które poprzenio naniosłeś na schemat. Powinieneś zobaczyć okno jak na Rys 3.2.  
 
 <figure style="text-align: center; page-break-inside: avoid; break-inside: avoid;">
-  <img src="screenshots/03_import_no_mapping.png" style="width: 90%; height: auto;">
+  <img src="lab2_ss/03/03_import_no_mapping.png" style="width: 90%; height: auto;">
   <figcaption>Rys. 3.2. Okno importowania elementów z netlisty.</figcaption>
 </figure>
 
@@ -198,11 +198,11 @@ W zakładce *Layout* ustaw **Pitch** na 6.5 μm Okno importowania powinno wyglą
   <table style="width: 100%; border-collapse: collapse;">
     <tr>
       <td style="width: 50%; text-align: center; vertical-align: bottom; padding: 0 5px;">
-        <img src="screenshots/03_import_mapping.png" style="max-width: 100%; height: auto;">
+        <img src="lab2_ss/03/03_import_mapping.png" style="max-width: 100%; height: auto;">
         <div>a)</div>
       </td>
       <td style="width: 50%; text-align: center; vertical-align: bottom; padding: 0 5px;">
-        <img src="screenshots/03_import_tech_cell.png" style="max-width: 100%; height: auto;">
+        <img src="lab2_ss/03/03_import_tech_cell.png" style="max-width: 100%; height: auto;">
         <div>b)</div>
       </td>
     </tr>
@@ -213,7 +213,7 @@ W zakładce *Layout* ustaw **Pitch** na 6.5 μm Okno importowania powinno wyglą
 Jeżeli wszystko wygląda tak samo - kliknij **Import**. Powinien wyświetlić się raport z importowania - jeżeli wszystko przebiegło pomyślnie, zobaczysz w raporcie "Cells succeeded: 1 ... Instances succeeded: 62" Okno twojego projektu powinno wyglądać jak na Rys. 3.4. - utworzony przez Ciebie widok zawiera po 31 tranzystorów pełniących funkcję źródeł prądowych oraz kluczy elektronicznych.  
 
 <figure style="text-align: center; page-break-inside: avoid; break-inside: avoid;">
-  <img src="screenshots/03_import_result.png">
+  <img src="lab2_ss/03/03_import_result.png">
   <figcaption>Rys. 3.4. Widok layoutu komórki DAC_CORE_5bit po zaimportowaniu elementów z netlisty.</figcaption>
 </figure>
 
@@ -229,11 +229,11 @@ Następnie utwórz matrycę tranzystorów pracujących jako źródła prądowe p
   <table style="width: 100%; border-collapse: collapse;">
     <tr>
       <td style="width: 50%; text-align: center; vertical-align: bottom; padding: 0 5px;">
-        <img src="screenshots/03_inst_properties_pcell.png" style="max-width: 100%; height: auto;">
+        <img src="lab2_ss/03/03_inst_properties_pcell.png" style="max-width: 100%; height: auto;">
         <div>a)</div>
       </td>
       <td style="width: 50%; text-align: center; vertical-align: bottom; padding: 0 5px;">
-        <img src="screenshots/03_inst_properties_geom.png" style="max-width: 100%; height: auto;">
+        <img src="lab2_ss/03/03_inst_properties_geom.png" style="max-width: 100%; height: auto;">
         <div>b)</div>
       </td>
     </tr>
@@ -242,7 +242,7 @@ Następnie utwórz matrycę tranzystorów pracujących jako źródła prądowe p
 </figure> 
 
 <figure style="text-align: center; page-break-inside: avoid; break-inside: avoid;">
-  <img src="screenshots/03_matrix_6x6.png" style="max-width: 80%; height: auto;">
+  <img src="lab2_ss/03/03_matrix_6x6.png" style="max-width: 80%; height: auto;">
   <figcaption>Rys. 3.6. Wygenerowana matryca tranzystorów pracujących jako źródła prądowe.</figcaption>
 </figure>
 
@@ -256,11 +256,11 @@ Po otworzeniu okna nowego layoutu umieść w nim jeden tranzystor PMOS o wymiara
   <table style="width: 100%; border-collapse: collapse;">
     <tr>
       <td style="width: 46.5%; text-align: center; vertical-align: bottom; padding: 0 5px;">
-        <img src="screenshots/03_PMOS_before.png" style="max-width: 100%; height: auto;">
+        <img src="lab2_ss/03/03_PMOS_before.png" style="max-width: 100%; height: auto;">
         <div>a)</div>
       </td>
       <td style="width: 50%; text-align: center; vertical-align: bottom; padding: 0 5px;">
-        <img src="screenshots/03_PMOS_after.png" style="max-width: 100%; height: auto;">
+        <img src="lab2_ss/03/03_PMOS_after.png" style="max-width: 100%; height: auto;">
         <div>b)</div>
       </td>
     </tr>
@@ -271,7 +271,7 @@ Po otworzeniu okna nowego layoutu umieść w nim jeden tranzystor PMOS o wymiara
 3.5. Następnie w komórce *DAC_CORE_5bit* (zmień na tą komórkę klikając prawym na nią w oknie *Cells* i wybierając `Show As New Top` ) umieść matrycę 6 × 6 elementów Twojej komórki podstawowej *DAC_BASE_MCS*. Rezultatem operacji powinien być widok jak na Rys. 3.8. Jeśli poprzednia matryca nie została przez Ciebie usunięta, wybierz jej właściwości (skrót klawiszowy *Q*) i zamień komórkę `pfet` na Twoją komórkę podstawową `DAC_BASE_MCS` - zamień Library na *Local (no library)* i wybierz swoją komórkę z listy.  
 
 <figure style="text-align: center; page-break-inside: avoid; break-inside: avoid;">
-  <img src="screenshots/03_matrix_6x6_base_cell.png" style="max-width: 80%; height: auto;">
+  <img src="lab2_ss/03/03_matrix_6x6_base_cell.png" style="max-width: 80%; height: auto;">
   <figcaption>Rys. 3.8. Matryca tranzystorów pracujących jako źródła prądowe złożona z komórek bazowych.</figcaption>
 </figure>
 
@@ -285,7 +285,7 @@ Po otworzeniu okna nowego layoutu umieść w nim jeden tranzystor PMOS o wymiara
 3.9. Umieść matrycę 9 × 7 tranzystorów źródeł prądowych, a tranzystory zewnętrzne opisz etykietą "MD". Możesz wykorzystać obiekt `TEXT` z biblioteki **Basic** lub *Text* z paska narzędzi. Którykolwiek sposób wybierzesz - umieść tekst na warstwie *text.drawing - 83:44*. Zwróć uwagę, że wnętrze matrycy zawiera 35 tranzystorów, podczas gdy Ty potrzebujesz tylko 31 do realizacji źródeł prądowych. Tych 4 dodatkowych tranzystorów również użyjesz jako MD, ale nieco później. Matryca tranzystorów źródeł prądowych powinna wyglądać jak na Rys 3.9. (Na zdjęciu wykorzystano wspomnianą komórkę z biblioteki Basic).  
 
 <figure style="text-align: center; page-break-inside: avoid; break-inside: avoid;">
-  <img src="screenshots/03_matrix_9x7_base_cell.png" style="max-width: 80%; height: auto;">
+  <img src="lab2_ss/03/03_matrix_9x7_base_cell.png" style="max-width: 80%; height: auto;">
   <figcaption>Rys. 3.9. Matryca tranzystorów pracujących jako źródła prądowe wraz z tranzystorami dummy.</figcaption>
 </figure>
 
@@ -293,7 +293,7 @@ Po otworzeniu okna nowego layoutu umieść w nim jeden tranzystor PMOS o wymiara
 **UWAGA**: zwróć uwagę na etykiety pomiędzy kluczami a źródłami prądowymi.  
 
 <figure style="text-align: center; page-break-inside: avoid; break-inside: avoid;">
-  <img src="screenshots/03_schematic_w.png">
+  <img src="lab2_ss/03/03_schematic_w.png">
   <figcaption>Rys. 3.10. Schemat przetwornika cyfrowo-analogowego po umieszczeniu tranzystorów dodatkowych MD (dummy). UWAGA: zwróć uwagę na etykiety M*_C pomiędzy kluczami i źródłami prądowymi.</figcaption>
 </figure>
 
@@ -302,7 +302,7 @@ Po otworzeniu okna nowego layoutu umieść w nim jeden tranzystor PMOS o wymiara
 **UWAGA**: Na Twoim planie masek matryca kluczy (po lewej) powinna składać się z 4 × 8 tranzystorów, a matryca źródeł prądowych (po prawej) powinna składać się z 9 × 7 tranzystorów.  
 
 <figure style="text-align: center; page-break-inside: avoid; break-inside: avoid;">
-  <img src="screenshots/03_layout_sample.png">
+  <img src="lab2_ss/03/03_layout_sample.png">
   <figcaption>Rys. 3.11. Rysunek poglądowy - matryca kluczy i matryca źródeł prądowych po dodaniu pierścieni ochronnych. UWAGA: Na Twoim planie masek matryca kluczy (po lewej) powinna składać się z 4 × 8 tranzystorów, a matryca źródeł prądowych (po prawej) powinna składać się z 9 × 7 tranzystorów.</figcaption>
 </figure>
 
@@ -322,7 +322,7 @@ Po otworzeniu okna nowego layoutu umieść w nim jeden tranzystor PMOS o wymiara
 > Opisz te dodatkowe operacje jakie wykonałeś przy realizacji tego projektu (przykłady: dodatkowe struktury, sposób realizacji masek kluczy elektronicznych, etc.).  
 
 <figure style="text-align: center; page-break-inside: avoid; break-inside: avoid;">
-  <img src="screenshots/03_layout_final.png" style="max-width: 90%; height: auto;">
+  <img src="lab2_ss/03/03_layout_final.png" style="max-width: 90%; height: auto;">
   <figcaption>Rys. 3.12. Ukończony plan masek komórki DAC_CORE_5bit, widok all layers: skrót klawiszowy '0'.</figcaption>
 </figure>
 
@@ -330,11 +330,11 @@ Po otworzeniu okna nowego layoutu umieść w nim jeden tranzystor PMOS o wymiara
   <table style="width: 100%; border-collapse: collapse;">
     <tr>
       <td style="width: 34.9%; text-align: center; vertical-align: bottom; padding: 0 5px;">
-        <img src="screenshots/03_result_DRC.png" style="max-width: 100%; height: auto;">
+        <img src="lab2_ss/03/03_result_DRC.png" style="max-width: 100%; height: auto;">
         <div>a)</div>
       </td>
       <td style="width: 50%; text-align: center; vertical-align: bottom; padding: 0 5px;">
-        <img src="screenshots/03_result_LVS.png" style="max-width: 100%; height: auto;">
+        <img src="lab2_ss/03/03_result_LVS.png" style="max-width: 100%; height: auto;">
         <div>b)</div>
       </td>
     </tr>
@@ -343,12 +343,12 @@ Po otworzeniu okna nowego layoutu umieść w nim jeden tranzystor PMOS o wymiara
 </figure> 
 
 <figure style="text-align: center; page-break-inside: avoid; break-inside: avoid;">
-  <img src="screenshots/03_layout_final_me1.png" style="max-width: 90%; height: auto;">
+  <img src="lab2_ss/03/03_layout_final_me1.png" style="max-width: 90%; height: auto;">
   <figcaption>Rys. 3.14. Ukończony plan masek komórki DAC_CORE_5bit, widok me1: skrót klawiszowy '2'.</figcaption>
 </figure>
 
 <figure style="text-align: center; page-break-inside: avoid; break-inside: avoid;">
-  <img src="screenshots/03_layout_final_me2.png" style="max-width: 90%; height: auto;">
+  <img src="lab2_ss/03/03_layout_final_me2.png" style="max-width: 90%; height: auto;">
   <figcaption>Rys. 3.15. Ukończony plan masek komórki DAC_CORE_5bit, widok me2: skrót klawiszowy '3'.</figcaption>
 </figure>
 
