@@ -1,0 +1,18 @@
+v {xschem version=3.4.8RC file_version=1.3}
+G {}
+K {type=primitive
+format="@name [ @@in ] [ @@out ] @symname"
+template="name=a1 model=inv_sv device_model=\\".model inv_sv d_cosim simulation=\\"ivlng\\" sim_args=[\\"inv_sv.vvp\\"] delay=1p\\""
+tclcommand="edit_file [abs_sym_path ../verilog/inv_sv.sv]"}
+V {}
+S {}
+F {}
+E {}
+L 4 -40 0 -20 0 {}
+L 4 30 0 50 0 {}
+B 5 -42.5 -2.5 -37.5 2.5 {name=in dir=in}
+B 5 47.5 -2.5 52.5 2.5 {name=out dir=out}
+A 4 25 0 5 180 360 {}
+P 4 4 -20 -20 -20 20 20 0 -20 -20 {}
+T {@name} -5 28 0 0 0.2 0.2 {}
+T {@symname} 0 10 0 0 0.3 0.3 {}

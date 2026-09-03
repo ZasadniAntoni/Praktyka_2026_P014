@@ -1,0 +1,15 @@
+*** TESTBENCH SYMBOL PARAMETERS ***
+name=a_sv 
+model=inv_sv 
+***Icarus_verilog***
+device_model=".model inv_sv d_cosim simulation=\"ivlng\" sim_args=[\"inv_sv.vvp\"] delay=1p"
+***Verilator***
+*device_model=".model inv_sv d_cosim simulation=\"inv_sv.so\""
+tclcommand="edit_file [abs_sym_path ../verilog/inv_sv.sv]"
+
+*** SYMBOL'S PROPERTIES ***
+type=primitive
+*format's pin names should match the symbol's pin names (case sensitive)
+format="@name [ @@in ] [ @@out ] @symname"
+template="name=a1 model=inv_sv device_model=\".model inv_sv d_cosim simulation=\"ivlng\" sim_args=[\"inv_sv.vvp\"] delay=1p\""
+tclcommand="edit_file [abs_sym_path ../verilog/inv_sv.sv]"

@@ -1,0 +1,12 @@
+name=sim_block 
+only_toplevel=true
+value=
+"
+.control
+  save all
+  tran 100p 5u
+  write inv_test_parallel.raw
+  write /foss/designs/inv_mixed/results/inv_test_parallel.raw
+  quit
+.endc
+"
